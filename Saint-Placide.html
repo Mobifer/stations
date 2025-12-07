@@ -245,6 +245,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Saint-Placide","lignes":{"metro":["4"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Station_Saint-Placide.jpg/1280px-Station_Saint-Placide.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Saint-Placide.jpg","imga":"Arthur Weidmann","stats":[{"lignes":{"metro":["4"]},"ouv":"9 janvier 1910","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (VI<sup>e</sup>)"],"freq":"2 391 205 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Notre-Dame des Champs","acc":true},{"num":"2","desc":"rue de Rennes","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Saint-Placide&line=4&sens=Porte%20de:b:Clignancourt&stationcode=71184&linecode=C01374&destcode=Porte%20de%20Clignancourt&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Saint-Placide&line=4&sens=Bagneux&stationcode=71184&linecode=C01374&destcode=BAGNEUX-LUCIE%20AUBRAC&destcodealt=false"}]};
 
@@ -275,7 +276,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -398,8 +399,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -526,7 +527,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

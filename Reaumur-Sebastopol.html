@@ -318,6 +318,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Réaumur – Sébastopol","lignes":{"metro":["3","4"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Station_R%C3%A9aumur_-_S%C3%A9bastopol.jpg/1280px-Station_R%C3%A9aumur_-_S%C3%A9bastopol.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_R%C3%A9aumur_-_S%C3%A9bastopol.jpg","imga":"Arthur Weidmann","stats":[{"lignes":{"metro":["3","4"]},"ouv":"19 novembre 1904","voies":"4","quais":"4","zt":"1","inaug":"Rue Saint-Denis","ufr":"Non","communes":["Paris (II<sup>e</sup>, III<sup>e</sup>)"],"freq":"3 579 544 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard de Sébastopol","acc":true},{"num":"2","desc":"rue Réaumur","acc":true},{"num":"3","desc":"rue Saint-Denis"},{"num":"4","desc":"square Émile Chautemps","pti":"Gaîté Lyrique"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=R%C3%A9aumur%20S%C3%A9bastopol&line=3&sens=Levallois&stationcode=73636&linecode=C01373&destcode=Pont%20de%20Levallois%20-%20B%C3%A9con&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=R%C3%A9aumur%20S%C3%A9bastopol&line=3&sens=Gallieni&stationcode=73636&linecode=C01373&destcode=Gallieni&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=R%C3%A9aumur%20S%C3%A9bastopol&line=4&sens=Porte%20de:b:Clignancourt&stationcode=73636&linecode=C01373&destcode=Porte%20de%20Clignancourt&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=R%C3%A9aumur%20S%C3%A9bastopol&line=4&sens=Bagneux&stationcode=73636&linecode=C01373&destcode=BAGNEUX-LUCIE%20AUBRAC&destcodealt=false"}]};
 
@@ -348,7 +349,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -471,8 +472,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -599,7 +600,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

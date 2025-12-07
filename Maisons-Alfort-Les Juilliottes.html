@@ -285,6 +285,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Maisons-Alfort – Les Juilliottes","lignes":{"metro":["8"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Station_Maisons_Alfort_Juilliottes_M%C3%A9tro_Paris_Ligne_8_-_Maisons-Alfort_%28FR94%29_-_2022-07-04_-_5.jpg/1280px-Station_Maisons_Alfort_Juilliottes_M%C3%A9tro_Paris_Ligne_8_-_Maisons-Alfort_%28FR94%29_-_2022-07-04_-_5.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Maisons_Alfort_Juilliottes_M%C3%A9tro_Paris_Ligne_8_-_Maisons-Alfort_(FR94)_-_2022-07-04_-_5.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["8"]},"ouv":"21 avril 1972","voies":"3","quais":"2","zt":"3","ufr":"Non","communes":["Maisons-Alfort"],"freq":"1 297 495 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Louis Pergaud","acc":true},{"num":"2","desc":"avenue du Général Leclerc"},{"num":"3","desc":"rue du Buisson Joyeux"},{"num":"4","desc":"avenue du Maréchal de Lattre de Tassigny"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Maisons-Alfort-Les%20Juilliottes&line=8&sens=Balard&stationcode=70358&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Maisons-Alfort-Les%20Juilliottes&line=8&sens=Cr%C3%A9teil&stationcode=70358&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"}]};
 
@@ -315,7 +316,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -438,8 +439,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -566,7 +567,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

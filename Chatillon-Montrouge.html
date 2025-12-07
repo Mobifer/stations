@@ -322,6 +322,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Châtillon – Montrouge","lignes":{"metro":["13"],"tram":["T6"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Acc%C3%A8s_Station_Ch%C3%A2tillon_Montrouge_M%C3%A9tro_Paris_Avenue_R%C3%A9publique_-_Ch%C3%A2tillon_%28FR92%29_-_2025-02-15_-_1.jpg/1280px-Acc%C3%A8s_Station_Ch%C3%A2tillon_Montrouge_M%C3%A9tro_Paris_Avenue_R%C3%A9publique_-_Ch%C3%A2tillon_%28FR92%29_-_2025-02-15_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_Ch%C3%A2tillon_Montrouge_M%C3%A9tro_Paris_Avenue_R%C3%A9publique_-_Ch%C3%A2tillon_(FR92)_-_2025-02-15_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["13"]},"ouv":"9 novembre 1976","voies":"3","quais":"2","zt":"3","ufr":"Non","communes":["Châtillon","Montrouge","Bagneux"],"freq":"5 034 012 voyageurs (2021)"},{"lignes":{"tram":["T6"]},"ouv":"13 décembre 2014","voies":"2","quais":"2","zt":"3","ufr":"Oui","communes":["Châtillon"]}],"sorties":[{"num":"1","desc":"avenue Marx Dormoy","rep":"Montrouge"},{"num":"2","desc":"rue de l’Avenir","rep":"Châtillon"}],"siv":[{"metro":"https://enrail.org/ratp/?style=siel&station=Ch%C3%A2tillon-Montrouge&line=13&sens=Asni%C3%A8res:b:Gennevilliers%20%E2%80%A2%20Saint-Denis&stationcode=461505&linecode=C01383&destcode=Asni%C3%A8res%20-%20Gennevilliers%20Les%20Courtilles%20%E2%80%A2%20Saint-Denis%20-%20Universit%C3%A9&destcodealt=false"},{"tram":"2336","line":"6"}]};
 
@@ -352,7 +353,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -475,8 +476,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -603,7 +604,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

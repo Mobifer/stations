@@ -367,6 +367,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"La Courneuve – 8 Mai 1945","lignes":{"metro":["7"],"tram":["T1"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Accès_Station_Courneuve_8_Mai_1945_Métro_Paris_Place_8_Mai_1945_-_La_Courneuve_%28FR93%29_-_2025-01-25_-_5.jpg/1280px-Accès_Station_Courneuve_8_Mai_1945_Métro_Paris_Place_8_Mai_1945_-_La_Courneuve_%28FR93%29_-_2025-01-25_-_5.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Accès_Station_Courneuve_8_Mai_1945_Métro_Paris_Place_8_Mai_1945_-_La_Courneuve_(FR93)_-_2025-01-25_-_5.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["7"]},"ouv":"6 mai 1987","voies":"3","quais":"2","zt":"3","ufr":"Non","communes":["La Courneuve"],"freq":"4 924 444 voyageurs (2021)"},{"lignes":{"tram":["T1"]},"ouv":"6 juillet 1992","voies":"2","quais":"2","zt":"3","ufr":"Non","communes":["La Courneuve"]}],"sorties":[{"num":"1","desc":"stade Daniel Féry","esc":true},{"num":"2","desc":"avenue Jean Jaurès","acc":true,"esc":true},{"num":"3","desc":"avenue Paul Vailant-Couturier","esc":true},{"num":"4","desc":"avenue Lénine","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=siel&station=La%20Courneuve%208%20Mai%201945&line=7&sens=Ivry%20•%20Villejuif&stationcode=73696&linecode=C01377&destcode=Mairie%20d%27Ivry%20•%20Villejuif%20-%20Louis%20Aragon&destcodealt=false"},{"tram":"22629","line":"1"},{"tram":"24426","line":"1"}]};
 
@@ -397,7 +398,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -520,8 +521,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -648,7 +649,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

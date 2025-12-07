@@ -221,6 +221,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Saint-Fargeau","lignes":{"metro":["3bis"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Entrée_station_Saint-Fargeau.JPG/1280px-Entrée_station_Saint-Fargeau.JPG","imgp":"https://commons.wikimedia.org/wiki/File:Entrée_station_Saint-Fargeau.JPG","imga":"LPLT","stats":[{"lignes":{"metro":["3bis"]},"ouv":"27 novembre 1921","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XX<sup>e</sup>)"],"freq":"472 258 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place Saint-Fargeau","asc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Saint-Fargeau&line=3b&sens=Porte:b:des%20Lilas&stationcode=71860&linecode=C01386&destcode=Porte%20des%20Lilas&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Saint-Fargeau&line=3b&sens=Gambetta&stationcode=71860&linecode=C01386&destcode=Gambetta&destcodealt=false"}]};
 
@@ -251,7 +252,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -374,8 +375,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -502,7 +503,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

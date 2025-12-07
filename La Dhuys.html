@@ -262,6 +262,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"La Dhuys","lignes":{"metro":["11"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Station_Dhuys_M%C3%A9tro_Paris_Ligne_11_-_Rosny-sous-Bois_%28FR93%29_-_2024-06-13_-_6.jpg/1280px-Station_Dhuys_M%C3%A9tro_Paris_Ligne_11_-_Rosny-sous-Bois_%28FR93%29_-_2024-06-13_-_6.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Dhuys_M%C3%A9tro_Paris_Ligne_11_-_Rosny-sous-Bois_(FR93)_-_2024-06-13_-_6.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["11"]},"ouv":"13 juin 2024","voies":"2","quais":"2","zt":"3","ufr":"Oui","communes":["Montreuil","Rosny-sous-Bois"]}],"sorties":[{"num":"1","desc":"rue Lucien Piron","asc":true},{"num":"2","desc":"rue de la Dhuys","asc":true},{"num":"3","desc":"boulevard de la Boissière","asc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=La%20Dhuys&line=11&sens=Ch%C3%A2telet&stationcode=490782&linecode=C01381&destcode=Ch%C3%A2telet&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=La%20Dhuys&line=11&sens=Rosny:t:sous-Bois&stationcode=490782&linecode=C01381&destcode=Rosny-sous-Bois&destcodealt=false"}]};
 
@@ -292,7 +293,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -415,8 +416,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -543,7 +544,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

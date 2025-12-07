@@ -243,6 +243,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Quai de la Gare","lignes":{"metro":["6"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Ligne-6-Quai-de-la-Gare-2.jpg/1280px-Ligne-6-Quai-de-la-Gare-2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Ligne-6-Quai-de-la-Gare-2.jpg","imga":"Pline","stats":[{"lignes":{"metro":["6"]},"ouv":"1<sup>er</sup> mars 1909","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XIII<sup>e</sup>)"],"freq":"1 735 465 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue de France","acc":true},{"num":"2","desc":"pont de Bercy"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Quai%20de%20la%20Gare&line=6&sens=Étoile&stationcode=71597&linecode=C01376&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Quai%20de%20la%20Gare&line=6&sens=Nation&stationcode=71597&linecode=C01376&destcode=Nation&destcodealt=false"}]};
 
@@ -273,7 +274,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -396,8 +397,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -524,7 +525,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

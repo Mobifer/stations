@@ -330,6 +330,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Gambetta","lignes":{"metro":["3","3bis"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Metro_de_Paris_-_Ligne_3_-_Gambetta_01.jpg/1280px-Metro_de_Paris_-_Ligne_3_-_Gambetta_01.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Metro_de_Paris_-_Ligne_3_-_Gambetta_01.jpg","imga":"Clicsouris","stats":[{"lignes":{"metro":["3","3bis"]},"ouv":"25 janvier 1905","voies":"4","quais":"3","zt":"1","ufr":"Non","communes":["Paris (XX<sup>e</sup>)"],"freq":"4 796 724 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"Mairie du XX<sup>e</sup>","rep":"Hôpital Tenon","acc":true},{"num":"2","desc":"place Gambetta"},{"num":"3","desc":"Père Lachaise","pti":"Cimetière du Père Lachaise","esc":true},{"num":"4","desc":"place Martin Nadaud"},{"num":"5","desc":"rue Orfila"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Gambetta&line=3&sens=Levallois&stationcode=71808&linecode=C01373&destcode=Pont%20de%20Levallois%20-%20B%C3%A9con&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Gambetta&line=3&sens=Gallieni&stationcode=71808&linecode=C01373&destcode=Gallieni&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Gambetta&line=3b&sens=Porte:b:des%20Lilas&stationcode=71808&linecode=C01386&destcode=Porte%20des%20Lilas&destcodealt=false"}]};
 
@@ -360,7 +361,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -483,8 +484,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -611,7 +612,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

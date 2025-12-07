@@ -250,6 +250,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Avenue Émile Zola","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Trains_at_Avenue_%C3%89mile-Zola_metro_station_May_2025.jpg/2560px-Trains_at_Avenue_%C3%89mile-Zola_metro_station_May_2025.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Trains_at_Avenue_%C3%89mile-Zola_metro_station_May_2025.jpg","imga":"\t4300tramway","stats":[{"lignes":{"metro":["10"]},"ouv":"13 juillet 1913","inaug":"Commerce","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XV<sup>e</sup>)"],"freq":"1 041 233 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Fondary","acc":true},{"num":"2","desc":"rue du Commerce"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Avenue%20%C3%89mile%20Zola&line=10&sens=Boulogne&stationcode=71158&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Avenue%20%C3%89mile%20Zola&line=10&sens=Gare:b:d’Austerlitz&stationcode=71158&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
 
@@ -280,7 +281,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -403,8 +404,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -531,7 +532,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

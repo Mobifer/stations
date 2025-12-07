@@ -257,6 +257,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Jacques Bonsergent","lignes":{"metro":["5"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Station_Jacques_Bonsergent_M%C3%A9tro_Paris_Ligne_5_-_Paris_X_%28FR75%29_-_2022-06-24_-_1.jpg/1280px-Station_Jacques_Bonsergent_M%C3%A9tro_Paris_Ligne_5_-_Paris_X_%28FR75%29_-_2022-06-24_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Jacques_Bonsergent_Métro_Paris_Ligne_5_-_Paris_X_(FR75)_-_2022-06-24_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["5"]},"ouv":"17 décembre 1906","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (X<sup>e</sup>)"],"freq":"1 743 989 voyageurs (2021)","inaug":"Lancry"}],"sorties":[{"num":"1","desc":"boulevard de Magenta","rep":"Hôpital Saint-Louis","acc":true},{"num":"2","desc":"rue de Lancry"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Jacques%20Bonsergent&line=5&sens=Bobigny&stationcode=71322&linecode=C01375&destcode=Bobigny%20Pablo%20Picasso&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Jacques%20Bonsergent&line=5&sens=Place%20d’Italie&stationcode=71322&linecode=C01375&destcode=Place%20d%27Italie&destcodealt=false"}]};
 
@@ -287,7 +288,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -410,8 +411,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -538,7 +539,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

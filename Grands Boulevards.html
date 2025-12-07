@@ -359,6 +359,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Grands Boulevards","lignes":{"metro":["8","9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/f/f3/Paris_Subway_Grands_Boulevards.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Paris_Subway_Grands_Boulevards.jpg","imga":"DeansFA~commonswiki","stats":[{"lignes":{"metro":["8","9"]},"ouv":"5 mai 1931","inaug":"Rue Montmartre","voies":"4","quais":"4","zt":"1","ufr":"Non","communes":["Paris (II<sup>e</sup>, IX<sup>e</sup>)"],"freq":"3 737 316 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue du Faubourg Montmartre"},{"num":"2","desc":"boulevard Montmartre","pti":"Musée Grévin","acc":true,"esc":true},{"num":"3","desc":"rue Montmartre"},{"num":"4","desc":"boulevard Poissonnière"},{"num":"5","desc":"rue Saint-Fiacre"},{"num":"6","desc":"rue Rougemont"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Grands%20Boulevards&line=8&sens=Balard&stationcode=71326&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Grands%20Boulevards&line=8&sens=Cr%C3%A9teil&stationcode=71326&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Grands%20Boulevards&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71326&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Grands%20Boulevards&line=9&sens=Montreuil&stationcode=71326&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"}]};
 
@@ -389,7 +390,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -512,8 +513,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -640,7 +641,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

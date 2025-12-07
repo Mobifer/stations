@@ -331,6 +331,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Voltaire","lignes":{"metro":["9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Acc%C3%A8s_Station_M%C3%A9tro_Voltaire_Boulevard_Voltaire_-_Paris_XI_%28FR75%29_-_2022-01-15_-_14.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Voltaire_Boulevard_Voltaire_-_Paris_XI_%28FR75%29_-_2022-01-15_-_14.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Voltaire_Boulevard_Voltaire_-_Paris_XI_(FR75)_-_2022-01-15_-_14.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["9"]},"ouv":"10 décembre 1933","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XI<sup>e</sup>)"],"freq":"3 454 006 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place Léon Blum","acc":true},{"num":"2","desc":"boulevard Voltaire"},{"num":"3","desc":"rue Richard-Lenoir"},{"num":"4","desc":"rue Sedaine"},{"num":"5","desc":"Mairie du XI<sup>e</sup>"},{"num":"6","desc":"square Denis Poulot","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Voltaire&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71750&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Voltaire&line=9&sens=Montreuil&stationcode=71750&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"}],"rep":"Léon Blum"};
 
@@ -361,7 +362,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -484,8 +485,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -612,7 +613,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

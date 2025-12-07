@@ -264,6 +264,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Jourdain","lignes":{"metro":["11"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Acc%C3%A8s_Station_M%C3%A9tro_Jourdain_Rue_Belleville_-_Paris_XX_%28FR75%29_-_2022-01-01_-_1.jpg/960px-Acc%C3%A8s_Station_M%C3%A9tro_Jourdain_Rue_Belleville_-_Paris_XX_%28FR75%29_-_2022-01-01_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Jourdain_Rue_Belleville_-_Paris_XX_(FR75)_-_2022-01-01_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["11"]},"ouv":"28 avril 1935","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XIX<sup>e</sup>, XX<sup>e</sup>)"],"freq":"1 881 321 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue de Jourdain","acc":true},{"num":"2","desc":"rue Lassus"},{"num":"3","desc":"rue de Belleville"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Jourdain&line=11&sens=Châtelet&stationcode=71868&linecode=C01381&destcode=Châtelet&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Jourdain&line=11&sens=Rosny:t:sous-Bois&stationcode=71868&linecode=C01381&destcode=Rosny-sous-Bois&destcodealt=false"}]};
 
@@ -294,7 +295,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -417,8 +418,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -545,7 +546,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

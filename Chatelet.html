@@ -484,6 +484,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Châtelet","corresp":["Chatelet-Les Halles"],"lignes":{"metro":["1","4","7","11","14"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Entr%C3%A9e_M%C3%A9tro_Ch%C3%A2telet_Paris_1.jpg/1280px-Entr%C3%A9e_M%C3%A9tro_Ch%C3%A2telet_Paris_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_M%C3%A9tro_Ch%C3%A2telet_Paris_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["1","4","7","11","14"]},"ouv":"6 août 1900","inaug":"Pont Notre-Dame (ligne 7)","voies":"11","quais":"10","zt":"1","ufr":"Oui (ligne 14 uniquement)","communes":["Paris (I<sup>er</sup>, IV<sup>e</sup>)"],"freq":"8,4 M voyageurs (2021)"}],"sorties":[{"num":"10","desc":"place Sainte-Opportune"},{"num":"11","desc":"rue de Rivoli"},{"num":"12","desc":"rue Bertin Poirée"},{"num":"13","desc":"rue des Lavandières"},{"num":"14","desc":"rue Saint-Denis"},{"num":"15","desc":"Théâtre du Châtelet"},{"num":"16","desc":"place du Châtelet","acc":true},{"num":"17","desc":"Théâtre de la Ville","acc":true},{"num":"18","desc":"avenue Victoria"},{"num":"19","desc":"rue Saint-Martin"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Ch%C3%A2telet&line=1&sens=La%20D%C3%A9fense&stationcode=42587&linecode=C01371&destcode=La%20D%C3%A9fense%20(Grande%20Arche)&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Ch%C3%A2telet&line=1&sens=Ch%C3%A2teau:b:de%20Vincennes&stationcode=42587&linecode=C01371&destcode=Ch%C3%A2teau%20de%20Vincennes&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Ch%C3%A2telet&line=4&sens=Porte%20de:b:Clignancourt&stationcode=42587&linecode=C01374&destcode=Porte%20de%20Clignancourt&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Ch%C3%A2telet&line=4&sens=Bagneux&stationcode=42587&linecode=C01374&destcode=BAGNEUX-LUCIE%20AUBRAC&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Ch%C3%A2telet&line=7&sens=La%20Courneuve&stationcode=42587&linecode=C01377&destcode=La%20Courneuve%20-%208%20Mai%201945&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Ch%C3%A2telet&line=7&sens=Ivry%20%E2%80%A2%20Villejuif&stationcode=42587&linecode=C01377&destcode=Mairie%20d%27Ivry%20%E2%80%A2%20Villejuif%20-%20Louis%20Aragon&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Ch%C3%A2telet&line=11&sens=Rosny:t:sous-Bois&stationcode=42587&linecode=C01381&destcode=Rosny-sous-Bois&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Ch%C3%A2telet&line=14&sens=Saint-Denis%20:l::s:Pleyel&stationcode=42587&linecode=C01384&destcode=Saint-Denis%20-%20Pleyel&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Ch%C3%A2telet&line=14&sens=A%C3%A9roport:b:d’Orly&stationcode=42587&linecode=C01384&destcode=A%C3%A9roport%20d%27Orly&destcodealt=false"}]};
 
@@ -514,7 +515,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -637,8 +638,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -765,7 +766,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

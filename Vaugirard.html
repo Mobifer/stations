@@ -268,6 +268,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Vaugirard","rep":"Adolphe Chérioux","lignes":{"metro":["12"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Station_Vaugirard_M%C3%A9tro_Paris_Ligne_12_-_Paris_XV_%28FR75%29_-_2022-07-02_-_2.jpg/1280px-Station_Vaugirard_M%C3%A9tro_Paris_Ligne_12_-_Paris_XV_%28FR75%29_-_2022-07-02_-_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Vaugirard_M%C3%A9tro_Paris_Ligne_12_-_Paris_XV_(FR75)_-_2022-07-02_-_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["12"]},"ouv":"5 novembre 1910","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XV<sup>e</sup>)"],"freq":"2 482 886 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place Adolphe Chérioux","acc":true,"esc":true},{"num":"2","desc":"rue d’Alleray"},{"num":"3","desc":"rue des Favorites"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Vaugirard&line=12&sens=Aubervilliers&stationcode=71091&linecode=C01382&destcode=Mairie%20d%27Aubervilliers&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Vaugirard&line=12&sens=Mairie%20d%27Issy&stationcode=71091&linecode=C01382&destcode=Mairie%20d%27Issy&destcodealt=false"}]};
 
@@ -298,7 +299,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -421,8 +422,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -549,7 +550,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

@@ -243,6 +243,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Cardinal Lemoine","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Acc%C3%A8s_Station_M%C3%A9tro_Cardinal_Lemoine_Rue_Monge_-_Paris_V_%28FR75%29_-_2022-01-15_-_7.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Cardinal_Lemoine_Rue_Monge_-_Paris_V_%28FR75%29_-_2022-01-15_-_7.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Accès_Station_Métro_Cardinal_Lemoine_Rue_Monge_-_Paris_V_(FR75)_-_2022-01-15_-_7.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["10"]},"ouv":"26 avril 1931","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (V<sup>e</sup>)"],"freq":"1 121 854 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue du Cardinal Lemoine","acc":true},{"num":"2","desc":"rue Monge"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Cardinal%20Lemoine&line=10&sens=Boulogne&stationcode=71153&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Cardinal%20Lemoine&line=10&sens=Gare:b:d’Austerlitz&stationcode=71153&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
 
@@ -273,7 +274,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -396,8 +397,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -524,7 +525,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

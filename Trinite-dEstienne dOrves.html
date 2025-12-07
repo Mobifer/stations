@@ -252,6 +252,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Trinité – d’Estienne d’Orves","lignes":{"metro":["12"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Station_Trinit%C3%A9_Estienne_Orves_M%C3%A9tro_Paris_Ligne_12_-_Paris_IX_%28FR75%29_-_2022-07-02_-_10.jpg/1280px-Station_Trinit%C3%A9_Estienne_Orves_M%C3%A9tro_Paris_Ligne_12_-_Paris_IX_%28FR75%29_-_2022-07-02_-_10.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Trinit%C3%A9_Estienne_Orves_M%C3%A9tro_Paris_Ligne_12_-_Paris_IX_(FR75)_-_2022-07-02_-_10.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["12"]},"ouv":"5 novembre 1910","inaug":"Trinité","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (IX<sup>e</sup>)"],"freq":"1 051 982 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place d’Estienne d’Orves","acc":true,"esc":true},{"num":"2","desc":"rue de Châteaudun"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Trinit%C3%A9%20d%27Estienne%20d%27Orves&line=12&sens=Aubervilliers&stationcode=71355&linecode=C01382&destcode=Mairie%20d%27Aubervilliers&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Trinit%C3%A9%20d%27Estienne%20d%27Orves&line=12&sens=Mairie%20d’Issy&stationcode=71355&linecode=C01382&destcode=Mairie%20d%27Issy&destcodealt=false"}]};
 
@@ -282,7 +283,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -405,8 +406,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -533,7 +534,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

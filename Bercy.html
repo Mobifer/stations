@@ -369,6 +369,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Bercy","lignes":{"metro":["6","14"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Acc%C3%A8s_Station_M%C3%A9tro_Bercy_Place_Bataillon_Pacifique_-_Paris_XII_%28FR75%29_-_2022-01-13_-_1.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Bercy_Place_Bataillon_Pacifique_-_Paris_XII_%28FR75%29_-_2022-01-13_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Bercy_Place_Bataillon_Pacifique_-_Paris_XII_(FR75)_-_2022-01-13_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["6","14"]},"ouv":"1<sup>er</sup> mars 1909","voies":"4","quais":"4","zt":"1","ufr":"Oui (ligne 14 uniquement)","communes":["Paris (XII<sup>e</sup>)"],"freq":"3 884 212 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place du Bataillon du Pacifique","pti":"Arena","acc":true},{"num":"2","desc":"boulevard de Bercy","asc":true},{"num":"3","desc":"rue Corbineau"},{"num":"4","desc":"rue Henri Desgrange","acc":true,"asc":true},{"num":"5","desc":"rue Paul Belmondo","pti":"Parc de Bercy","acc":true},{"num":"6","desc":"rue de Bercy","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Bercy&line=6&sens=%C3%89toile&stationcode=71607&linecode=C01376&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bercy&line=6&sens=Nation&stationcode=71607&linecode=C01376&destcode=Nation&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bercy&line=14&sens=Saint-Denis%20:l::s:Pleyel&stationcode=71607&linecode=C01384&destcode=Saint-Denis%20-%20Pleyel&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bercy&line=14&sens=A%C3%A9roport:b:d’Orly&stationcode=71607&linecode=C01384&destcode=A%C3%A9roport%20d%27Orly&destcodealt=false"}]};
 
@@ -399,7 +400,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -522,8 +523,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -650,7 +651,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

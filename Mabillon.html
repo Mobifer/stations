@@ -245,6 +245,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Mabillon","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Station_Mabillon_Métro_Paris_Ligne_10_-_Paris_VI_%28FR75%29_-_2022-07-02_-_9.jpg/1280px-Station_Mabillon_Métro_Paris_Ligne_10_-_Paris_VI_%28FR75%29_-_2022-07-02_-_9.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Mabillon_Métro_Paris_Ligne_10_-_Paris_VI_(FR75)_-_2022-07-02_-_9.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["10"]},"ouv":"10 mars 1925","voies":2,"quais":2,"zt":1,"ufr":"Non","communes":["Paris (VI<sup>e</sup>)"],"freq":"1 195 051 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue de Montfaucon","acc":true},{"num":"2","desc":"rue du Four","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Mabillon&line=10&sens=Boulogne&stationcode=73639&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Mabillon&line=10&sens=Gare:b:d’Austerlitz&stationcode=73639&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
 
@@ -275,7 +276,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -398,8 +399,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -526,7 +527,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

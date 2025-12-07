@@ -308,6 +308,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Les Courtilles","rep":"Asnières – Gennevilliers","lignes":{"metro":["13"],"tram":["T1"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Station_M%C3%A9tro_Ligne_13_Courtilles_Asni%C3%A8res_Seine_2.jpg/1280px-Station_M%C3%A9tro_Ligne_13_Courtilles_Asni%C3%A8res_Seine_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_M%C3%A9tro_Ligne_13_Courtilles_Asni%C3%A8res_Seine_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["13"]},"ouv":"14 juin 2008","voies":"2","quais":"2","zt":"3","ufr":"Oui","communes":["Asnières-sur-Seine","Gennevilliers"],"freq":"2 802 689 voyageurs (2021)"},{"lignes":{"tram":["T1"]},"ouv":"15 novembre 2012","voies":"2","quais":"2","zt":"3","ufr":"Oui","communes":["Asnières-sur-Seine","Gennevilliers"]}],"sorties":[{"num":"1","desc":"avenue de la Redoute","acc":true},{"num":"2","desc":"boulevard Intercommunal","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Les%20Courtilles&line=13&sens=Asni%C3%A8res:b:Gennevilliers&stationcode=72286&linecode=C01383&destcode=Asni%C3%A8res%20-%20Gennevilliers%20Les%20Courtilles%20%E2%80%A2%20Saint-Denis%20-%20Universit%C3%A9&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Les%20Courtilles&line=13&sens=Châtillon&stationcode=72286&linecode=C01383&destcode=Ch%C3%A2tillon-Montrouge&destcodealt=false"}]};
 
@@ -338,7 +339,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -461,8 +462,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -589,7 +590,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

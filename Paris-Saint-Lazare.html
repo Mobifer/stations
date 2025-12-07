@@ -445,6 +445,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Paris – Saint-Lazare","corresp":["Haussmann-Gare Saint-Lazare","Saint-Lazare"],"lignes":{"train":["J","L"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Gare_Saint-Lazare_train.jpg/1280px-Gare_Saint-Lazare_train.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Gare_Saint-Lazare_train.jpg","imga":"APK","stats":[{"lignes":{"train":["J","L"]},"ouv":"26 août 1837","voies":"27","quais":"27","zt":"1","ufr":"Oui","communes":["Paris (VIII<sup>e</sup>, IX<sup>e</sup>)"],"freq":"103 453 620 voyageurs (2023)"}],"sorties":[{"num":"1","desc":"cour de Rome","acc":true,"asc":true,"esc":true},{"num":"2","desc":"place du Havre"},{"num":"3","desc":"passage du Havre"},{"num":"4","desc":"galerie des Marchands","esc":true},{"num":"5","desc":"rue Intérieure"},{"num":"6","desc":"place Gabriel Péri"},{"num":"7","desc":"rue de l’Arcade"},{"num":"8","desc":"rue d’Amsterdam","asc":true},{"num":"9","desc":"cour du Havre","esc":true},{"num":"10","desc":"rue de Caumartin","esc":true},{"num":"11","desc":"rue Saint-Lazare"}],"siv":[{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.8755948%2C2.3274702&stop=stop_area%3AIDFM%3A71370&lines=line%3AIDFM%3AC01739%2Cline%3AIDFM%3AC01846&platforms="},{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.8749665%2C2.3244925&stop=stop_area%3AIDFM%3A71370&lines=line%3AIDFM%3AC01740%2Cline%3AIDFM%3AC01847&platforms="}]};
 
@@ -475,7 +476,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -598,8 +599,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -726,7 +727,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

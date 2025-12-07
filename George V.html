@@ -254,6 +254,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"George V","lignes":{"metro":["1"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Entrée_Station_Métro_George_V_Paris_6.jpg/1024px-Entrée_Station_Métro_George_V_Paris_6.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Entrée_Station_Métro_George_V_Paris_6.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["1"]},"ouv":"13 août 1900","inaug":"Alma","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (VIII<sup>e</sup>)"],"freq":"3 842 260 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"Champs-Élysées","esc":true},{"num":"2","desc":"avenue George V","acc":true,"esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=George%20V&line=1&sens=La%20D%C3%A9fense&stationcode=43283&linecode=C01371&destcode=La%20D%C3%A9fense%20(Grande%20Arche)&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=George%20V&line=1&sens=Château:b:de%20Vincennes&stationcode=43283&linecode=C01371&destcode=Château%20de%20Vincennes&destcodealt=false"}]};
 
@@ -284,7 +285,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -407,8 +408,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -535,7 +536,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

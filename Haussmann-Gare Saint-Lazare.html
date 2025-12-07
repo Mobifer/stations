@@ -296,6 +296,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Haussmann – Gare Saint-Lazare","corresp":["Auber","Havre-Caumartin","Paris-Saint-Lazare","Saint-Lazare"],"lignes":{"rer":["E"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Quais_RER_E_Gare_Haussmann_St_Lazare_Paris_3.jpg/1280px-Quais_RER_E_Gare_Haussmann_St_Lazare_Paris_3.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Quais_RER_E_Gare_Haussmann_St_Lazare_Paris_3.jpg","imga":"Chabe01","stats":[{"lignes":{"rer":["E"]},"ouv":"14 juillet 1999","voies":"4","quais":"2 centraux","zt":"1","ufr":"Oui","communes":["Paris (VIII<sup>e</sup>, IX<sup>e</sup>)"],"freq":"32 617 013 voyageurs (2022)"}],"sorties":[{"num":"SNCF","desc":"rue Saint-Lazare","acc":true},{"num":"SNCF","desc":"rue de Provence","esc":true},{"num":"SNCF","desc":"place Georges Berry","esc":true,"asc":true},{"num":"SNCF","desc":"rue du Havre","esc":true}],"siv":[{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.874998862001185%2C2.328646179742093&stop=stop_area%3AIDFM%3A73688&lines=line%3AIDFM%3AC01729&platforms="}]};
 
@@ -326,7 +327,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -449,8 +450,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -577,7 +578,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

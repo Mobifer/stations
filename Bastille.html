@@ -459,6 +459,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Bastille","lignes":{"metro":["1","5","8"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/%C3%89dicule_Bastille.JPG/1280px-%C3%89dicule_Bastille.JPG","imgp":"https://commons.wikimedia.org/wiki/File:%C3%89dicule_Bastille.JPG","imga":"LPLT","stats":[{"lignes":{"metro":["1","5","8"]},"ouv":"19 juillet 1900","voies":"6","quais":"6","zt":"1","ufr":"Non","communes":["Paris (IV<sup>e</sup>, XI<sup>e</sup>, XII<sup>e</sup>)"],"freq":"8,1 M voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue de la Roquette","acc":true},{"num":"2","desc":"rue du Faubourg Saint-Antoine","rep":"Hôpital des Quinze-Vingts"},{"num":"3","pti":"Opéra Bastille"},{"num":"4","desc":"rue de Lyon","pti":"Port de l’Arsenal","acc":true},{"num":"5","desc":"boulevard Bourbon","esc":true},{"num":"6","desc":"boulevard Henri IV"},{"num":"7","desc":"place de la Bastille","pti":"Place des Vosges","acc":true,"esc":true},{"num":"8","desc":"boulevard Beaumarchais"},{"num":"9","desc":"boulevard Richard-Lenoir"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Bastille&line=1&sens=La%20D%C3%A9fense&stationcode=42288&linecode=C01371&destcode=La%20D%C3%A9fense%20(Grande%20Arche)&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bastille&line=1&sens=Ch%C3%A2teau:b:de%20Vincennes&stationcode=42288&linecode=C01371&destcode=Ch%C3%A2teau%20de%20Vincennes&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bastille&line=5&sens=Bobigny&stationcode=42288&linecode=C01375&destcode=Bobigny%20Pablo%20Picasso&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bastille&line=5&sens=Place%20d’Italie&stationcode=42288&linecode=C01375&destcode=Place%20d%27Italie&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bastille&line=8&sens=Balard&stationcode=42288&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bastille&line=8&sens=Cr%C3%A9teil&stationcode=42288&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"}]};
 
@@ -489,7 +490,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -612,8 +613,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -740,7 +741,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

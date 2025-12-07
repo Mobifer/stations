@@ -273,6 +273,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Corentin Celton","lignes":{"metro":["12"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Entr%C3%A9e_Station_M%C3%A9tro_Celton_Issy_Moulineaux_2.jpg/1280px-Entr%C3%A9e_Station_M%C3%A9tro_Celton_Issy_Moulineaux_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Entrée_Station_Métro_Celton_Issy_Moulineaux_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["12"]},"ouv":"24 mars 1934","inaug":"Petits Ménages","voies":"2","quais":"2","zt":"2","ufr":"Non","communes":["Issy-les-Moulineaux"],"freq":"2 504 685 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard Gambetta","acc":true},{"num":"2","desc":"rue Ernest Renan"},{"num":"3","desc":"place Paul Vaillant-Couturier","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Corentin%20Celton&line=12&sens=Aubervilliers&stationcode=70990&linecode=C01382&destcode=Mairie%20d%27Aubervilliers&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Corentin%20Celton&line=12&sens=Mairie%20d’Issy&stationcode=70990&linecode=C01382&destcode=Mairie%20d%27Issy&destcodealt=false"}]};
 
@@ -303,7 +304,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -426,8 +427,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -554,7 +555,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

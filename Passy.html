@@ -265,6 +265,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Passy","lignes":{"metro":["6"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Train_arriving_at_Passy_metro_station_in_April_2019.jpg/1280px-Train_arriving_at_Passy_metro_station_in_April_2019.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Train_arriving_at_Passy_metro_station_in_April_2019.jpg","imga":"Nick-D","stats":[{"lignes":{"metro":["6"]},"ouv":"6 novembre 1903","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>)"],"freq":"2 080 548 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place du Costa Rica","pti":["Maison de Balzac","Musée Georges Clémenceau"],"acc":true,"esc":true},{"num":"2","desc":"avenue du Président Kennedy","pti":["Maison de la Radio","Musée du Vin"]}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Passy&line=6&sens=%C3%89toile&stationcode=71237&linecode=C01376&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Passy&line=6&sens=Nation&stationcode=71237&linecode=C01376&destcode=Nation&destcodealt=false"}]};
 
@@ -295,7 +296,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -418,8 +419,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -546,7 +547,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

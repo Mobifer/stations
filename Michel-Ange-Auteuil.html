@@ -253,6 +253,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Michel-Ange – Auteuil","lignes":{"metro":["9","10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Station_Michel_Ange_Auteuil_M%C3%A9tro_Paris_Ligne_10_-_Paris_XVI_%28FR75%29_-_2022-07-04_-_5.jpg/1280px-Station_Michel_Ange_Auteuil_M%C3%A9tro_Paris_Ligne_10_-_Paris_XVI_%28FR75%29_-_2022-07-04_-_5.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Michel_Ange_Auteuil_M%C3%A9tro_Paris_Ligne_10_-_Paris_XVI_(FR75)_-_2022-07-04_-_5.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["9","10"]},"ouv":"30 septembre 1913","voies":"4","quais":"3","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>)"],"freq":"1 512 050 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place Jean Lorrain","acc":true},{"num":"2","desc":"rue d’Auteuil","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Michel%20Ange-Auteuil&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71206&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Michel%20Ange-Auteuil&line=9&sens=Montreuil&stationcode=71206&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Michel%20Ange-Auteuil&line=10&sens=Boulogne&stationcode=71206&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"}]};
 
@@ -283,7 +284,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -406,8 +407,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -534,7 +535,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

@@ -421,6 +421,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Montparnasse – Bienvenüe","corresp":["Paris-Montparnasse"],"lignes":{"metro":["4","6","12","13"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Station_Montparnasse-Bienven%C3%BCe.jpg/1280px-Station_Montparnasse-Bienven%C3%BCe.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Montparnasse-Bienven%C3%BCe.jpg","imga":"Arthur Weidmann","stats":[{"lignes":{"metro":["4","6","12","13"]},"ouv":"24 avril 1906","voies":"8","quais":"8","zt":"1","ufr":"Non","communes":["Paris (VI<sup>e</sup>, XIV<sup>e</sup>, XV<sup>e</sup>)"],"freq":"20,4 M de voyageurs (2021)","inaug":"Montparnasse<br>Avenue du Maine<br>Bienvenüe"}],"sorties":[{"num":"1","desc":"Porte Océane"},{"num":"2","desc":"place Bienvenüe"},{"num":"4","desc":"Tour Montparnasse"},{"num":"5","desc":"boulevard du Montparnasse","acc":true},{"num":"6","desc":"rue d’Odessa","esc":true},{"num":"7","desc":"rue du Départ","pti":"Centre Commercial","esc":true},{"num":"8","desc":"rue de Rennes"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Montparnasse-Bienven%C3%BCe&line=4&sens=Porte%20de:b:Clignancourt&stationcode=71139&linecode=C01374&destcode=Porte%20de%20Clignancourt&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Montparnasse-Bienven%C3%BCe&line=4&sens=Bagneux&stationcode=71139&linecode=C01374&destcode=BAGNEUX-LUCIE%20AUBRAC&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Montparnasse-Bienven%C3%BCe&line=6&sens=%C3%89toile&stationcode=71139&linecode=C01374&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Montparnasse-Bienven%C3%BCe&line=6&sens=Nation&stationcode=71139&linecode=C01374&destcode=Nation&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Montparnasse-Bienven%C3%BCe&line=12&sens=Aubervilliers&stationcode=71139&linecode=C01374&destcode=Mairie%20d%27Aubervilliers&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Montparnasse-Bienven%C3%BCe&line=12&sens=Mairie%20d’Issy&stationcode=71139&linecode=C01374&destcode=Mairie%20d%27Issy&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Montparnasse-Bienven%C3%BCe&line=13&sens=Asni%C3%A8res:b:Gennevilliers%20%E2%80%A2%20Saint-Denis&stationcode=71139&linecode=C01383&destcode=Asni%C3%A8res%20-%20Gennevilliers%20Les%20Courtilles%20%E2%80%A2%20Saint-Denis%20-%20Universit%C3%A9&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Montparnasse-Bienven%C3%BCe&line=13&sens=Châtillon&stationcode=71139&linecode=C01383&destcode=Ch%C3%A2tillon-Montrouge&destcodealt=false"}]};
 
@@ -451,7 +452,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -574,8 +575,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -702,7 +703,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

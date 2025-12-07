@@ -347,6 +347,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Marcel Sembat","lignes":{"metro":["9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Acc%C3%A8s_Station_M%C3%A9tro_Marcel_Sembat_Place_Marcel_Sembat_-_Boulogne-Billancourt_%28FR92%29_-_2022-01-22_-_9.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Marcel_Sembat_Place_Marcel_Sembat_-_Boulogne-Billancourt_%28FR92%29_-_2022-01-22_-_9.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Marcel_Sembat_Place_Marcel_Sembat_-_Boulogne-Billancourt_(FR92)_-_2022-01-22_-_9.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["9"]},"ouv":"3 février 1934","voies":"2","quais":"2","zt":"2","ufr":"Non","communes":["Boulogne-Billancourt"],"freq":"1 967 532 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue Victor Hugo","esc":true},{"num":"2","desc":"place Marcel Sembat"},{"num":"3","desc":"avenue Édouard Vaillant"},{"num":"4","desc":"rue des Quatre Cheminées"},{"num":"5","desc":"avenue André Morizet"},{"num":"6","desc":"rue Rieux"},{"num":"7","desc":"rue Danjou"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Marcel%20Sembat&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71054&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Marcel%20Sembat&line=9&sens=Montreuil&stationcode=71054&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"}]};
 
@@ -377,7 +378,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -500,8 +501,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -628,7 +629,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

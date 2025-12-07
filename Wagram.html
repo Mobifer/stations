@@ -245,6 +245,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Wagram","lignes":{"metro":["3"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Acc%C3%A8s_Station_M%C3%A9tro_Wagram_Place_Monseigneur_Loutil_-_Paris_XVII_%28FR75%29_-_2022-01-30_-_1.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Wagram_Place_Monseigneur_Loutil_-_Paris_XVII_%28FR75%29_-_2022-01-30_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Wagram_Place_Monseigneur_Loutil_-_Paris_XVII_(FR75)_-_2022-01-30_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["3"]},"ouv":"23 mai 1910","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XVII<sup>e</sup>)"],"freq":"1 508 617 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place Monseigneur Loutil","acc":true},{"num":"2","desc":"avenue de Villiers","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Wagram&line=3&sens=Levallois&stationcode=71423&linecode=C01373&destcode=Pont%20de%20Levallois%20-%20B%C3%A9con&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Wagram&line=3&sens=Gallieni&stationcode=71423&linecode=C01373&destcode=Gallieni&destcodealt=false"}]};
 
@@ -275,7 +276,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -398,8 +399,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -526,7 +527,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

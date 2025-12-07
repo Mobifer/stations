@@ -368,6 +368,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Porte des Lilas","lignes":{"metro":["3bis","11"],"tram":["T3b"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/B%C3%A2timent_entr%C3%A9e_m%C3%A9tro_Porte_Lilas_Paris_2.jpg/1280px-B%C3%A2timent_entr%C3%A9e_m%C3%A9tro_Porte_Lilas_Paris_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:B%C3%A2timent_entr%C3%A9e_m%C3%A9tro_Porte_Lilas_Paris_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["3bis","11"],"tram":["T3b"]},"ouv":"27 novembre 1921","voies":"7","quais":"6","zt":"1","ufr":"Non","communes":["Paris (XIX<sup>e</sup>)"],"freq":"3 105 016 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue Gambetta","acc":true,"asc":true},{"num":"2","desc":"boulevard Mortier"},{"num":"3","desc":"rue de Belleville"},{"num":"4","desc":"boulevard Sérurier","rep":"Hôpital Robert Debré"},{"num":"5","desc":"square du Docteur Variot"},{"num":"6","desc":"rue des Glaïeuls","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20des%20Lilas&line=3b&sens=Gambetta&stationcode=71889&linecode=C01386&destcode=Gambetta&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20des%20Lilas&line=11&sens=Ch%C3%A2telet&stationcode=71889&linecode=C01386&destcode=Ch%C3%A2telet&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20des%20Lilas&line=11&sens=Rosny:t:sous-Bois&stationcode=71889&linecode=C01386&destcode=Rosny-sous-Bois&destcodealt=false"},{"tram":"24415","line":"3b"},{"tram":"24409","line":"3b"}]};
 
@@ -398,7 +399,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -521,8 +522,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -649,7 +650,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

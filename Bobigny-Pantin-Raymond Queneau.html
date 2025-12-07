@@ -252,6 +252,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Bobigny – Pantin – Raymond Queneau","lignes":{"metro":["5"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Station_M%C3%A9tro_Bobigny_Pantin_Raymond_Queneau_Ligne_5_-_Pantin_%28FR93%29_-_2022-04-28_-_2.jpg/1280px-Station_M%C3%A9tro_Bobigny_Pantin_Raymond_Queneau_Ligne_5_-_Pantin_%28FR93%29_-_2022-04-28_-_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Métro_Bobigny_Pantin_Raymond_Queneau_Ligne_5_-_Pantin_(FR93)_-_2022-04-28_-_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["5"]},"ouv":"25 avril 1985","voies":"2","quais":"1","zt":"2","ufr":"Non","communes":["Bobigny","Pantin"],"freq":"2 335 465 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue de Paris","acc":true},{"num":"2","desc":"avenue Anatole France","rep":"Centre Commercial Paddock","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Bobigny-Pantin%20-%20Raymond%20Queneau&line=5&sens=Bobigny&stationcode=72039&linecode=C01375&destcode=Bobigny%20Pablo%20Picasso&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bobigny-Pantin%20-%20Raymond%20Queneau&line=5&sens=Place%20d’Italie&stationcode=72039&linecode=C01375&destcode=Place%20d%27Italie&destcodealt=false"}]};
 
@@ -282,7 +283,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -405,8 +406,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -533,7 +534,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

@@ -389,6 +389,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
+		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
 			const station = {"nom":"Strasbourg – Saint-Denis","lignes":{"metro":["4","8","9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Station_Strasbourg_Saint_Denis_M%C3%A9tro_Paris_Ligne_8_-_Paris_X_%28FR75%29_-_2022-07-02_-_4.jpg/1280px-Station_Strasbourg_Saint_Denis_M%C3%A9tro_Paris_Ligne_8_-_Paris_X_%28FR75%29_-_2022-07-02_-_4.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Strasbourg_Saint_Denis_M%C3%A9tro_Paris_Ligne_8_-_Paris_X_(FR75)_-_2022-07-02_-_4.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["4","8","9"]},"ouv":"21 avril 1908","voies":"6","quais":"6","zt":"1","ufr":"Non","communes":["Paris (II<sup>e</sup>, III<sup>e</sup>, X<sup>e</sup>)"],"freq":"6 345 770 voyageurs (2021)","inaug":"Boulevard Saint-Denis"}],"sorties":[{"num":"1","desc":"boulevard de Sébastopol","acc":true},{"num":"2","desc":"rue Saint-Martin","esc":true},{"num":"3","desc":"Porte Saint-Martin"},{"num":"4","desc":"boulevard de Bonne Nouvelle"},{"num":"5","desc":"rue Saint-Denis"},{"num":"6","desc":"boulevard de Strasbourg"},{"num":"7","desc":"passage du Prado"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Strasbourg-Saint-Denis&line=4&sens=Porte%20de:b:Clignancourt&stationcode=73633&linecode=C01374&destcode=Porte%20de%20Clignancourt&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Strasbourg-Saint-Denis&line=4&sens=Bagneux&stationcode=73633&linecode=C01374&destcode=BAGNEUX-LUCIE%20AUBRAC&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Strasbourg-Saint-Denis&line=8&sens=Balard&stationcode=73633&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Strasbourg-Saint-Denis&line=8&sens=Cr%C3%A9teil&stationcode=73633&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Strasbourg-Saint-Denis&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=73633&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Strasbourg-Saint-Denis&line=9&sens=Montreuil&stationcode=73633&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"}]};
 
@@ -419,7 +420,7 @@
 			let prochainsArrets = {};
 			let destinations = {};
 			
-			setTimeout(
+			setTimeout(() => {
 				fetch('/data/metroliste.json')
 					.then(response => response.json())
 					.then(data => {
@@ -542,8 +543,8 @@
 							document.getElementById("stations-suivantes").style.display = "block";
 						}
 					})
-				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err)),
-			500 );
+				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
+			1000 );
 		</script>
 		<script>
 			// Génération de la carte
@@ -670,7 +671,7 @@
 				stationsMarkers.addTo(map);
 			}
 
-			setTimeout(() => map.invalidateSize(), 500);
+			setTimeout(() => map.invalidateSize(), 1000);
 		</script>
 		<script src="/addons/footer.js"></script>
 		<script>

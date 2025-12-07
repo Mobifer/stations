@@ -77,7 +77,7 @@
 											
 											
 												
-													<span class="repere" style='margin-top:5px !important;'>UNESCO – Fontenoy</span>
+													<span class="repere" style='margin-top:5px !important;'>UNESCO–Fontenoy</span>
 													
 												
 												
@@ -105,7 +105,7 @@
 											
 											
 												
-													<span class="repere" style='margin-top:5px !important;'>UNESCO – Miollis</span>
+													<span class="repere" style='margin-top:5px !important;'>UNESCO–Miollis</span>
 													
 												
 												
@@ -262,7 +262,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Ségur","rep":"UNESCO","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Acc%C3%A8s_Station_M%C3%A9tro_S%C3%A9gur_Avenue_Suffren_-_Paris_XV_%28FR75%29_-_2022-01-22_-_7.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_S%C3%A9gur_Avenue_Suffren_-_Paris_XV_%28FR75%29_-_2022-01-22_-_7.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_S%C3%A9gur_Avenue_Suffren_-_Paris_XV_(FR75)_-_2022-01-22_-_7.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["10"]},"ouv":"29 septembre 1937","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (VII<sup>e</sup>, XV<sup>e</sup>)"],"freq":"1 100 151 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue de Suffren","rep":"UNESCO – Fontenoy","acc":true},{"num":"2","desc":"boulevard Garibaldi","rep":"UNESCO – Miollis"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=S%C3%A9gur&line=10&sens=Boulogne&stationcode=71157&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=S%C3%A9gur&line=10&sens=Gare:b:d’Austerlitz&stationcode=71157&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
+			const station = {"nom":"Ségur","rep":"UNESCO","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Acc%C3%A8s_Station_M%C3%A9tro_S%C3%A9gur_Avenue_Suffren_-_Paris_XV_%28FR75%29_-_2022-01-22_-_7.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_S%C3%A9gur_Avenue_Suffren_-_Paris_XV_%28FR75%29_-_2022-01-22_-_7.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_S%C3%A9gur_Avenue_Suffren_-_Paris_XV_(FR75)_-_2022-01-22_-_7.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["10"]},"ouv":"29 septembre 1937","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (VII<sup>e</sup>, XV<sup>e</sup>)"],"freq":"1 100 151 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue de Suffren","rep":"UNESCO–Fontenoy","acc":true},{"num":"2","desc":"boulevard Garibaldi","rep":"UNESCO–Miollis"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=S%C3%A9gur&line=10&sens=Boulogne&stationcode=71157&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=S%C3%A9gur&line=10&sens=Gare:b:d’Austerlitz&stationcode=71157&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -320,7 +320,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -435,8 +435,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

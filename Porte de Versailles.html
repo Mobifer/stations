@@ -78,7 +78,7 @@
 											
 											
 												
-													<span class="ptinteret" style='margin-top:5px !important;'>Parc des Expositions – Halls 2 à 8</span>
+													<span class="ptinteret" style='margin-top:5px !important;'>Parc des Expositions–Halls 2 à 8</span>
 													
 												
 												
@@ -106,7 +106,7 @@
 											
 											
 												
-													<span class="ptinteret" style='margin-top:5px !important;'>Parc des Expositions – Hall 1</span>
+													<span class="ptinteret" style='margin-top:5px !important;'>Parc des Expositions–Hall 1</span>
 													
 												
 												
@@ -407,7 +407,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Porte de Versailles","pti":"Parc des Expositions","lignes":{"metro":["12"],"tram":["T2","T3a"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Paris_Metro_12_Porte_de_Versailles_Eingang.JPG/1280px-Paris_Metro_12_Porte_de_Versailles_Eingang.JPG","imgp":"https://commons.wikimedia.org/wiki/File:Paris_Metro_12_Porte_de_Versailles_Eingang.JPG","imga":"Bellomonte","stats":[{"lignes":{"metro":["12"]},"ouv":"5 novembre 1910","voies":"3","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XV<sup>e</sup>)"],"freq":"3 268 157 voyageurs (2021)"},{"lignes":{"tram":["T2","T3a"]},"ouv":"2 juillet 1997","voies":"4","quais":"4","zt":"1","ufr":"Oui","communes":["Paris (XV<sup>e</sup>)"]}],"sorties":[{"num":"1","desc":"avenue Ernest Renan","pti":"Parc des Expositions – Halls 2 à 8","acc":true},{"num":"2","desc":"Palais des Sports","pti":"Parc des Expositions – Hall 1"},{"num":"3","desc":"rue de Vaugirard"},{"num":"4","desc":"boulevard Victor"},{"num":"5","desc":"boulevard Lefebvre"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20de%20Versailles&line=12&sens=Aubervilliers&stationcode=71045&linecode=C01382&destcode=Mairie%20d%27Aubervilliers&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20de%20Versailles&line=12&sens=Mairie%20d’Issy&stationcode=71045&linecode=C01382&destcode=Mairie%20d%27Issy&destcodealt=false"},{"tram":"24111","line":"3a"},{"tram":"24114","line":"3a"}]};
+			const station = {"nom":"Porte de Versailles","pti":"Parc des Expositions","lignes":{"metro":["12"],"tram":["T2","T3a"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Paris_Metro_12_Porte_de_Versailles_Eingang.JPG/1280px-Paris_Metro_12_Porte_de_Versailles_Eingang.JPG","imgp":"https://commons.wikimedia.org/wiki/File:Paris_Metro_12_Porte_de_Versailles_Eingang.JPG","imga":"Bellomonte","stats":[{"lignes":{"metro":["12"]},"ouv":"5 novembre 1910","voies":"3","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XV<sup>e</sup>)"],"freq":"3 268 157 voyageurs (2021)"},{"lignes":{"tram":["T2","T3a"]},"ouv":"2 juillet 1997","voies":"4","quais":"4","zt":"1","ufr":"Oui","communes":["Paris (XV<sup>e</sup>)"]}],"sorties":[{"num":"1","desc":"avenue Ernest Renan","pti":"Parc des Expositions–Halls 2 à 8","acc":true},{"num":"2","desc":"Palais des Sports","pti":"Parc des Expositions–Hall 1"},{"num":"3","desc":"rue de Vaugirard"},{"num":"4","desc":"boulevard Victor"},{"num":"5","desc":"boulevard Lefebvre"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20de%20Versailles&line=12&sens=Aubervilliers&stationcode=71045&linecode=C01382&destcode=Mairie%20d%27Aubervilliers&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20de%20Versailles&line=12&sens=Mairie%20d’Issy&stationcode=71045&linecode=C01382&destcode=Mairie%20d%27Issy&destcodealt=false"},{"tram":"24111","line":"3a"},{"tram":"24114","line":"3a"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -465,7 +465,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -580,8 +580,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

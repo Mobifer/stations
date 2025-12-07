@@ -29,7 +29,7 @@
 			<span class="shadowed pictos"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span></span><br>
 			<span class="centered terminus-box">Place Monge</span>
 			
-				<br><span class="ptinteret-station">Jardin des Plantes – Arènes de Lutèce</span>
+				<br><span class="ptinteret-station">Jardin des Plantes–Arènes de Lutèce</span>
 			
 			
 			</p>
@@ -257,7 +257,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Place Monge","lignes":{"metro":["7"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/M%C3%A9tro_de_Paris_-_Ligne_7_-_Place_Monge_06.jpg/1280px-M%C3%A9tro_de_Paris_-_Ligne_7_-_Place_Monge_06.jpg","imgp":"https://commons.wikimedia.org/wiki/File:M%C3%A9tro_de_Paris_-_Ligne_7_-_Place_Monge_06.jpg","imga":"Greenwitcher","stats":[{"lignes":{"metro":["7"]},"ouv":"15 février 1930","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (V<sup>e</sup>)"],"freq":"1 837 996 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place Monge","acc":true,"esc":true},{"num":"2","desc":"rue de Navarre","pti":"Arènes de Lutèce"}],"siv":[{"metro":"https://enrail.org/ratp/?style=siel&station=Place%20Monge&line=7&sens=La%20Courneuve&stationcode=71133&linecode=C01377&destcode=La%20Courneuve%20-%208%20Mai%201945&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Place%20Monge&line=7&sens=Ivry%20%E2%80%A2%20Villejuif&stationcode=71133&linecode=C01377&destcode=Mairie%20d%27Ivry%20%E2%80%A2%20Villejuif%20-%20Louis%20Aragon&destcodealt=false"}],"pti":"Jardin des Plantes – Arènes de Lutèce"};
+			const station = {"nom":"Place Monge","lignes":{"metro":["7"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/M%C3%A9tro_de_Paris_-_Ligne_7_-_Place_Monge_06.jpg/1280px-M%C3%A9tro_de_Paris_-_Ligne_7_-_Place_Monge_06.jpg","imgp":"https://commons.wikimedia.org/wiki/File:M%C3%A9tro_de_Paris_-_Ligne_7_-_Place_Monge_06.jpg","imga":"Greenwitcher","stats":[{"lignes":{"metro":["7"]},"ouv":"15 février 1930","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (V<sup>e</sup>)"],"freq":"1 837 996 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place Monge","acc":true,"esc":true},{"num":"2","desc":"rue de Navarre","pti":"Arènes de Lutèce"}],"siv":[{"metro":"https://enrail.org/ratp/?style=siel&station=Place%20Monge&line=7&sens=La%20Courneuve&stationcode=71133&linecode=C01377&destcode=La%20Courneuve%20-%208%20Mai%201945&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Place%20Monge&line=7&sens=Ivry%20%E2%80%A2%20Villejuif&stationcode=71133&linecode=C01377&destcode=Mairie%20d%27Ivry%20%E2%80%A2%20Villejuif%20-%20Louis%20Aragon&destcodealt=false"}],"pti":"Jardin des Plantes–Arènes de Lutèce"};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -315,7 +315,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -430,8 +430,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

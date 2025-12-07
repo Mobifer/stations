@@ -6,11 +6,11 @@
 		<link rel="stylesheet" href="/stationstyles.css" />
 		
 		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
-		<title>Censier – Daubenton - MobiFer</title>
-		<meta name="description" content="Plus d’informations sur la station Censier – Daubenton sur MobiFer." />
+		<title>Censier–Daubenton - MobiFer</title>
+		<meta name="description" content="Plus d’informations sur la station Censier–Daubenton sur MobiFer." />
 		<meta name="theme-color" content="#0b0082" />
-		<meta property="og:title" content="Censier – Daubenton - MobiFer" />
-		<meta property="og:description" content="Plus d’informations sur la station Censier – Daubenton sur MobiFer." />
+		<meta property="og:title" content="Censier–Daubenton - MobiFer" />
+		<meta property="og:description" content="Plus d’informations sur la station Censier–Daubenton sur MobiFer." />
 		<meta property="og:image" content="" />
 	</head>
 	<body>
@@ -27,7 +27,7 @@
 			<div class="centered">
 			<p class="centered"><strong>Station</strong><br>
 			<span class="shadowed pictos"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span></span><br>
-			<span class="centered terminus-box">Censier – Daubenton</span>
+			<span class="centered terminus-box">Censier–Daubenton</span>
 			
 			
 			</p>
@@ -246,7 +246,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Censier – Daubenton","lignes":{"metro":["7"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Entr%C3%A9e_Station_M%C3%A9tro_Censier_Daubenton_Paris_4.jpg/1280px-Entr%C3%A9e_Station_M%C3%A9tro_Censier_Daubenton_Paris_4.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_Station_M%C3%A9tro_Censier_Daubenton_Paris_4.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["7"]},"ouv":"15 février 1930","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (V<sup>e</sup>)"],"freq":"2 291 843 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue de Mirbel"},{"num":"2","desc":"rue Monge","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=siel&station=Censier-Daubenton&line=7&sens=La%20Courneuve&stationcode=71100&linecode=C01377&destcode=La%20Courneuve%20-%208%20Mai%201945&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Censier-Daubenton&line=7&sens=Ivry%20%E2%80%A2%20Villejuif&stationcode=71100&linecode=C01377&destcode=Mairie%20d%27Ivry%20%E2%80%A2%20Villejuif%20-%20Louis%20Aragon&destcodealt=false"}]};
+			const station = {"nom":"Censier–Daubenton","lignes":{"metro":["7"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Entr%C3%A9e_Station_M%C3%A9tro_Censier_Daubenton_Paris_4.jpg/1280px-Entr%C3%A9e_Station_M%C3%A9tro_Censier_Daubenton_Paris_4.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_Station_M%C3%A9tro_Censier_Daubenton_Paris_4.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["7"]},"ouv":"15 février 1930","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (V<sup>e</sup>)"],"freq":"2 291 843 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue de Mirbel"},{"num":"2","desc":"rue Monge","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=siel&station=Censier-Daubenton&line=7&sens=La%20Courneuve&stationcode=71100&linecode=C01377&destcode=La%20Courneuve%20-%208%20Mai%201945&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Censier-Daubenton&line=7&sens=Ivry%20%E2%80%A2%20Villejuif&stationcode=71100&linecode=C01377&destcode=Mairie%20d%27Ivry%20%E2%80%A2%20Villejuif%20-%20Louis%20Aragon&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -304,7 +304,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -419,8 +419,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

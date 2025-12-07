@@ -6,11 +6,11 @@
 		<link rel="stylesheet" href="/stationstyles.css" />
 		
 		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
-		<title>Pereire – Levallois - MobiFer</title>
-		<meta name="description" content="Plus d’informations sur la station Pereire – Levallois sur MobiFer." />
+		<title>Pereire–Levallois - MobiFer</title>
+		<meta name="description" content="Plus d’informations sur la station Pereire–Levallois sur MobiFer." />
 		<meta name="theme-color" content="#0b0082" />
-		<meta property="og:title" content="Pereire – Levallois - MobiFer" />
-		<meta property="og:description" content="Plus d’informations sur la station Pereire – Levallois sur MobiFer." />
+		<meta property="og:title" content="Pereire–Levallois - MobiFer" />
+		<meta property="og:description" content="Plus d’informations sur la station Pereire–Levallois sur MobiFer." />
 		<meta property="og:image" content="" />
 	</head>
 	<body>
@@ -27,7 +27,7 @@
 			<div class="centered">
 			<p class="centered"><strong>Station</strong><br>
 			<span class="shadowed pictos"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerC.html"><img src="/assets/icons/RER_C_couleur_RVB.svg" alt="C"></a></span></span></span><br>
-			<span class="centered terminus-box">Pereire – Levallois</span>
+			<span class="centered terminus-box">Pereire–Levallois</span>
 			
 			
 			</p>
@@ -241,7 +241,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Pereire – Levallois","corresp":["Pereire"],"lignes":{"rer":["C"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Paris_17e_-_Gare_de_Pereire-Levallois_RER_C_-_Janvier_2014.jpg/1280px-Paris_17e_-_Gare_de_Pereire-Levallois_RER_C_-_Janvier_2014.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Paris_17e_-_Gare_de_Pereire-Levallois_RER_C_-_Janvier_2014.jpg","imga":"Bibliophyl","stats":[{"lignes":{"rer":["C"]},"ouv":"2 mai 1854","voies":"3","quais":"2","zt":"1","ufr":"Oui","communes":["Paris (XVII<sup>e</sup>)"],"freq":"3 130 190 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place du Maréchal Juin","acc":true,"asc":true,"esc":true},{"num":"2","desc":"rue Puvis de Chavannes"}],"siv":[{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.885091544548644%2C2.2974239756303887&stop=stop_area%3AIDFM%3A71453&lines=line%3AIDFM%3AC01727&platforms="}]};
+			const station = {"nom":"Pereire–Levallois","corresp":["Pereire"],"lignes":{"rer":["C"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Paris_17e_-_Gare_de_Pereire-Levallois_RER_C_-_Janvier_2014.jpg/1280px-Paris_17e_-_Gare_de_Pereire-Levallois_RER_C_-_Janvier_2014.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Paris_17e_-_Gare_de_Pereire-Levallois_RER_C_-_Janvier_2014.jpg","imga":"Bibliophyl","stats":[{"lignes":{"rer":["C"]},"ouv":"2 mai 1854","voies":"3","quais":"2","zt":"1","ufr":"Oui","communes":["Paris (XVII<sup>e</sup>)"],"freq":"3 130 190 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place du Maréchal Juin","acc":true,"asc":true,"esc":true},{"num":"2","desc":"rue Puvis de Chavannes"}],"siv":[{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.885091544548644%2C2.2974239756303887&stop=stop_area%3AIDFM%3A71453&lines=line%3AIDFM%3AC01727&platforms="}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -299,7 +299,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -414,8 +414,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

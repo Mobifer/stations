@@ -30,7 +30,7 @@
 			<span class="centered terminus-box">Les Agnettes</span>
 			
 			
-				<br><span class="repere-station">Asnières – Gennevilliers</span>
+				<br><span class="repere-station">Asnières–Gennevilliers</span>
 			
 			</p>
 
@@ -248,7 +248,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Les Agnettes","rep":"Asnières – Gennevilliers","lignes":{"metro":["13"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Acc%C3%A8s_Station_M%C3%A9tro_Agnettes_Rue_%C3%89mile_Zola_-_Asni%C3%A8res-sur-Seine_%28FR92%29_-_2022-01-09_-_1.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Agnettes_Rue_%C3%89mile_Zola_-_Asni%C3%A8res-sur-Seine_%28FR92%29_-_2022-01-09_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Agnettes_Rue_%C3%89mile_Zola_-_Asni%C3%A8res-sur-Seine_(FR92)_-_2022-01-09_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["13"]},"ouv":"14 juin 2008","voies":"2","quais":"2","zt":"3","ufr":"Oui","communes":["Asnières-sur-Seine","Gennevilliers"],"freq":"1 890 356 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue des Bas","acc":true},{"num":"2","desc":"rue Émile Zola"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Les%20Agnettes&line=13&sens=Asnières%20:l::s:Gennevilliers&stationcode=72240&linecode=C01383&destcode=Asni%C3%A8res%20-%20Gennevilliers%20Les%20Courtilles%20%E2%80%A2%20Saint-Denis%20-%20Universit%C3%A9&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Les%20Agnettes&line=13&sens=Châtillon&stationcode=72240&linecode=C01383&destcode=Ch%C3%A2tillon-Montrouge&destcodealt=false"}]};
+			const station = {"nom":"Les Agnettes","rep":"Asnières–Gennevilliers","lignes":{"metro":["13"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Acc%C3%A8s_Station_M%C3%A9tro_Agnettes_Rue_%C3%89mile_Zola_-_Asni%C3%A8res-sur-Seine_%28FR92%29_-_2022-01-09_-_1.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Agnettes_Rue_%C3%89mile_Zola_-_Asni%C3%A8res-sur-Seine_%28FR92%29_-_2022-01-09_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Agnettes_Rue_%C3%89mile_Zola_-_Asni%C3%A8res-sur-Seine_(FR92)_-_2022-01-09_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["13"]},"ouv":"14 juin 2008","voies":"2","quais":"2","zt":"3","ufr":"Oui","communes":["Asnières-sur-Seine","Gennevilliers"],"freq":"1 890 356 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue des Bas","acc":true},{"num":"2","desc":"rue Émile Zola"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Les%20Agnettes&line=13&sens=Asnières%20:l::s:Gennevilliers&stationcode=72240&linecode=C01383&destcode=Asni%C3%A8res%20-%20Gennevilliers%20Les%20Courtilles%20%E2%80%A2%20Saint-Denis%20-%20Universit%C3%A9&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Les%20Agnettes&line=13&sens=Châtillon&stationcode=72240&linecode=C01383&destcode=Ch%C3%A2tillon-Montrouge&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -306,7 +306,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -421,8 +421,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

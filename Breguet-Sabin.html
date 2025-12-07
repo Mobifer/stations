@@ -6,11 +6,11 @@
 		<link rel="stylesheet" href="/stationstyles.css" />
 		
 		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
-		<title>Bréguet – Sabin - MobiFer</title>
-		<meta name="description" content="Plus d’informations sur la station Bréguet – Sabin sur MobiFer." />
+		<title>Bréguet–Sabin - MobiFer</title>
+		<meta name="description" content="Plus d’informations sur la station Bréguet–Sabin sur MobiFer." />
 		<meta name="theme-color" content="#0b0082" />
-		<meta property="og:title" content="Bréguet – Sabin - MobiFer" />
-		<meta property="og:description" content="Plus d’informations sur la station Bréguet – Sabin sur MobiFer." />
+		<meta property="og:title" content="Bréguet–Sabin - MobiFer" />
+		<meta property="og:description" content="Plus d’informations sur la station Bréguet–Sabin sur MobiFer." />
 		<meta property="og:image" content="" />
 	</head>
 	<body>
@@ -27,7 +27,7 @@
 			<div class="centered">
 			<p class="centered"><strong>Station</strong><br>
 			<span class="shadowed pictos"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span></span><br>
-			<span class="centered terminus-box">Bréguet – Sabin</span>
+			<span class="centered terminus-box">Bréguet–Sabin</span>
 			
 			
 			</p>
@@ -246,7 +246,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Bréguet – Sabin","lignes":{"metro":["5"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/%C3%89dicule_Br%C3%A9guet-Sabin.JPG/1280px-%C3%89dicule_Br%C3%A9guet-Sabin.JPG","imgp":"https://commons.wikimedia.org/wiki/File:Édicule_Bréguet-Sabin.JPG","imga":"LPLT","stats":[{"lignes":{"metro":["5"]},"ouv":"31 décembre 1906","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XI<sup>e</sup>)"],"freq":"1 490 160 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Saint-Sabin","acc":true},{"num":"2","desc":"rue du Pasteur Wagner"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Bréguet-Sabin&line=5&sens=Bobigny&stationcode=73621&linecode=C01375&destcode=Bobigny%20Pablo%20Picasso&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bréguet-Sabin&line=5&sens=Place%20d’Italie&stationcode=73621&linecode=C01375&destcode=Place%20d%27Italie&destcodealt=false"}]};
+			const station = {"nom":"Bréguet–Sabin","lignes":{"metro":["5"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/%C3%89dicule_Br%C3%A9guet-Sabin.JPG/1280px-%C3%89dicule_Br%C3%A9guet-Sabin.JPG","imgp":"https://commons.wikimedia.org/wiki/File:Édicule_Bréguet-Sabin.JPG","imga":"LPLT","stats":[{"lignes":{"metro":["5"]},"ouv":"31 décembre 1906","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XI<sup>e</sup>)"],"freq":"1 490 160 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Saint-Sabin","acc":true},{"num":"2","desc":"rue du Pasteur Wagner"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Bréguet-Sabin&line=5&sens=Bobigny&stationcode=73621&linecode=C01375&destcode=Bobigny%20Pablo%20Picasso&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bréguet-Sabin&line=5&sens=Place%20d’Italie&stationcode=73621&linecode=C01375&destcode=Place%20d%27Italie&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -304,7 +304,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -419,8 +419,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

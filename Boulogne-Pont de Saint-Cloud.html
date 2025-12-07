@@ -6,11 +6,11 @@
 		<link rel="stylesheet" href="/stationstyles.css" />
 		
 		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
-		<title>Boulogne – Pont de Saint-Cloud - MobiFer</title>
-		<meta name="description" content="Plus d’informations sur la station Boulogne – Pont de Saint-Cloud sur MobiFer." />
+		<title>Boulogne–Pont de Saint-Cloud - MobiFer</title>
+		<meta name="description" content="Plus d’informations sur la station Boulogne–Pont de Saint-Cloud sur MobiFer." />
 		<meta name="theme-color" content="#0b0082" />
-		<meta property="og:title" content="Boulogne – Pont de Saint-Cloud - MobiFer" />
-		<meta property="og:description" content="Plus d’informations sur la station Boulogne – Pont de Saint-Cloud sur MobiFer." />
+		<meta property="og:title" content="Boulogne–Pont de Saint-Cloud - MobiFer" />
+		<meta property="og:description" content="Plus d’informations sur la station Boulogne–Pont de Saint-Cloud sur MobiFer." />
 		<meta property="og:image" content="" />
 	</head>
 	<body>
@@ -27,7 +27,7 @@
 			<div class="centered">
 			<p class="centered"><strong>Station</strong><br>
 			<span class="shadowed pictos"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span></span><br>
-			<span class="centered terminus-box">Boulogne – Pont de Saint-Cloud</span>
+			<span class="centered terminus-box">Boulogne–Pont de Saint-Cloud</span>
 			
 				<br><span class="ptinteret-station">Rhin et Danube</span>
 			
@@ -289,7 +289,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Boulogne – Pont de Saint-Cloud","pti":"Rhin et Danube","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Station_Boulogne_Pont_Saint_Cloud_M%C3%A9tro_Paris_Ligne_10_-_Boulogne-Billancourt_%28FR92%29_-_2022-07-04_-_2.jpg/1280px-Station_Boulogne_Pont_Saint_Cloud_M%C3%A9tro_Paris_Ligne_10_-_Boulogne-Billancourt_%28FR92%29_-_2022-07-04_-_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Boulogne_Pont_Saint_Cloud_M%C3%A9tro_Paris_Ligne_10_-_Boulogne-Billancourt_(FR92)_-_2022-07-04_-_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["10"]},"ouv":"2 octobre 1981","voies":"2","quais":"1","zt":"2","ufr":"Non","communes":["Boulogne-Billancourt"],"freq":"2 182 738 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"route de la Reine","acc":true},{"num":"2","desc":"avenue Jean-Baptiste Clément"},{"num":"3","desc":"rue du Port","pti":"Musée Albert Kahn"},{"num":"4","desc":"avenue du Maréchal de Lattre de Tassigny"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Boulogne%20-%20Pont%20de%20Saint-Cloud&line=10&sens=Gare:b:d’Austerlitz&stationcode=70721&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
+			const station = {"nom":"Boulogne–Pont de Saint-Cloud","pti":"Rhin et Danube","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Station_Boulogne_Pont_Saint_Cloud_M%C3%A9tro_Paris_Ligne_10_-_Boulogne-Billancourt_%28FR92%29_-_2022-07-04_-_2.jpg/1280px-Station_Boulogne_Pont_Saint_Cloud_M%C3%A9tro_Paris_Ligne_10_-_Boulogne-Billancourt_%28FR92%29_-_2022-07-04_-_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Boulogne_Pont_Saint_Cloud_M%C3%A9tro_Paris_Ligne_10_-_Boulogne-Billancourt_(FR92)_-_2022-07-04_-_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["10"]},"ouv":"2 octobre 1981","voies":"2","quais":"1","zt":"2","ufr":"Non","communes":["Boulogne-Billancourt"],"freq":"2 182 738 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"route de la Reine","acc":true},{"num":"2","desc":"avenue Jean-Baptiste Clément"},{"num":"3","desc":"rue du Port","pti":"Musée Albert Kahn"},{"num":"4","desc":"avenue du Maréchal de Lattre de Tassigny"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Boulogne%20-%20Pont%20de%20Saint-Cloud&line=10&sens=Gare:b:d’Austerlitz&stationcode=70721&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -347,7 +347,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -462,8 +462,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

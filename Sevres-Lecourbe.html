@@ -6,11 +6,11 @@
 		<link rel="stylesheet" href="/stationstyles.css" />
 		
 		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
-		<title>Sèvres – Lecourbe - MobiFer</title>
-		<meta name="description" content="Plus d’informations sur la station Sèvres – Lecourbe sur MobiFer." />
+		<title>Sèvres–Lecourbe - MobiFer</title>
+		<meta name="description" content="Plus d’informations sur la station Sèvres–Lecourbe sur MobiFer." />
 		<meta name="theme-color" content="#0b0082" />
-		<meta property="og:title" content="Sèvres – Lecourbe - MobiFer" />
-		<meta property="og:description" content="Plus d’informations sur la station Sèvres – Lecourbe sur MobiFer." />
+		<meta property="og:title" content="Sèvres–Lecourbe - MobiFer" />
+		<meta property="og:description" content="Plus d’informations sur la station Sèvres–Lecourbe sur MobiFer." />
 		<meta property="og:image" content="" />
 	</head>
 	<body>
@@ -27,7 +27,7 @@
 			<div class="centered">
 			<p class="centered"><strong>Station</strong><br>
 			<span class="shadowed pictos"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span></span><br>
-			<span class="centered terminus-box">Sèvres – Lecourbe</span>
+			<span class="centered terminus-box">Sèvres–Lecourbe</span>
 			
 			
 			</p>
@@ -232,7 +232,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Sèvres – Lecourbe","lignes":{"metro":["6"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Sèvres-Lecourbe217.jpg/1280px-Sèvres-Lecourbe217.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Sèvres-Lecourbe217.jpg","imga":"MathTeacherGuy","stats":[{"lignes":{"metro":["6"]},"ouv":"24 avril 1906","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XV<sup>e</sup>)"],"freq":"1 257 040 voyageurs (2021)","inaug":"Suffren"}],"sorties":[{"num":"1","desc":"boulevard Garibaldi","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Sèvres-Lecourbe&line=6&sens=Étoile&stationcode=71144&linecode=C01376&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Sèvres-Lecourbe&line=6&sens=Nation&stationcode=71144&linecode=C01376&destcode=Nation&destcodealt=false"}]};
+			const station = {"nom":"Sèvres–Lecourbe","lignes":{"metro":["6"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Sèvres-Lecourbe217.jpg/1280px-Sèvres-Lecourbe217.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Sèvres-Lecourbe217.jpg","imga":"MathTeacherGuy","stats":[{"lignes":{"metro":["6"]},"ouv":"24 avril 1906","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XV<sup>e</sup>)"],"freq":"1 257 040 voyageurs (2021)","inaug":"Suffren"}],"sorties":[{"num":"1","desc":"boulevard Garibaldi","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Sèvres-Lecourbe&line=6&sens=Étoile&stationcode=71144&linecode=C01376&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Sèvres-Lecourbe&line=6&sens=Nation&stationcode=71144&linecode=C01376&destcode=Nation&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -290,7 +290,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -405,8 +405,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

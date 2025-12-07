@@ -6,11 +6,11 @@
 		<link rel="stylesheet" href="/stationstyles.css" />
 		
 		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
-		<title>Créteil – L’Échat - MobiFer</title>
-		<meta name="description" content="Plus d’informations sur la station Créteil – L’Échat sur MobiFer." />
+		<title>Créteil–L’Échat - MobiFer</title>
+		<meta name="description" content="Plus d’informations sur la station Créteil–L’Échat sur MobiFer." />
 		<meta name="theme-color" content="#0b0082" />
-		<meta property="og:title" content="Créteil – L’Échat - MobiFer" />
-		<meta property="og:description" content="Plus d’informations sur la station Créteil – L’Échat sur MobiFer." />
+		<meta property="og:title" content="Créteil–L’Échat - MobiFer" />
+		<meta property="og:description" content="Plus d’informations sur la station Créteil–L’Échat sur MobiFer." />
 		<meta property="og:image" content="" />
 	</head>
 	<body>
@@ -27,7 +27,7 @@
 			<div class="centered">
 			<p class="centered"><strong>Station</strong><br>
 			<span class="shadowed pictos"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span></span><br>
-			<span class="centered terminus-box">Créteil – L’Échat</span>
+			<span class="centered terminus-box">Créteil–L’Échat</span>
 			
 			
 				<br><span class="repere-station">Hôpital Henri Mondor</span>
@@ -304,7 +304,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Créteil – L’Échat","rep":"Hôpital Henri Mondor","lignes":{"metro":["8"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Station_Cr%C3%A9teil-L%27%C3%A9chat.jpg/1280px-Station_Cr%C3%A9teil-L%27%C3%A9chat.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Cr%C3%A9teil-L%27%C3%A9chat.jpg","imga":"Benro94","stats":[{"lignes":{"metro":["8"]},"ouv":"24 septembre 1973","voies":"2","quais":"2","zt":"3","ufr":"Non","communes":["Créteil"],"freq":"1 660 120 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Gustave Eiffel","rep":"Hôpital Henri Mondor","acc":true},{"num":"2","desc":"voie Félix Éboué"},{"num":"3","desc":"avenue du Général de Gaulle","rep":"Galerie Commerciale"},{"num":"4","desc":"rue Albert Einstein"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Cr%C3%A9teil%E2%80%93L%E2%80%99%C3%89chat&line=8&sens=Balard&stationcode=70269&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Cr%C3%A9teil%E2%80%93L%E2%80%99%C3%89chat&line=8&sens=Cr%C3%A9teil&stationcode=70269&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"}]};
+			const station = {"nom":"Créteil–L’Échat","rep":"Hôpital Henri Mondor","lignes":{"metro":["8"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Station_Cr%C3%A9teil-L%27%C3%A9chat.jpg/1280px-Station_Cr%C3%A9teil-L%27%C3%A9chat.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Cr%C3%A9teil-L%27%C3%A9chat.jpg","imga":"Benro94","stats":[{"lignes":{"metro":["8"]},"ouv":"24 septembre 1973","voies":"2","quais":"2","zt":"3","ufr":"Non","communes":["Créteil"],"freq":"1 660 120 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Gustave Eiffel","rep":"Hôpital Henri Mondor","acc":true},{"num":"2","desc":"voie Félix Éboué"},{"num":"3","desc":"avenue du Général de Gaulle","rep":"Galerie Commerciale"},{"num":"4","desc":"rue Albert Einstein"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Cr%C3%A9teil%E2%80%93L%E2%80%99%C3%89chat&line=8&sens=Balard&stationcode=70269&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Cr%C3%A9teil%E2%80%93L%E2%80%99%C3%89chat&line=8&sens=Cr%C3%A9teil&stationcode=70269&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -362,7 +362,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -477,8 +477,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

@@ -76,7 +76,7 @@
 											
 											
 												
-													<span class="ptinteret" style='margin-top:5px !important;'>Parc des Princes – Roland Garros</span>
+													<span class="ptinteret" style='margin-top:5px !important;'>Parc des Princes–Roland Garros</span>
 													
 												
 												
@@ -266,7 +266,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Porte d’Auteuil","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Bouche_m%C3%A9tro_Porte-d%27Auteuil%2C_Paris_16e_1.jpg/1280px-Bouche_m%C3%A9tro_Porte-d%27Auteuil%2C_Paris_16e_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Bouche_métro_Porte-d%27Auteuil,_Paris_16e_1.jpg","imga":"Polymagou","stats":[{"lignes":{"metro":["10"]},"ouv":"30 septembre 1913","voies":"3","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>)"],"freq":"375 748 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard Murat","pti":"Parc des Princes – Roland Garros","acc":true},{"num":"2","desc":"Hippodrome"},{"num":"3","desc":"rue d’Auteuil"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20d%27Auteuil&line=10&sens=Boulogne&stationcode=71169&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"}]};
+			const station = {"nom":"Porte d’Auteuil","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Bouche_m%C3%A9tro_Porte-d%27Auteuil%2C_Paris_16e_1.jpg/1280px-Bouche_m%C3%A9tro_Porte-d%27Auteuil%2C_Paris_16e_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Bouche_métro_Porte-d%27Auteuil,_Paris_16e_1.jpg","imga":"Polymagou","stats":[{"lignes":{"metro":["10"]},"ouv":"30 septembre 1913","voies":"3","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>)"],"freq":"375 748 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard Murat","pti":"Parc des Princes–Roland Garros","acc":true},{"num":"2","desc":"Hippodrome"},{"num":"3","desc":"rue d’Auteuil"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20d%27Auteuil&line=10&sens=Boulogne&stationcode=71169&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -324,7 +324,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -439,8 +439,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

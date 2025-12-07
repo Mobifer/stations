@@ -6,11 +6,11 @@
 		<link rel="stylesheet" href="/stationstyles.css" />
 		
 		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
-		<title>Bagneux – Lucie Aubrac - MobiFer</title>
-		<meta name="description" content="Plus d’informations sur la station Bagneux – Lucie Aubrac sur MobiFer." />
+		<title>Bagneux–Lucie Aubrac - MobiFer</title>
+		<meta name="description" content="Plus d’informations sur la station Bagneux–Lucie Aubrac sur MobiFer." />
 		<meta name="theme-color" content="#0b0082" />
-		<meta property="og:title" content="Bagneux – Lucie Aubrac - MobiFer" />
-		<meta property="og:description" content="Plus d’informations sur la station Bagneux – Lucie Aubrac sur MobiFer." />
+		<meta property="og:title" content="Bagneux–Lucie Aubrac - MobiFer" />
+		<meta property="og:description" content="Plus d’informations sur la station Bagneux–Lucie Aubrac sur MobiFer." />
 		<meta property="og:image" content="" />
 	</head>
 	<body>
@@ -27,7 +27,7 @@
 			<div class="centered">
 			<p class="centered"><strong>Station</strong><br>
 			<span class="shadowed pictos"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span></span><br>
-			<span class="centered terminus-box">Bagneux – Lucie Aubrac</span>
+			<span class="centered terminus-box">Bagneux–Lucie Aubrac</span>
 			
 			
 			</p>
@@ -306,7 +306,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Bagneux – Lucie Aubrac","lignes":{"metro":["4"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Bagneux_-_Lucie_Aubrac_Quai_d%C3%A9part.jpg/1280px-Bagneux_-_Lucie_Aubrac_Quai_d%C3%A9part.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Bagneux_-_Lucie_Aubrac_Quai_d%C3%A9part.jpg","imga":"Nicolas22g","stats":[{"lignes":{"metro":["4"]},"ouv":"13 janvier 2022","voies":"3","quais":"2","zt":"2","ufr":"Oui","communes":["Bagneux"]}],"sorties":[{"num":"1","desc":"rue de Verdun","acc":true,"asc":true},{"num":"2","desc":"avenue Henri Barbusse","asc":true},{"num":"3","desc":"place Lucie Aubrac","asc":true},{"num":"4","desc":"avenue de Stalingrad","esc":true},{"num":"5","desc":"rue Claude Debussy","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Bagneux%20-%20Lucie%20Aubrac&line=4&sens=Porte%20de:b:Clignancourt&stationcode=483315&linecode=C01374&destcode=Porte%20de%20Clignancourt&destcodealt=false"}]};
+			const station = {"nom":"Bagneux–Lucie Aubrac","lignes":{"metro":["4"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Bagneux_-_Lucie_Aubrac_Quai_d%C3%A9part.jpg/1280px-Bagneux_-_Lucie_Aubrac_Quai_d%C3%A9part.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Bagneux_-_Lucie_Aubrac_Quai_d%C3%A9part.jpg","imga":"Nicolas22g","stats":[{"lignes":{"metro":["4"]},"ouv":"13 janvier 2022","voies":"3","quais":"2","zt":"2","ufr":"Oui","communes":["Bagneux"]}],"sorties":[{"num":"1","desc":"rue de Verdun","acc":true,"asc":true},{"num":"2","desc":"avenue Henri Barbusse","asc":true},{"num":"3","desc":"place Lucie Aubrac","asc":true},{"num":"4","desc":"avenue de Stalingrad","esc":true},{"num":"5","desc":"rue Claude Debussy","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Bagneux%20-%20Lucie%20Aubrac&line=4&sens=Porte%20de:b:Clignancourt&stationcode=483315&linecode=C01374&destcode=Porte%20de%20Clignancourt&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -364,7 +364,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -479,8 +479,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

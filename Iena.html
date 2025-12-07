@@ -73,7 +73,7 @@
 											
 											
 												
-													<span class="ptinteret" style='margin-top:5px !important;'>Musée d’Art Moderne – Palais de Tokyo</span>
+													<span class="ptinteret" style='margin-top:5px !important;'>Musée d’Art Moderne–Palais de Tokyo</span>
 													
 												
 												
@@ -288,7 +288,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Iéna","lignes":{"metro":["9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Bouche_m%C3%A9tro_I%C3%A9na%2C_Paris_16e_2.jpg/1280px-Bouche_m%C3%A9tro_I%C3%A9na%2C_Paris_16e_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Bouche_m%C3%A9tro_I%C3%A9na,_Paris_16e_2.jpg","imga":"Polymagou","stats":[{"lignes":{"metro":["9"]},"ouv":"27 mai 1923","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>)"],"freq":"1 646 925 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue du Président Wilson","pti":"Musée d’Art Moderne – Palais de Tokyo"},{"num":"2","desc":"rue Boissière","pti":"Musée Guimet"},{"num":"3","desc":"avenue d’Iéna","pti":"Palais d’Iéna","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=I%C3%A9na&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71294&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=I%C3%A9na&line=9&sens=Montreuil&stationcode=71294&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"}]};
+			const station = {"nom":"Iéna","lignes":{"metro":["9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Bouche_m%C3%A9tro_I%C3%A9na%2C_Paris_16e_2.jpg/1280px-Bouche_m%C3%A9tro_I%C3%A9na%2C_Paris_16e_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Bouche_m%C3%A9tro_I%C3%A9na,_Paris_16e_2.jpg","imga":"Polymagou","stats":[{"lignes":{"metro":["9"]},"ouv":"27 mai 1923","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>)"],"freq":"1 646 925 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue du Président Wilson","pti":"Musée d’Art Moderne–Palais de Tokyo"},{"num":"2","desc":"rue Boissière","pti":"Musée Guimet"},{"num":"3","desc":"avenue d’Iéna","pti":"Palais d’Iéna","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=I%C3%A9na&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71294&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=I%C3%A9na&line=9&sens=Montreuil&stationcode=71294&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -346,7 +346,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -461,8 +461,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

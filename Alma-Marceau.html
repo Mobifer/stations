@@ -6,11 +6,11 @@
 		<link rel="stylesheet" href="/stationstyles.css" />
 		
 		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
-		<title>Alma – Marceau - MobiFer</title>
-		<meta name="description" content="Plus d’informations sur la station Alma – Marceau sur MobiFer." />
+		<title>Alma–Marceau - MobiFer</title>
+		<meta name="description" content="Plus d’informations sur la station Alma–Marceau sur MobiFer." />
 		<meta name="theme-color" content="#0b0082" />
-		<meta property="og:title" content="Alma – Marceau - MobiFer" />
-		<meta property="og:description" content="Plus d’informations sur la station Alma – Marceau sur MobiFer." />
+		<meta property="og:title" content="Alma–Marceau - MobiFer" />
+		<meta property="og:description" content="Plus d’informations sur la station Alma–Marceau sur MobiFer." />
 		<meta property="og:image" content="" />
 	</head>
 	<body>
@@ -27,7 +27,7 @@
 			<div class="centered">
 			<p class="centered"><strong>Station</strong><br>
 			<span class="shadowed pictos"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span></span><br>
-			<span class="centered terminus-box">Alma – Marceau</span>
+			<span class="centered terminus-box">Alma–Marceau</span>
 			
 			
 			</p>
@@ -283,7 +283,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Alma – Marceau","lignes":{"metro":["9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Station_Alma_Marceau_M%C3%A9tro_Paris_Ligne_9_-_Paris_XVI_%28FR75%29_-_2022-07-01_-_6.jpg/1280px-Station_Alma_Marceau_M%C3%A9tro_Paris_Ligne_9_-_Paris_XVI_%28FR75%29_-_2022-07-01_-_6.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Alma_Marceau_M%C3%A9tro_Paris_Ligne_9_-_Paris_XVI_(FR75)_-_2022-07-01_-_6.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["9"]},"ouv":"27 mai 1923","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (VIII<sup>e</sup>, XVI<sup>e</sup>)"],"freq":"2 564 842 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue Montaigne","pti":"Théâtre des Champs-Élysées","acc":true},{"num":"2","desc":"pont de l’Alma","pti":"Bateaux-mouches"},{"num":"3","desc":"avenue du Président Wilson","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Alma-Marceau&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71290&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Alma-Marceau&line=9&sens=Montreuil&stationcode=71290&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"}]};
+			const station = {"nom":"Alma–Marceau","lignes":{"metro":["9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Station_Alma_Marceau_M%C3%A9tro_Paris_Ligne_9_-_Paris_XVI_%28FR75%29_-_2022-07-01_-_6.jpg/1280px-Station_Alma_Marceau_M%C3%A9tro_Paris_Ligne_9_-_Paris_XVI_%28FR75%29_-_2022-07-01_-_6.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Alma_Marceau_M%C3%A9tro_Paris_Ligne_9_-_Paris_XVI_(FR75)_-_2022-07-01_-_6.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["9"]},"ouv":"27 mai 1923","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (VIII<sup>e</sup>, XVI<sup>e</sup>)"],"freq":"2 564 842 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue Montaigne","pti":"Théâtre des Champs-Élysées","acc":true},{"num":"2","desc":"pont de l’Alma","pti":"Bateaux-mouches"},{"num":"3","desc":"avenue du Président Wilson","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Alma-Marceau&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71290&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Alma-Marceau&line=9&sens=Montreuil&stationcode=71290&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -341,7 +341,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -456,8 +456,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

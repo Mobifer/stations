@@ -70,7 +70,7 @@
 										<div class="sortie-right">
 											
 											
-												boulevard de Grenelle – Pont de Bir-Hakeim
+												boulevard de Grenelle–Pont de Bir-Hakeim
 												<span style="font-size: 1.25em">
 													
 									
@@ -264,7 +264,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Champ de Mars","pti":"Tour Eiffel","corresp":["Bir-Hakeim"],"lignes":{"rer":["C"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Gare_Champ_Mars_Tour_Eiffel_-_Paris_XV_%28FR75%29_-_2022-05-28_-_5.jpg/1280px-Gare_Champ_Mars_Tour_Eiffel_-_Paris_XV_%28FR75%29_-_2022-05-28_-_5.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Gare_Champ_Mars_Tour_Eiffel_-_Paris_XV_(FR75)_-_2022-05-28_-_5.jpg","imga":"Chabe01","stats":[{"lignes":{"rer":["C"]},"ouv":"1867","voies":"2","quais":"2","zt":"1","ufr":"Oui","communes":["Paris (XV<sup>e</sup>)"],"freq":"6 564 413 voyageurs (2022)"}],"sorties":[{"num":"1","desc":"boulevard de Grenelle – Pont de Bir-Hakeim"},{"num":"2","desc":"avenue de Suffren","pti":"Tour Eiffel"},{"num":"3","desc":"boulevard de Grenelle"}],"siv":[{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.856832418601826%2C2.290701347947487&stop=stop_area%3AIDFM%3A73844&lines=line%3AIDFM%3AC01727&platforms="}]};
+			const station = {"nom":"Champ de Mars","pti":"Tour Eiffel","corresp":["Bir-Hakeim"],"lignes":{"rer":["C"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Gare_Champ_Mars_Tour_Eiffel_-_Paris_XV_%28FR75%29_-_2022-05-28_-_5.jpg/1280px-Gare_Champ_Mars_Tour_Eiffel_-_Paris_XV_%28FR75%29_-_2022-05-28_-_5.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Gare_Champ_Mars_Tour_Eiffel_-_Paris_XV_(FR75)_-_2022-05-28_-_5.jpg","imga":"Chabe01","stats":[{"lignes":{"rer":["C"]},"ouv":"1867","voies":"2","quais":"2","zt":"1","ufr":"Oui","communes":["Paris (XV<sup>e</sup>)"],"freq":"6 564 413 voyageurs (2022)"}],"sorties":[{"num":"1","desc":"boulevard de Grenelle–Pont de Bir-Hakeim"},{"num":"2","desc":"avenue de Suffren","pti":"Tour Eiffel"},{"num":"3","desc":"boulevard de Grenelle"}],"siv":[{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.856832418601826%2C2.290701347947487&stop=stop_area%3AIDFM%3A73844&lines=line%3AIDFM%3AC01727&platforms="}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -322,7 +322,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -437,8 +437,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

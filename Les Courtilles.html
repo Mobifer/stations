@@ -30,7 +30,7 @@
 			<span class="centered terminus-box">Les Courtilles</span>
 			
 			
-				<br><span class="repere-station">Asnières – Gennevilliers</span>
+				<br><span class="repere-station">Asnières–Gennevilliers</span>
 			
 			</p>
 
@@ -311,7 +311,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Les Courtilles","rep":"Asnières – Gennevilliers","lignes":{"metro":["13"],"tram":["T1"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Station_M%C3%A9tro_Ligne_13_Courtilles_Asni%C3%A8res_Seine_2.jpg/1280px-Station_M%C3%A9tro_Ligne_13_Courtilles_Asni%C3%A8res_Seine_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_M%C3%A9tro_Ligne_13_Courtilles_Asni%C3%A8res_Seine_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["13"]},"ouv":"14 juin 2008","voies":"2","quais":"2","zt":"3","ufr":"Oui","communes":["Asnières-sur-Seine","Gennevilliers"],"freq":"2 802 689 voyageurs (2021)"},{"lignes":{"tram":["T1"]},"ouv":"15 novembre 2012","voies":"2","quais":"2","zt":"3","ufr":"Oui","communes":["Asnières-sur-Seine","Gennevilliers"]}],"sorties":[{"num":"1","desc":"avenue de la Redoute","acc":true},{"num":"2","desc":"boulevard Intercommunal","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Les%20Courtilles&line=13&sens=Asni%C3%A8res:b:Gennevilliers&stationcode=72286&linecode=C01383&destcode=Asni%C3%A8res%20-%20Gennevilliers%20Les%20Courtilles%20%E2%80%A2%20Saint-Denis%20-%20Universit%C3%A9&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Les%20Courtilles&line=13&sens=Châtillon&stationcode=72286&linecode=C01383&destcode=Ch%C3%A2tillon-Montrouge&destcodealt=false"}]};
+			const station = {"nom":"Les Courtilles","rep":"Asnières–Gennevilliers","lignes":{"metro":["13"],"tram":["T1"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Station_M%C3%A9tro_Ligne_13_Courtilles_Asni%C3%A8res_Seine_2.jpg/1280px-Station_M%C3%A9tro_Ligne_13_Courtilles_Asni%C3%A8res_Seine_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_M%C3%A9tro_Ligne_13_Courtilles_Asni%C3%A8res_Seine_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["13"]},"ouv":"14 juin 2008","voies":"2","quais":"2","zt":"3","ufr":"Oui","communes":["Asnières-sur-Seine","Gennevilliers"],"freq":"2 802 689 voyageurs (2021)"},{"lignes":{"tram":["T1"]},"ouv":"15 novembre 2012","voies":"2","quais":"2","zt":"3","ufr":"Oui","communes":["Asnières-sur-Seine","Gennevilliers"]}],"sorties":[{"num":"1","desc":"avenue de la Redoute","acc":true},{"num":"2","desc":"boulevard Intercommunal","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Les%20Courtilles&line=13&sens=Asni%C3%A8res:b:Gennevilliers&stationcode=72286&linecode=C01383&destcode=Asni%C3%A8res%20-%20Gennevilliers%20Les%20Courtilles%20%E2%80%A2%20Saint-Denis%20-%20Universit%C3%A9&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Les%20Courtilles&line=13&sens=Châtillon&stationcode=72286&linecode=C01383&destcode=Ch%C3%A2tillon-Montrouge&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -369,7 +369,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -484,8 +484,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

@@ -6,11 +6,11 @@
 		<link rel="stylesheet" href="/stationstyles.css" />
 		
 		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
-		<title>Louvre – Rivoli - MobiFer</title>
-		<meta name="description" content="Plus d’informations sur la station Louvre – Rivoli sur MobiFer." />
+		<title>Louvre–Rivoli - MobiFer</title>
+		<meta name="description" content="Plus d’informations sur la station Louvre–Rivoli sur MobiFer." />
 		<meta name="theme-color" content="#0b0082" />
-		<meta property="og:title" content="Louvre – Rivoli - MobiFer" />
-		<meta property="og:description" content="Plus d’informations sur la station Louvre – Rivoli sur MobiFer." />
+		<meta property="og:title" content="Louvre–Rivoli - MobiFer" />
+		<meta property="og:description" content="Plus d’informations sur la station Louvre–Rivoli sur MobiFer." />
 		<meta property="og:image" content="" />
 	</head>
 	<body>
@@ -27,7 +27,7 @@
 			<div class="centered">
 			<p class="centered"><strong>Station</strong><br>
 			<span class="shadowed pictos"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span></span><br>
-			<span class="centered terminus-box">Louvre – Rivoli</span>
+			<span class="centered terminus-box">Louvre–Rivoli</span>
 			
 			
 			</p>
@@ -232,7 +232,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Louvre – Rivoli","lignes":{"metro":["1"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Station_Louvre_Rivoli_Métro_Paris_Ligne_1_-_Paris_I_(FR75)_-_2022-06-29_-_5.jpg/1280px-Station_Louvre_Rivoli_Métro_Paris_Ligne_1_-_Paris_I_(FR75)_-_2022-06-29_-_5.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Louvre_Rivoli_Métro_Paris_Ligne_1_-_Paris_I_(FR75)_-_2022-06-29_-_5.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["1"]},"ouv":"13 août 1900","inaug":"Louvre","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (I<sup>er</sup>)"],"freq":"1 869 612 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue de l’Amiral-de-Coligny","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Louvre-Rivoli&line=1&sens=La%20Défense&stationcode=44645&linecode=C01371&destcode=La%20Défense%20(Grande%20Arche)&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Louvre-Rivoli&line=1&sens=Château:b:de%20Vincennes&stationcode=44645&linecode=C01371&destcode=Château%20de%20Vincennes&destcodealt=false"}]};
+			const station = {"nom":"Louvre–Rivoli","lignes":{"metro":["1"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Station_Louvre_Rivoli_Métro_Paris_Ligne_1_-_Paris_I_(FR75)_-_2022-06-29_-_5.jpg/1280px-Station_Louvre_Rivoli_Métro_Paris_Ligne_1_-_Paris_I_(FR75)_-_2022-06-29_-_5.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Louvre_Rivoli_Métro_Paris_Ligne_1_-_Paris_I_(FR75)_-_2022-06-29_-_5.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["1"]},"ouv":"13 août 1900","inaug":"Louvre","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (I<sup>er</sup>)"],"freq":"1 869 612 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue de l’Amiral-de-Coligny","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Louvre-Rivoli&line=1&sens=La%20Défense&stationcode=44645&linecode=C01371&destcode=La%20Défense%20(Grande%20Arche)&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Louvre-Rivoli&line=1&sens=Château:b:de%20Vincennes&stationcode=44645&linecode=C01371&destcode=Château%20de%20Vincennes&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -290,7 +290,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -405,8 +405,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

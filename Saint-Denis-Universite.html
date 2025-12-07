@@ -6,11 +6,11 @@
 		<link rel="stylesheet" href="/stationstyles.css" />
 		
 		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
-		<title>Saint-Denis – Université - MobiFer</title>
-		<meta name="description" content="Plus d’informations sur la station Saint-Denis – Université sur MobiFer." />
+		<title>Saint-Denis–Université - MobiFer</title>
+		<meta name="description" content="Plus d’informations sur la station Saint-Denis–Université sur MobiFer." />
 		<meta name="theme-color" content="#0b0082" />
-		<meta property="og:title" content="Saint-Denis – Université - MobiFer" />
-		<meta property="og:description" content="Plus d’informations sur la station Saint-Denis – Université sur MobiFer." />
+		<meta property="og:title" content="Saint-Denis–Université - MobiFer" />
+		<meta property="og:description" content="Plus d’informations sur la station Saint-Denis–Université sur MobiFer." />
 		<meta property="og:image" content="" />
 	</head>
 	<body>
@@ -27,7 +27,7 @@
 			<div class="centered">
 			<p class="centered"><strong>Station</strong><br>
 			<span class="shadowed pictos"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span></span><br>
-			<span class="centered terminus-box">Saint-Denis – Université</span>
+			<span class="centered terminus-box">Saint-Denis–Université</span>
 			
 			
 			</p>
@@ -245,7 +245,7 @@
 		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
-			const station = {"nom":"Saint-Denis – Université","lignes":{"metro":["13"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Station_M%C3%A9tro_Saint_Denis_Universit%C3%A9_Ligne_13_-_Saint-Denis_%28FR93%29_-_2022-05-28_-_1.jpg/1280px-Station_M%C3%A9tro_Saint_Denis_Universit%C3%A9_Ligne_13_-_Saint-Denis_%28FR93%29_-_2022-05-28_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Métro_Saint_Denis_Université_Ligne_13_-_Saint-Denis_(FR93)_-_2022-05-28_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["13"]},"ouv":"25 mai 1998","voies":"2","quais":"2","zt":"3","ufr":"Non","communes":["Saint-Denis"],"freq":"3 569 990 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"Université","pti":"Archives Nationales","acc":true},{"num":"2","desc":"avenue de Stalingrad"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Saint-Denis%20-%20Université&line=13&sens=Châtillon&stationcode=72358&linecode=C01383&destcode=Châtillon-Montrouge&destcodealt=false"}]};
+			const station = {"nom":"Saint-Denis–Université","lignes":{"metro":["13"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Station_M%C3%A9tro_Saint_Denis_Universit%C3%A9_Ligne_13_-_Saint-Denis_%28FR93%29_-_2022-05-28_-_1.jpg/1280px-Station_M%C3%A9tro_Saint_Denis_Universit%C3%A9_Ligne_13_-_Saint-Denis_%28FR93%29_-_2022-05-28_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Métro_Saint_Denis_Université_Ligne_13_-_Saint-Denis_(FR93)_-_2022-05-28_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["13"]},"ouv":"25 mai 1998","voies":"2","quais":"2","zt":"3","ufr":"Non","communes":["Saint-Denis"],"freq":"3 569 990 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"Université","pti":"Archives Nationales","acc":true},{"num":"2","desc":"avenue de Stalingrad"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Saint-Denis%20-%20Université&line=13&sens=Châtillon&stationcode=72358&linecode=C01383&destcode=Châtillon-Montrouge&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)
 			const lignesListe = [];
@@ -303,7 +303,7 @@
 											"nom": "Maison Blanche",
 											"prec": "Tolbiac",
 											"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-											"terminus": ["La Courneuve – 8 Mai 1945", ["Villejuif – Louis Aragon", "Mairie d’Ivry"]]
+											"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
 										} */ 
 										
 										if (avant.constructor === Object)
@@ -418,8 +418,8 @@
 
 					// La carte doit être centrée sur la station de la page
 					// On compare le nom de la station de la page (station.nom), normalisé, sans accent, avec les noms des stations de la carte
-					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", " ").replaceAll("-", " ").toLowerCase();
-					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll(" – ", "-").replaceAll("-", " ").toLowerCase() === stationName);
+					const stationName = station.nom.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", " ").replaceAll("-", " ").toLowerCase();
+					const stationPosition = data.features.find(feature => feature.properties.zdaname.normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "").replaceAll("–", "-").replaceAll("-", " ").toLowerCase() === stationName);
 					if (stationPosition) {
 						map.setView([stationPosition.geometry.coordinates[1], stationPosition.geometry.coordinates[0]], 17);
 					} else {

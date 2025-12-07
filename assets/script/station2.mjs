@@ -1,6 +1,6 @@
 import fs from "fs";
-import path from "path";
 import ejs from "ejs";
+import { genererLignesHTML } from "./genlineicons.js";
 
 const stations = JSON.parse(fs.readFileSync("data/stations.json", "utf-8"));
 

@@ -369,8 +369,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Porte de Saint-Cloud","lignes":{"metro":["9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Acc%C3%A8s_Station_M%C3%A9tro_Porte_Saint_Cloud_Place_Porte_Saint_Cloud_-_Paris_XVI_%28FR75%29_-_2022-01-22_-_5.jpg/974px-Acc%C3%A8s_Station_M%C3%A9tro_Porte_Saint_Cloud_Place_Porte_Saint_Cloud_-_Paris_XVI_%28FR75%29_-_2022-01-22_-_5.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Porte_Saint_Cloud_Place_Porte_Saint_Cloud_-_Paris_XVI_(FR75)_-_2022-01-22_-_5.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["9"]},"ouv":"29 septembre 1923","voies":"4","quais":"3","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>)"],"freq":"3 485 946 voyageurs (2021)"}],"sorties":[{"num":"1","pti":"Parc des Princes"},{"num":"2","desc":"avenue Édouard Vaillant","rep":"Boulogne-Billancourt"},{"num":"3","desc":"avenue Georges Lafont","pti":"Stade Pierre de Coubertin"},{"num":"4","desc":"rue Gudin"},{"num":"5","desc":"avenue de Versailles"},{"num":"6","desc":"boulevard Murat"},{"num":"7","desc":"Gare Routière","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20de%20Saint-Cloud&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71084&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20de%20Saint-Cloud&line=9&sens=Montreuil&stationcode=71084&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"}],"pti":"Parc des Princes"};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

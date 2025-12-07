@@ -273,8 +273,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Rue des Boulets","lignes":{"metro":["9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Station_Rue_Boulets_M%C3%A9tro_Paris_Ligne_9_-_Paris_XI_%28FR75%29_-_2022-06-24_-_2.jpg/1280px-Station_Rue_Boulets_M%C3%A9tro_Paris_Ligne_9_-_Paris_XI_%28FR75%29_-_2022-06-24_-_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Rue_Boulets_M%C3%A9tro_Paris_Ligne_9_-_Paris_XI_(FR75)_-_2022-06-24_-_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["9"]},"ouv":"10 décembre 1933","inaug":"Rue des Boulets – Rue de Montreuil","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XI<sup>e</sup>)"],"freq":"1 832 442 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"cité Voltaire"},{"num":"2","desc":"rue des Boulets","acc":true},{"num":"3","desc":"boulevard Voltaire","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Rue%20des%20Boulets&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71694&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Rue%20des%20Boulets&line=9&sens=Montreuil&stationcode=71694&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

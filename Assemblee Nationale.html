@@ -278,8 +278,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Assemblée Nationale","lignes":{"metro":["12"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Station_Assembl%C3%A9e_Nationale_M%C3%A9tro_Paris_Ligne_12_-_Paris_VII_%28FR75%29_-_2022-07-02_-_3.jpg/1280px-Station_Assembl%C3%A9e_Nationale_M%C3%A9tro_Paris_Ligne_12_-_Paris_VII_%28FR75%29_-_2022-07-02_-_3.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Assembl%C3%A9e_Nationale_M%C3%A9tro_Paris_Ligne_12_-_Paris_VII_(FR75)_-_2022-07-02_-_3.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["12"]},"ouv":"5 novembre 1910","inaug":"Chambre des députés","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (VII<sup>e</sup>)"],"freq":"611 512 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard Saint-Germain","rep":"Assemblée Nationale","acc":true},{"num":"2","desc":"rue de Lille"},{"num":"3","desc":"rue de l’Université"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Assembl%C3%A9e%20Nationale&line=12&sens=Aubervilliers&stationcode=73642&linecode=C01382&destcode=Mairie%20d%27Aubervilliers&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Assembl%C3%A9e%20Nationale&line=12&sens=Mairie%20d’Issy&stationcode=73642&linecode=C01382&destcode=Mairie%20d%27Issy&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

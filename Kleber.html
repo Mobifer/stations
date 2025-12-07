@@ -243,8 +243,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Kléber","lignes":{"metro":["6"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Accès_Station_Métro_Kléber_Avenue_Kléber_-_Paris_XVI_%28FR75%29_-_2022-01-23_-_12.jpg/1280px-Accès_Station_Métro_Kléber_Avenue_Kléber_-_Paris_XVI_%28FR75%29_-_2022-01-23_-_12.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Accès_Station_Métro_Kléber_Avenue_Kléber_-_Paris_XVI_(FR75)_-_2022-01-23_-_12.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["6"]},"ouv":"2 octobre 1900","voies":"4","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>)"],"freq":"724 215 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue Kléber","acc":true},{"num":"2","desc":"avenue des Portugais"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Kléber&line=6&sens=Étoile&stationcode=73656&linecode=C01376&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Kléber&line=6&sens=Nation&stationcode=73656&linecode=C01376&destcode=Nation&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

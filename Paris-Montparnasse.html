@@ -350,8 +350,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Paris – Montparnasse","corresp":["Montparnasse-Bienvenue"],"lignes":{"train":["N"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Z_57000_en_livr%C3%A9e_IDFM_en_gare_de_Paris-Montparnasse.jpg/1280px-Z_57000_en_livr%C3%A9e_IDFM_en_gare_de_Paris-Montparnasse.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Z_57000_en_livr%C3%A9e_IDFM_en_gare_de_Paris-Montparnasse.jpg","imga":"Remontees","stats":[{"lignes":{"train":["N"]},"ouv":"années 1960","voies":"158","quais":"8","zt":"1","ufr":"Oui","communes":["Paris (XIV<sup>e</sup>, XV<sup>e</sup>)"],"freq":"64 471 254 voyageurs (2023"}],"sorties":[{"num":"1","desc":"Porte Océane"},{"num":"2","desc":"place Bienvenüe"},{"num":"4","desc":"Tour Montparnasse"},{"num":"5","desc":"boulevard du Montparnasse","acc":true},{"num":"6","desc":"rue d’Odessa","esc":true},{"num":"7","desc":"rue du Départ","pti":"Centre Commercial","esc":true},{"num":"8","desc":"rue de Rennes"}],"siv":[{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.841345872313546%2C2.3204896409663567&stop=stop_area%3AIDFM%3A71139&lines=line%3AIDFM%3AC01736%2Cline%3AIDFM%3AC01845&platforms="}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

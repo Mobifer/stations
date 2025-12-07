@@ -299,8 +299,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Mairie d’Aubervilliers","rep":"Plaine des Vertus","lignes":{"metro":["12"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Acc%C3%A8s_Station_M%C3%A9tro_Mairie_Aubervilliers_Avenue_Victor_Hugo_-_Aubervilliers_%28FR93%29_-_2022-06-01_-_12.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Mairie_Aubervilliers_Avenue_Victor_Hugo_-_Aubervilliers_%28FR93%29_-_2022-06-01_-_12.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Accès_Station_Métro_Mairie_Aubervilliers_Avenue_Victor_Hugo_-_Aubervilliers_(FR93)_-_2022-06-01_-_12.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["12"]},"ouv":"31 mai 2022","voies":"3","quais":"2","zt":"2","ufr":"Oui","communes":["Aubervilliers"]}],"sorties":[{"num":"1","desc":"avenue du Président Roosevelt","acc":true},{"num":"2","desc":"avenue Victor Hugo"},{"num":"3","desc":"rue Pasteur","asc":true},{"num":"4","desc":"rue Fourrier"},{"num":"5","desc":"avenue de la République","asc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Mairie%20d%27Aubervilliers&line=12&sens=Mairie%20d’Issy&stationcode=72524&linecode=C01382&destcode=Mairie%20d%27Issy&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

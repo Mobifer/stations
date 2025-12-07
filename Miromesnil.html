@@ -308,8 +308,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Miromesnil","lignes":{"metro":["9","13"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Station_Miromesnil_M%C3%A9tro_Paris_Ligne_9_-_Paris_VIII_%28FR75%29_-_2022-07-01_-_1.jpg/1280px-Station_Miromesnil_M%C3%A9tro_Paris_Ligne_9_-_Paris_VIII_%28FR75%29_-_2022-07-01_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Miromesnil_M%C3%A9tro_Paris_Ligne_9_-_Paris_VIII_(FR75)_-_2022-07-01_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["9","13"]},"ouv":"27 mai 1923","voies":"4","quais":"4","zt":"1","ufr":"Non","communes":["Paris (VIII<sup>e</sup>)"],"freq":"3 647 255 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue Percier","acc":true},{"num":"2","desc":"avenue Delcassé","pti":"Salle Gaveau"},{"num":"3","desc":"rue de Miromesnil"},{"num":"4","desc":"rue La Boétie"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Miromesnil&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71346&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Miromesnil&line=9&sens=Montreuil&stationcode=71346&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Miromesnil&line=13&sens=Asni%C3%A8res:b:Gennevilliers%20%E2%80%A2%20Saint-Denis&stationcode=71346&linecode=C01383&destcode=Asni%C3%A8res%20-%20Gennevilliers%20Les%20Courtilles%20%E2%80%A2%20Saint-Denis%20-%20Universit%C3%A9&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Miromesnil&line=13&sens=Châtillon&stationcode=71346&linecode=C01383&destcode=Ch%C3%A2tillon-Montrouge&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

@@ -251,8 +251,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Bourse","lignes":{"metro":["3"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Station_Bourse_M%C3%A9tro_Paris_Ligne_3_-_Paris_II_%28FR75%29_-_2022-06-24_-_4.jpg/1280px-Station_Bourse_M%C3%A9tro_Paris_Ligne_3_-_Paris_II_%28FR75%29_-_2022-06-24_-_4.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Bourse_M%C3%A9tro_Paris_Ligne_3_-_Paris_II_(FR75)_-_2022-06-24_-_4.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["3"]},"ouv":"19 octobre 1904","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (II<sup>e</sup>)"],"freq":"1 725 043 voyageurs (2021)"}],"sorties":[{"num":"1","pti":"Palais Brongniart","acc":true,"esc":true},{"num":"2","desc":"rue Notre-Dame des Victoires"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Bourse&line=3&sens=Levallois&stationcode=73635&linecode=C01373&destcode=Pont%20de%20Levallois%20-%20B%C3%A9con&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bourse&line=3&sens=Gallieni&stationcode=73635&linecode=C01373&destcode=Gallieni&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

@@ -241,8 +241,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Serge Gainsbourg","lignes":{"metro":["11"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Station_Serge_Gainsbourg_Métro_Paris_Ligne_11_-_Les_Lilas_%28FR93%29_-_2024-06-13_-_3.jpg/1280px-Station_Serge_Gainsbourg_Métro_Paris_Ligne_11_-_Les_Lilas_%28FR93%29_-_2024-06-13_-_3.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Serge_Gainsbourg_Métro_Paris_Ligne_11_-_Les_Lilas_(FR93)_-_2024-06-13_-_3.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["11"]},"ouv":"13 juin 2024","voies":2,"quais":2,"zt":2,"ufr":"Oui","communes":["Les Lilas"]}],"sorties":[{"num":"1","desc":"boulevard du Général Leclerc","asc":true,"esc":true},{"num":"2","desc":"rue de la Liberté","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Serge%20Gainsbourg&line=11&sens=Châtelet&stationcode=490779&linecode=C01381&destcode=Châtelet&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Serge%20Gainsbourg&line=11&sens=Rosny:t:sous-Bois&stationcode=490779&linecode=C01381&destcode=Rosny-sous-Bois&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

@@ -214,8 +214,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Danube","lignes":{"metro":["7bis"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Station_M%C3%A9tro_Danube_Ligne_7bis_-_Paris_XIX_%28FR75%29_-_2022-06-18_-_2.jpg/1280px-Station_M%C3%A9tro_Danube_Ligne_7bis_-_Paris_XIX_%28FR75%29_-_2022-06-18_-_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_M%C3%A9tro_Danube_Ligne_7bis_-_Paris_XIX_(FR75)_-_2022-06-18_-_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["7bis"]},"ouv":"18 janvier 1911","voies":"1","quais":"1","zt":"1","ufr":"Non","communes":["Paris (XIX<sup>e</sup>)"],"freq":"400 157 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place Rhin et Danube","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Danube&line=7b&sens=Louis%20Blanc&stationcode=71930&linecode=C01387&destcode=Louis%20Blanc&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

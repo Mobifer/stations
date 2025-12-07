@@ -271,8 +271,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Aimé Césaire","rep":"Aubervilliers","lignes":{"metro":["12"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Acc%C3%A8s_Station_M%C3%A9tro_Aim%C3%A9_C%C3%A9saire_Rue_Commune_Paris_-_Aubervilliers_%28FR93%29_-_2022-06-01_-_5.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Aim%C3%A9_C%C3%A9saire_Rue_Commune_Paris_-_Aubervilliers_%28FR93%29_-_2022-06-01_-_5.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Aim%C3%A9_C%C3%A9saire_Rue_Commune_Paris_-_Aubervilliers_(FR93)_-_2022-06-01_-_5.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["12"]},"ouv":"31 mai 2022","voies":"2","quais":"2","zt":"2","ufr":"Oui","communes":["Aubervilliers"]}],"sorties":[{"num":"1","desc":"Canal Saint-Denis","acc":true,"asc":true},{"num":"2","desc":"Pont de Stains","acc":true},{"num":"3","desc":"boulevard Félix Faure","acc":true,"esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Aim%C3%A9%20C%C3%A9saire&line=12&sens=Aubervilliers&stationcode=72491&linecode=C01382&destcode=Mairie%20d%27Aubervilliers&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Aim%C3%A9%20C%C3%A9saire&line=12&sens=Mairie%20d’Issy&stationcode=72491&linecode=C01382&destcode=Mairie%20d%27Issy&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

@@ -269,8 +269,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Mairie des Lilas","lignes":{"metro":["11"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Acc%C3%A8s_Station_M%C3%A9tro_Mairie_Lilas_Boulevard_Libert%C3%A9_-_Les_Lilas_%28FR93%29_-_2022-01-01_-_1.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Mairie_Lilas_Boulevard_Libert%C3%A9_-_Les_Lilas_%28FR93%29_-_2022-01-01_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Accès_Station_Métro_Mairie_Lilas_Boulevard_Liberté_-_Les_Lilas_(FR93)_-_2022-01-01_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["11"]},"ouv":"17 février 1937","voies":"2","quais":"2","zt":"2","ufr":"Oui","communes":["Les Lilas"],"freq":"2 894 622 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue de Paris","acc":true,"asc":true},{"num":"2","desc":"boulevard de la Liberté","acc":true},{"num":"3","desc":"rue Rouget de Lisle"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Mairie%20des%20Lilas&line=11&sens=Châtelet&stationcode=71909&linecode=C01381&destcode=Châtelet&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Mairie%20des%20Lilas&line=11&sens=Rosny:t:sous-Bois&stationcode=71909&linecode=C01381&destcode=Rosny-sous-Bois&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

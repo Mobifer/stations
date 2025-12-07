@@ -268,8 +268,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Exelmans","lignes":{"metro":["9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Acc%C3%A8s_Station_M%C3%A9tro_Exelmans_Boulevard_Exelmans_-_Paris_XVI_%28FR75%29_-_2022-01-23_-_6.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Exelmans_Boulevard_Exelmans_-_Paris_XVI_%28FR75%29_-_2022-01-23_-_6.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Exelmans_Boulevard_Exelmans_-_Paris_XVI_(FR75)_-_2022-01-23_-_6.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["9"]},"ouv":"8 novembre 1922","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>)"],"freq":"1 607 223 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard Exelmans"},{"num":"2","desc":"rue Michel-Ange"},{"num":"3","desc":"rue Claude Lorrain","rep":"Hôpital Henry Dunant"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Exelmans&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71124&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Exelmans&line=9&sens=Montreuil&stationcode=71124&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

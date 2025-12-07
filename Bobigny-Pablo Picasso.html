@@ -385,8 +385,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Bobigny – Pablo Picasso","lignes":{"metro":["5"],"tram":["T1"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Station_M%C3%A9tro_Bobigny_Pablo_Picasso_Ligne_5_-_Bobigny_%28FR93%29_-_2022-04-28_-_6.jpg/1280px-Station_M%C3%A9tro_Bobigny_Pablo_Picasso_Ligne_5_-_Bobigny_%28FR93%29_-_2022-04-28_-_6.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Métro_Bobigny_Pablo_Picasso_Ligne_5_-_Bobigny_(FR93)_-_2022-04-28_-_6.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["5"]},"ouv":"25 avril 1985","voies":"3","quais":"2","zt":"3","ufr":"Non","communes":["Bobigny"],"freq":"6 561 327 voyageurs (2021)"},{"lignes":{"tram":["T1"]},"ouv":"6 juillet 1992","voies":"2","quais":"6","zt":"3","ufr":"Oui","communes":["Bobigny"]}],"sorties":[{"num":"1","desc":"Hôtel de Ville","pti":"MC93 – Maison de la Culture","acc":true},{"num":"2","desc":"Palais de Justice"},{"num":"3","desc":"rue Carnot","esc":true},{"num":"4","desc":"Préfecture","rep":["Trésorerie Générale","Cité Administrative","Centre Commercial"],"esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Bobigny%20Pablo%20Picasso&line=5&sens=Place%20d’Italie&stationcode=72486&linecode=C01375&destcode=Place%20d%27Italie&destcodealt=false"},{"tram":"22624","line":"1"},{"tram":"22625","line":"1"}],"rep":"Préfecture – Hôtel du Département"};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

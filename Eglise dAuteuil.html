@@ -242,8 +242,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Église d’Auteuil","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Acc%C3%A8s_Station_M%C3%A9tro_%C3%89glise_Auteuil_Place_Th%C3%A9odore_Rivi%C3%A8re_-_Paris_XVI_%28FR75%29_-_2022-01-23_-_5.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_%C3%89glise_Auteuil_Place_Th%C3%A9odore_Rivi%C3%A8re_-_Paris_XVI_%28FR75%29_-_2022-01-23_-_5.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Accès_Station_Métro_Église_Auteuil_Place_Théodore_Rivière_-_Paris_XVI_(FR75)_-_2022-01-23_-_5.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["10"]},"ouv":"30 septembre 1913","inaug":"Wilhem","voies":"1","quais":"1","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>)"],"freq":"124 941 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place Théodore Rivière","acc":true},{"num":"2","desc":"rue Wilhem"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Église%20d%27Auteuil&line=10&sens=Boulogne&stationcode=71166&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

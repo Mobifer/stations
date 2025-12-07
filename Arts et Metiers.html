@@ -332,8 +332,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Arts et Métiers","lignes":{"metro":["3","11"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Paris-ArtetMetiers.jpg/1024px-Paris-ArtetMetiers.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Paris-ArtetMetiers.jpg","imga":"Jerem9211","stats":[{"lignes":{"metro":["3","11"]},"ouv":"19 octobre 1904","voies":"4","quais":"4","zt":"1","ufr":"Non","communes":["Paris (III<sup>e</sup>)"],"freq":"2 403 042 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Conté","acc":true},{"num":"2","desc":"rue Réaumur","acc":true},{"num":"3","desc":"rue des Vertus"},{"num":"4","desc":"rue Beaubourg","serv":true},{"num":"5","desc":"rue Turbigo","pti":"Musée des Arts et Métiers","serv":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Arts%20et%20Métiers&line=3&sens=Levallois&stationcode=71293&linecode=C01373&destcode=Pont%20de%20Levallois%20-%20Bécon&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Arts%20et%20Métiers&line=3&sens=Gallieni&stationcode=71293&linecode=C01373&destcode=Gallieni&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Arts%20et%20Métiers&line=11&sens=Châtelet&stationcode=71293&linecode=C01381&destcode=Châtelet&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Arts%20et%20Métiers&line=11&sens=Rosny:t:sous-Bois&stationcode=71293&linecode=C01381&destcode=Rosny-sous-Bois&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

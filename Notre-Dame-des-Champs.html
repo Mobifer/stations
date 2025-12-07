@@ -224,8 +224,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Notre-Dame-des-Champs","lignes":{"metro":["12"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Notre-Dame-des-Champs_métro_Didier_Deschamps_3.jpg/1280px-Notre-Dame-des-Champs_métro_Didier_Deschamps_3.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Notre-Dame-des-Champs_métro_Didier_Deschamps_3.jpg","imga":"Celette","stats":[{"lignes":{"metro":["12"]},"ouv":"5 novembre 1910","voies":2,"quais":2,"zt":1,"ufr":"Non","communes":["Paris (VI<sup>e</sup>)"],"freq":"1 487 256 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place Pierre Lafue","acc":true,"esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Notre-Dame-des-Champs&line=12&sens=Aubervilliers&stationcode=71138&linecode=C01382&destcode=Mairie%20d%27Aubervilliers&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Notre-Dame-des-Champs&line=12&sens=Mairie%20d%27Issy&stationcode=71138&linecode=C01382&destcode=Mairie%20d%27Issy&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

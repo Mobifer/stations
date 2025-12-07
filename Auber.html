@@ -345,8 +345,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Auber","corresp":["Haussmann-Gare Saint-Lazare","Havre-Caumartin","Opera","Paris-Saint-Lazare","Saint-Lazare"],"lignes":{"rer":["A"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Gare_Auber_RER_IdF_Ligne_A_-_Paris_IX_%28FR75%29_-_2025-10-14_-_5.jpg/1280px-Gare_Auber_RER_IdF_Ligne_A_-_Paris_IX_%28FR75%29_-_2025-10-14_-_5.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Gare_Auber_RER_IdF_Ligne_A_-_Paris_IX_(FR75)_-_2025-10-14_-_5.jpg","imga":"Chabe01","stats":[{"lignes":{"rer":["A"]},"ouv":"23 novembre 1971","voies":"2","quais":"2","zt":"1","ufr":"Oui","communes":["Paris (VIII<sup>e</sup>, IX<sup>e</sup>)"],"freq":"6 549 601 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Auber","pti":"Opéra Garnier","acc":true},{"num":"2","desc":"place Diaghilev","pti":"Les Grands Magasins","esc":true},{"num":"3","desc":"rue des Mathurins"},{"num":"4","desc":"Haussmann – Mogador","pti":"Les Grands Magasins"},{"num":"5","desc":"Haussmann – Charras","pti":"Les Grands Magasins","esc":true}],"siv":[{"train":"https://departs.leon.gp/screen/ratp_rer/stop/fr-idf_IDFM:478926/line/IDFM:C01742/pos/48.87287348342086,2.329726837260099"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

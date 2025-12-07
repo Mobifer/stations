@@ -355,8 +355,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Porte de Saint-Ouen","lignes":{"metro":["13"],"tram":["T3b"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Acc%C3%A8s_Station_M%C3%A9tro_Porte_Saint_Ouen_Avenue_Saint_Ouen_-_Paris_XVII_%28FR75%29_-_2022-01-29_-_2.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Porte_Saint_Ouen_Avenue_Saint_Ouen_-_Paris_XVII_%28FR75%29_-_2022-01-29_-_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Accès_Station_Métro_Porte_Saint_Ouen_Avenue_Saint_Ouen_-_Paris_XVII_(FR75)_-_2022-01-29_-_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["13"]},"ouv":"26 février 1911","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>, XVIII<sup>e</sup>)"],"freq":"2 710 638 voyageurs (2021)"},{"lignes":{"tram":["T3b"]},"ouv":"24 novembre 2018","voies":"2","quais":"2","zt":"1","ufr":"Oui","communes":["Paris (XVI<sup>e</sup>, XVIII<sup>e</sup>)"]}],"sorties":[{"num":"1","desc":"boulevard Bressières","acc":true},{"num":"2","desc":"avenue de Saint-Ouen","rep":"Hôpital Bichat"},{"num":"3","desc":"rue Leibniz","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20de%20Saint-Ouen&line=13&sens=Saint-Denis&stationcode=72078&linecode=C01383&destcode=Asnières%20-%20Gennevilliers%20Les%20Courtilles%20•%20Saint-Denis%20-%20Université&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20de%20Saint-Ouen&line=13&sens=Châtillon&stationcode=72078&linecode=C01383&destcode=Châtillon-Montrouge&destcodealt=false"},{"tram":"462436","line":"3b"},{"tram":"462446","line":"3b"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

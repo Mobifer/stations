@@ -278,8 +278,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Bel-Air","lignes":{"metro":["6"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Bel-Air_m%C3%A9tro_Q02.jpg/1280px-Bel-Air_m%C3%A9tro_Q02.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Bel-Air_m%C3%A9tro_Q02.jpg","imga":"Geralix","stats":[{"lignes":{"metro":["6"]},"ouv":"1<sup>er</sup> mars 1909","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XII<sup>e</sup>)"],"freq":"1 605 573 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard de Picpus","acc":true},{"num":"2","desc":"rue du Sahel","rep":"Hôpital Trousseau"},{"num":"3","desc":"rue Dagorno","rep":"Hôpital Rothschild"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Bel-Air&line=6&sens=%C3%89toile&stationcode=73650&linecode=C01376&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bel-Air&line=6&sens=Nation&stationcode=73650&linecode=C01376&destcode=Nation&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

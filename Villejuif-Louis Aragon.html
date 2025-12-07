@@ -340,8 +340,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Villejuif – Louis Aragon","lignes":{"metro":["7"],"tram":["T7"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Station_Villejuif_Louis_Aragon_M%C3%A9tro_Paris_Ligne_7_-_Villejuif_%28FR94%29_-_2022-07-04_-_7.jpg/1280px-Station_Villejuif_Louis_Aragon_M%C3%A9tro_Paris_Ligne_7_-_Villejuif_%28FR94%29_-_2022-07-04_-_7.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Villejuif_Louis_Aragon_M%C3%A9tro_Paris_Ligne_7_-_Villejuif_(FR94)_-_2022-07-04_-_7.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["7"]},"ouv":"28 février 1985","voies":"4","quais":"4","zt":"3","ufr":"Non","communes":["Villejuif"],"freq":"5 218 070 voyageurs (2021)"},{"lignes":{"tram":["T7"]},"ouv":"16 novembre 2013","voies":"2","quais":"2","zt":"3","ufr":"Oui","communes":["Villejuif"],"freq":"5 218 070 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue de Stalingrad","asc":true},{"num":"2","desc":"boulevard Maxime Gorki","asc":true},{"num":"3","desc":"Gare Routière","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Villejuif%20-%20Louis%20Aragon&line=7&sens=La%20Courneuve&stationcode=70143&linecode=C01377&destcode=La%20Courneuve%20-%208%20Mai%201945&destcodealt=false"},{"tram":"35946","line":"7"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

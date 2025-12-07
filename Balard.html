@@ -429,8 +429,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Balard","lignes":{"metro":["8"],"tram":["T3a"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Acc%C3%A8s_Station_M%C3%A9tro_Balard_Place_Balard_-_Paris_XV_%28FR75%29_-_2022-01-23_-_3.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Balard_Place_Balard_-_Paris_XV_%28FR75%29_-_2022-01-23_-_3.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Balard_Place_Balard_-_Paris_XV_(FR75)_-_2022-01-23_-_3.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["8"]},"ouv":"27 juillet 1937","voies":"3","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XV<sup>e</sup>)"],"freq":"3 236 801 voyageurs (2021)"},{"lignes":{"tram":["T3a"]},"ouv":"16 décembre 2006","voies":"2","quais":"2","zt":"1","ufr":"Oui","communes":["Paris (XV<sup>e</sup>)"]}],"sorties":[{"num":"1","desc":"boulevard Victor","acc":true},{"num":"2","desc":"boulevard du Général Martial Valin","rep":"Ministère de la Défense"},{"num":"3","desc":"rue Balard","rep":"Hôpital Européen Georges Pompidou"},{"num":"4","desc":"avenue Félix Faure"},{"num":"5","desc":"avenue de la Porte de Sèvres","esc":true},{"num":"6","desc":"rue Louis Armand","pti":"Centre Aquatique","acc":true,"esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Balard&line=8&sens=Cr%C3%A9teil&stationcode=71073&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"},{"tram":"24108","line":"3a"},{"tram":"24103","line":"3a"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

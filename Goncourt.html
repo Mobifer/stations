@@ -336,8 +336,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Goncourt","rep":"Hôpital Saint-Louis","lignes":{"metro":["11"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Rame_Station_Goncourt_M%C3%A9tro_Paris_Ligne_11_-_Paris_XI_%28FR75%29_-_2022-06-24_-_2.jpg/1280px-Rame_Station_Goncourt_M%C3%A9tro_Paris_Ligne_11_-_Paris_XI_%28FR75%29_-_2022-06-24_-_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Rame_Station_Goncourt_M%C3%A9tro_Paris_Ligne_11_-_Paris_XI_(FR75)_-_2022-06-24_-_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["11"]},"ouv":"28 avril 1935","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (X<sup>e</sup>, XI<sup>e</sup>)"],"freq":"2 199 170 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"Hôpital Saint-Louis","acc":true},{"num":"2","desc":"rue du Faubourg du Temple"},{"num":"3","desc":"avenue Parmentier"},{"num":"4","desc":"rue des Goncourt"},{"num":"5","desc":"rue d’Aix"},{"num":"6","desc":"rue Bichat","pti":"Canal Saint-Martin"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Goncourt&line=11&sens=Ch%C3%A2telet&stationcode=71840&linecode=C01381&destcode=Ch%C3%A2telet&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Goncourt&line=11&sens=Rosny:t:sous-Bois&stationcode=71840&linecode=C01381&destcode=Rosny-sous-Bois&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

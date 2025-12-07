@@ -303,8 +303,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Bagneux – Lucie Aubrac","lignes":{"metro":["4"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Bagneux_-_Lucie_Aubrac_Quai_d%C3%A9part.jpg/1280px-Bagneux_-_Lucie_Aubrac_Quai_d%C3%A9part.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Bagneux_-_Lucie_Aubrac_Quai_d%C3%A9part.jpg","imga":"Nicolas22g","stats":[{"lignes":{"metro":["4"]},"ouv":"13 janvier 2022","voies":"3","quais":"2","zt":"2","ufr":"Oui","communes":["Bagneux"]}],"sorties":[{"num":"1","desc":"rue de Verdun","acc":true,"asc":true},{"num":"2","desc":"avenue Henri Barbusse","asc":true},{"num":"3","desc":"place Lucie Aubrac","asc":true},{"num":"4","desc":"avenue de Stalingrad","esc":true},{"num":"5","desc":"rue Claude Debussy","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Bagneux%20-%20Lucie%20Aubrac&line=4&sens=Porte%20de:b:Clignancourt&stationcode=483315&linecode=C01374&destcode=Porte%20de%20Clignancourt&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

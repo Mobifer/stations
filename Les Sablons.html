@@ -295,8 +295,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Les Sablons","pti":"Jardin d’Acclimatation","lignes":{"metro":["1"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Acc%C3%A8s_Station_M%C3%A9tro_Sablons_Avenue_Charles_Gaulle_-_Neuilly-sur-Seine_%28FR92%29_-_2022-01-30_-_4.jpg/1024px-Acc%C3%A8s_Station_M%C3%A9tro_Sablons_Avenue_Charles_Gaulle_-_Neuilly-sur-Seine_%28FR92%29_-_2022-01-30_-_4.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Sablons_Avenue_Charles_Gaulle_-_Neuilly-sur-Seine_(FR92)_-_2022-01-30_-_4.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["1"]},"ouv":"29 avril 1937","voies":"2","quais":"2","zt":"2","ufr":"Non","communes":["Neuilly-sur-Seine"],"freq":"3 954 920 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Louis-Philippe","esc":true},{"num":"2","pti":"Jardin d’Acclimatation","acc":true},{"num":"3","desc":"rue Jacques Dulud"},{"num":"4","desc":"place du Marché"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Les%20Sablons&line=1&sens=La%20D%C3%A9fense&stationcode=43785&linecode=C01371&destcode=La%20D%C3%A9fense%20(Grande%20Arche)&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Les%20Sablons&line=1&sens=Ch%C3%A2teau:b:de%20Vincennes&stationcode=43785&linecode=C01371&destcode=Ch%C3%A2teau%20de%20Vincennes&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

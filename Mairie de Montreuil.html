@@ -302,8 +302,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Mairie de Montreuil","lignes":{"metro":["9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Station_Mairie-de-Montreuil_-_2012-07-03_-_IMG_5047.jpg/1280px-Station_Mairie-de-Montreuil_-_2012-07-03_-_IMG_5047.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Mairie-de-Montreuil_-_2012-07-03_-_IMG_5047.jpg","imga":"Poudou99","stats":[{"lignes":{"metro":["9"]},"ouv":"14 octobre 1937","voies":"2","quais":"2","zt":"2","ufr":"Non","communes":["Montreuil"],"freq":"6 158 487 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"square Jean Jaurès","asc":true},{"num":"2","desc":"avenue Walwein"},{"num":"3","desc":"boulevard Rouget de Lisle","acc":true},{"num":"4","desc":"avenue Pasteur"},{"num":"5","desc":"boulevard Paul Vaillant-Couturier","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Mairie%20de%20Montreuil&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71785&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

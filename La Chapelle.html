@@ -234,8 +234,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"La Chapelle","corresp":["Gare du Nord","Magenta-Gare du Nord","Paris-Nord"],"lignes":{"metro":["2"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/MF2000_at_La_Chapelle.jpg/1280px-MF2000_at_La_Chapelle.jpg","imgp":"https://commons.wikimedia.org/wiki/File:MF2000_at_La_Chapelle.jpg","imga":"Matthew Black","stats":[{"lignes":{"metro":["2"]},"ouv":"31 janvier 1903","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (X<sup>e</sup>, XVIII<sup>e</sup>)"],"freq":"4 855 531 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard de la Chapelle","serv":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=La%20Chapelle&line=2&sens=Porte:b:Dauphine&stationcode=43524&linecode=C01372&destcode=Porte%20Dauphine&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=La%20Chapelle&line=2&sens=Nation&stationcode=43524&linecode=C01372&destcode=Nation&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

@@ -243,8 +243,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Dupleix","lignes":{"metro":["6"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Dupleix_vers_Étoile_par_Cramos.JPG/1280px-Dupleix_vers_Étoile_par_Cramos.JPG","imgp":"https://commons.wikimedia.org/wiki/File:Dupleix_vers_Étoile_par_Cramos.JPG","imga":"Cramos","stats":[{"lignes":{"metro":["6"]},"ouv":"24 avril 1906","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XV<sup>e</sup>)"],"freq":"2 028 963 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Viala","acc":true},{"num":"2","desc":"rue Desaix"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Dupleix&line=6&sens=Étoile&stationcode=71197&linecode=C01376&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Dupleix&line=6&sens=Nation&stationcode=71197&linecode=C01376&destcode=Nation&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

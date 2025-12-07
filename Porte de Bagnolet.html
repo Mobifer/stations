@@ -392,8 +392,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Porte de Bagnolet","lignes":{"metro":["3"],"tram":["T3b"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Metro_de_Paris_-_Ligne_3_-_Porte_de_Bagnolet_05.JPG/1280px-Metro_de_Paris_-_Ligne_3_-_Porte_de_Bagnolet_05.JPG","imgp":"https://commons.wikimedia.org/wiki/File:Metro_de_Paris_-_Ligne_3_-_Porte_de_Bagnolet_05.JPG","imga":"Chabe01","stats":[{"lignes":{"metro":["3"]},"ouv":"2 avril 1971","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XX<sup>e</sup>)"],"freq":"3 085 790 voyageurs (2021)"},{"lignes":{"tram":["T3b"]},"ouv":"15 décembre 2012","voies":"2","quais":"2","zt":"1","ufr":"Oui","communes":["Paris (XX<sup>e</sup>)"]}],"sorties":[{"num":"1","desc":"boulevard Davout","acc":true,"esc":true},{"num":"2","desc":"boulevard Mortier","esc":true},{"num":"3","desc":"rue de la Py"},{"num":"4","desc":"rue Belgrand"},{"num":"5","desc":"place Édith Piaf"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20de%20Bagnolet&line=3&sens=Levallois&stationcode=71799&linecode=C01373&destcode=Pont%20de%20Levallois%20-%20B%C3%A9con&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20de%20Bagnolet&line=3&sens=Gallieni&stationcode=71799&linecode=C01373&destcode=Gallieni&destcodealt=false"},{"tram":"24414","line":"3b"},{"tram":"24419","line":"3b"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

@@ -286,8 +286,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Charonne","lignes":{"metro":["9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Entr%C3%A9e_Station_M%C3%A9tro_Charonne_Paris_3.jpg/1280px-Entr%C3%A9e_Station_M%C3%A9tro_Charonne_Paris_3.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_Station_M%C3%A9tro_Charonne_Paris_3.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["9"]},"ouv":"10 décembre 1933","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XI<sup>e</sup>)"],"freq":"2 705 320 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue de Charonne","esc":true},{"num":"2","desc":"boulevard Voltaire"},{"num":"3","desc":"rue de Belfort"},{"num":"4","desc":"rue Gobert"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Charonne&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=73647&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Charonne&line=9&sens=Montreuil&stationcode=73647&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"}],"rep":"Place du 8 Février 1962"};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

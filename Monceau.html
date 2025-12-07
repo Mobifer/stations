@@ -222,8 +222,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Monceau","lignes":{"metro":["2"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Acc%C3%A8s_Station_M%C3%A9tro_Monceau_Place_R%C3%A9publique_Dominicaine_-_Paris_VIII_(FR75)_-_2022-01-30_-_2.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Monceau_Place_R%C3%A9publique_Dominicaine_-_Paris_VIII_(FR75)_-_2022-01-30_-_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Monceau_Place_R%C3%A9publique_Dominicaine_-_Paris_VIII_(FR75)_-_2022-01-30_-_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["2"]},"ouv":"7 octobre 1902","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (VIII<sup>e</sup>)"],"freq":"1 148 677 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place de la République Dominicaine","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Monceau&line=2&sens=Porte:b:Dauphine&stationcode=73671&linecode=C01372&destcode=Porte%20Dauphine&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Monceau&line=2&sens=Nation&stationcode=73671&linecode=C01372&destcode=Nation&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

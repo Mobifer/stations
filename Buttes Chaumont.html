@@ -222,8 +222,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Buttes Chaumont","lignes":{"metro":["7bis"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Buttes_Chaumont_metro_station.JPG/1280px-Buttes_Chaumont_metro_station.JPG","imgp":"https://commons.wikimedia.org/wiki/File:Buttes_Chaumont_metro_station.JPG","imga":"Maurits90","stats":[{"lignes":{"metro":["7bis"]},"ouv":"13 décembre 1912","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XIX<sup>e</sup>)"],"freq":"358 301 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Botzaris","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Buttes-Chaumont&line=7b&sens=Louis%20Blanc&stationcode=71900&linecode=C01387&destcode=Louis%20Blanc&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Buttes-Chaumont&line=7b&sens=Pr%C3%A9:b:Saint-Gervais&stationcode=71900&linecode=C01387&destcode=Pr%C3%A9-Saint-Gervais&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

@@ -286,8 +286,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Boulogne – Pont de Saint-Cloud","pti":"Rhin et Danube","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Station_Boulogne_Pont_Saint_Cloud_M%C3%A9tro_Paris_Ligne_10_-_Boulogne-Billancourt_%28FR92%29_-_2022-07-04_-_2.jpg/1280px-Station_Boulogne_Pont_Saint_Cloud_M%C3%A9tro_Paris_Ligne_10_-_Boulogne-Billancourt_%28FR92%29_-_2022-07-04_-_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Boulogne_Pont_Saint_Cloud_M%C3%A9tro_Paris_Ligne_10_-_Boulogne-Billancourt_(FR92)_-_2022-07-04_-_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["10"]},"ouv":"2 octobre 1981","voies":"2","quais":"1","zt":"2","ufr":"Non","communes":["Boulogne-Billancourt"],"freq":"2 182 738 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"route de la Reine","acc":true},{"num":"2","desc":"avenue Jean-Baptiste Clément"},{"num":"3","desc":"rue du Port","pti":"Musée Albert Kahn"},{"num":"4","desc":"avenue du Maréchal de Lattre de Tassigny"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Boulogne%20-%20Pont%20de%20Saint-Cloud&line=10&sens=Gare:b:d’Austerlitz&stationcode=70721&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

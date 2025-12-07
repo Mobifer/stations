@@ -310,8 +310,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Paris – Nord","corresp":["Gare de lEst","Gare du Nord","La Chapelle","Magenta-Gare du Nord","Paris-Est"],"lignes":{"rer":["B","D"],"train":["H","K"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Paris_gare_nord_face_3.jpg/1280px-Paris_gare_nord_face_3.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Paris_gare_nord_face_3.jpg","imga":"Velvet","stats":[{"lignes":{"rer":["B","D"],"train":["H","K"]},"ouv":"20 juin 1846","voies":"32","quais":"17","zt":"1","ufr":"Oui","communes":["Paris (X<sup>e</sup>)"],"freq":"226,7 M voyageurs (2023)"}],"sorties":[{"num":"1","desc":"rue du Faubourg Saint-Denis"},{"num":"2","desc":"rue de Saint-Quentin","acc":true},{"num":"3","desc":"rue de Dunkerque"},{"num":"4","desc":"boulevard de Denain"}],"siv":[{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.8795917%2C2.3568088&stop=stop_area%3AIDFM%3A71410&lines=line%3AIDFM%3AC01743%2Cline%3AIDFM%3AC01850&platforms="},{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.8795917%2C2.3568088&stop=stop_area%3AIDFM%3A71410&lines=line%3AIDFM%3AC01728&platforms="},{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.87968%2C2.3573429&stop=stop_area%3AIDFM%3A71410&lines=line%3AIDFM%3AC01737%2Cline%3AIDFM%3AC01842&platforms="},{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.8795917%2C2.3568088&stop=stop_area%3AIDFM%3A71410&lines=line%3AIDFM%3AC01738%2Cline%3AIDFM%3AC01844&platforms="}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

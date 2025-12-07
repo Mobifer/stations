@@ -285,8 +285,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Ledru-Rollin","lignes":{"metro":["8"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Entr%C3%A9e_Station_M%C3%A9tro_Ledru_Rollin_Paris_2.jpg/1280px-Entr%C3%A9e_Station_M%C3%A9tro_Ledru_Rollin_Paris_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Entrée_Station_Métro_Ledru_Rollin_Paris_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["8"]},"ouv":"5 mai 1931","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XI<sup>e</sup>, XII<sup>e</sup>)"],"freq":"2 570 283 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue Ledru-Rollin","acc":true},{"num":"2","desc":"rue du Faubourg Saint-Antoine"},{"num":"3","desc":"rue Traversière"},{"num":"4","desc":"rue de Charonne"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Ledru%20Rollin&line=8&sens=Balard&stationcode=71693&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Ledru%20Rollin&line=8&sens=Créteil&stationcode=71693&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

@@ -222,8 +222,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Botzaris","lignes":{"metro":["7bis"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Acc%C3%A8s_Station_M%C3%A9tro_Botzaris_Rue_Botzaris_-_Paris_XIX_%28FR75%29_-_2022-01-01_-_1.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Botzaris_Rue_Botzaris_-_Paris_XIX_%28FR75%29_-_2022-01-01_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Botzaris_Rue_Botzaris_-_Paris_XIX_(FR75)_-_2022-01-01_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["7bis"]},"ouv":"18 janvier 1911","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XIX<sup>e</sup>)"],"freq":"669 323 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Botzaris","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Botzaris&line=7b&sens=Louis%20Blanc&stationcode=71906&linecode=C01387&destcode=Louis%20Blanc&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Botzaris&line=7b&sens=Pr%C3%A9:b:Saint-Gervais&stationcode=71906&linecode=C01387&destcode=Pr%C3%A9-Saint-Gervais&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

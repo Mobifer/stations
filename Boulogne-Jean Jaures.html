@@ -267,8 +267,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Boulogne – Jean Jaurès","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Paris_metro_-_Boulogne-Jean_Jaur%C3%A8s_-_2.JPG/1280px-Paris_metro_-_Boulogne-Jean_Jaur%C3%A8s_-_2.JPG","imgp":"https://commons.wikimedia.org/wiki/File:Paris_metro_-_Boulogne-Jean_Jaur%C3%A8s_-_2.JPG","imga":"\tBenjism89","stats":[{"lignes":{"metro":["10"]},"ouv":"3 août 1980","voies":"2","quais":"1","zt":"2","ufr":"Non","communes":["Boulogne-Billancourt"],"freq":"2 700 354 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard Jean Jaurès<br>rue du Château (côté des n° impairs)","acc":true},{"num":"2","desc":"boulevard Jean Jaurès<br>rue du Château (côté des n° pairs)","acc":true},{"num":"3","desc":"rue du Château"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Boulogne%20-%20Pont%20de%20Saint-Cloud&line=10&sens=Boulogne&stationcode=70721&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Boulogne%20-%20Pont%20de%20Saint-Cloud&line=10&sens=Gare:b:d’Austerlitz&stationcode=70721&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

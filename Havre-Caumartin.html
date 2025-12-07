@@ -326,8 +326,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Havre – Caumartin","corresp":["Auber","Haussmann-Gare Saint-Lazare"],"lignes":{"metro":["3","9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Havre_-_Caumartin_-_Quais_de_la_ligne_9.jpg/1280px-Havre_-_Caumartin_-_Quais_de_la_ligne_9.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Havre_-_Caumartin_-_Quais_de_la_ligne_9.jpg","imga":"Capitaine AdBlock","stats":[{"lignes":{"metro":["3","9"]},"ouv":"19 octobre 1904","voies":"4","quais":"4","zt":"1","ufr":"Non","communes":["Paris (IX<sup>e</sup>)"],"freq":"5 894 982 (2021)","inaug":"Caumartin"}],"sorties":[{"num":"1","desc":"rue du Havre"},{"num":"2","desc":"boulevard Haussmann","pti":"Grands Magasins","acc":true},{"num":"3","desc":"rue Auber"},{"num":"4","desc":"rue de Caumartin"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Havre-Caumartin&line=3&sens=Levallois&stationcode=73688&linecode=C01373&destcode=Pont%20de%20Levallois%20-%20B%C3%A9con&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Havre-Caumartin&line=3&sens=Gallieni&stationcode=73688&linecode=C01373&destcode=Gallieni&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Havre-Caumartin&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=73688&linecode=C01373&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Havre-Caumartin&line=9&sens=Montreuil&stationcode=73688&linecode=C01373&destcode=Mairie%20de%20Montreuil&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

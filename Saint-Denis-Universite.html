@@ -242,8 +242,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Saint-Denis – Université","lignes":{"metro":["13"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Station_M%C3%A9tro_Saint_Denis_Universit%C3%A9_Ligne_13_-_Saint-Denis_%28FR93%29_-_2022-05-28_-_1.jpg/1280px-Station_M%C3%A9tro_Saint_Denis_Universit%C3%A9_Ligne_13_-_Saint-Denis_%28FR93%29_-_2022-05-28_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Métro_Saint_Denis_Université_Ligne_13_-_Saint-Denis_(FR93)_-_2022-05-28_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["13"]},"ouv":"25 mai 1998","voies":"2","quais":"2","zt":"3","ufr":"Non","communes":["Saint-Denis"],"freq":"3 569 990 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"Université","pti":"Archives Nationales","acc":true},{"num":"2","desc":"avenue de Stalingrad"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Saint-Denis%20-%20Université&line=13&sens=Châtillon&stationcode=72358&linecode=C01383&destcode=Châtillon-Montrouge&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

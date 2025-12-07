@@ -299,8 +299,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Romainville – Carnot","lignes":{"metro":["11"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Station_Romainville_Carnot_M%C3%A9tro_Paris_Ligne_11_-_Romainville_%28FR93%29_-_2024-06-13_-_8.jpg/1280px-Station_Romainville_Carnot_M%C3%A9tro_Paris_Ligne_11_-_Romainville_%28FR93%29_-_2024-06-13_-_8.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Romainville_Carnot_M%C3%A9tro_Paris_Ligne_11_-_Romainville_(FR93)_-_2024-06-13_-_8.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["11"]},"ouv":"13 juin 2024","voies":"2","quais":"2","zt":"3","ufr":"Oui","communes":["Noisy-le-Sec"]}],"sorties":[{"num":"1","desc":"place Carnot","asc":true},{"num":"2","desc":"boulevard Henri Barbusse","asc":true},{"num":"3","desc":"rue Carnot","pti":"Corniche des Forts","esc":true},{"num":"4","desc":"rue Veuve Aublet","pti":"Le Trianon","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Romainville%20-%20Carnot&line=11&sens=Ch%C3%A2telet&stationcode=71947&linecode=C01381&destcode=Ch%C3%A2telet&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Romainville%20-%20Carnot&line=11&sens=Rosny:t:sous-Bois&stationcode=71947&linecode=C01381&destcode=Rosny-sous-Bois&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

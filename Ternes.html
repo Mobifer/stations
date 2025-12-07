@@ -273,8 +273,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Ternes","lignes":{"metro":["2"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Station_Ternes_M%C3%A9tro_Paris_Ligne_2_-_Paris_XVII_%28FR75%29_-_2022-07-01_-_1.jpg/1280px-Station_Ternes_M%C3%A9tro_Paris_Ligne_2_-_Paris_XVII_%28FR75%29_-_2022-07-01_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Ternes_M%C3%A9tro_Paris_Ligne_2_-_Paris_XVII_(FR75)_-_2022-07-01_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["2"]},"ouv":"7 octobre 1902","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (VIII<sup>e</sup>, XVII<sup>e</sup>)"],"freq":"2 292 256 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue des Ternes"},{"num":"2","desc":"place des Ternes","pti":"Salle Pleyel","acc":true},{"num":"3","desc":"boulevard de Courcelles","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Ternes&line=2&sens=Porte:b:Dauphine&stationcode=71367&linecode=C01372&destcode=Porte%20Dauphine&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Ternes&line=2&sens=Nation&stationcode=71367&linecode=C01372&destcode=Nation&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

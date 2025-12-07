@@ -222,8 +222,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Nationale","lignes":{"metro":["6"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/P7250082_Paris_XIII_statin_nationale_reductwk.JPG/1280px-P7250082_Paris_XIII_statin_nationale_reductwk.JPG","imgp":"https://commons.wikimedia.org/wiki/File:P7250082_Paris_XIII_statin_nationale_reductwk.JPG","imga":"Mbzt","stats":[{"lignes":{"metro":["6"]},"ouv":"1<sup>er</sup> mars 1909","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XIII<sup>e</sup>)"],"freq":"1 320 290 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard Vincent Auriol","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Nationale&line=6&sens=%C3%89toile&stationcode=71043&linecode=C01376&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Nationale&line=6&sens=Nation&stationcode=71043&linecode=C01376&destcode=Nation&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

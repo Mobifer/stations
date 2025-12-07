@@ -295,8 +295,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Front Populaire","rep":"Aubervilliers • Saint-Denis","lignes":{"metro":["12"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Station_M%C3%A9tro_Front_Populaire_Ligne_12_-_Saint-Denis_%28FR93%29_-_2022-06-01_-_4.jpg/1280px-Station_M%C3%A9tro_Front_Populaire_Ligne_12_-_Saint-Denis_%28FR93%29_-_2022-06-01_-_4.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_M%C3%A9tro_Front_Populaire_Ligne_12_-_Saint-Denis_(FR93)_-_2022-06-01_-_4.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["12"]},"ouv":"18 décembre 2012","voies":"2","quais":"2","zt":"2","ufr":"Oui","communes":["Aubervilliers","Saint-Denis"],"freq":"1 948 542 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Léon Blum","rep":"Magasins Généraux","acc":true,"asc":true,"esc":true},{"num":"2","desc":"rue Waldeck Rochet","rep":"Campus Condorcet","esc":true},{"num":"3","desc":"avenue George Sand","rep":"Maison des Sciences et de l’Homme","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Front%20Populaire&line=12&sens=Aubervilliers&stationcode=74041&linecode=C01382&destcode=Mairie%20d%27Aubervilliers&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Front%20Populaire&line=12&sens=Mairie%20d’Issy&stationcode=74041&linecode=C01382&destcode=Mairie%20d%27Issy&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

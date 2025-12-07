@@ -245,8 +245,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"La Tour-Maubourg","lignes":{"metro":["8"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Station_m%C3%A9tro_La-Tour-Maubourg_-_IMG_3434.jpg/1280px-Station_m%C3%A9tro_La-Tour-Maubourg_-_IMG_3434.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_m%C3%A9tro_La-Tour-Maubourg_-_IMG_3434.jpg","imga":"Poudou99","stats":[{"lignes":{"metro":["8"]},"ouv":"13 juillet 1913","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (VII<sup>e</sup>)"],"freq":"1 361 723 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard de la Tour-Maubourg","acc":true},{"num":"2","desc":"rue de Grenelle","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=La%20Tour%20Maubourg&line=8&sens=Balard&stationcode=71242&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=La%20Tour%20Maubourg&line=8&sens=Cr%C3%A9teil&stationcode=71242&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

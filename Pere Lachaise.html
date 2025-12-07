@@ -261,8 +261,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Père Lachaise","lignes":{"metro":["2","3"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Entrance_to_P%C3%A8re_Lachaise_metro_station%2C_Paris.jpg/975px-Entrance_to_P%C3%A8re_Lachaise_metro_station%2C_Paris.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Entrance_to_P%C3%A8re_Lachaise_metro_station,_Paris.jpg","imga":"Oderik","stats":[{"lignes":{"metro":["2","3"]},"ouv":"25 février 1903","voies":"4","quais":"4","zt":"1","ufr":"Non","communes":["Paris (XI<sup>e</sup>, XX<sup>e</sup>)"],"freq":"3 465 307 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard de Ménilmontant","acc":true,"esc":true},{"num":"2","desc":"avenue de la République"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=P%C3%A8re%20Lachaise&line=2&sens=Porte:b:Dauphine&stationcode=44310&linecode=C01372&destcode=Porte%20Dauphine&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=P%C3%A8re%20Lachaise&line=2&sens=Nation&stationcode=44310&linecode=C01372&destcode=Nation&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=P%C3%A8re%20Lachaise&line=3&sens=Levallois&stationcode=44310&linecode=C01373&destcode=Pont%20de%20Levallois%20-%20B%C3%A9con&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=P%C3%A8re%20Lachaise&line=3&sens=Gallieni&stationcode=44310&linecode=C01373&destcode=Gallieni&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

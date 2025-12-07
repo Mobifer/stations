@@ -335,8 +335,9 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script src="/assets/script/genlineicons.js" type="module"></script>
 		<script>
+			import { genererLignesHTML } from "/assets/script/genlineicons.js";
+
 			const station = {"nom":"Pyrénées","lignes":{"metro":["11"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Entr%C3%A9e_Station_M%C3%A9tro_Pyr%C3%A9n%C3%A9es_Paris_3.jpg/1280px-Entr%C3%A9e_Station_M%C3%A9tro_Pyr%C3%A9n%C3%A9es_Paris_3.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Entrée_Station_Métro_Pyrénées_Paris_3.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["11"]},"ouv":"28 avril 1935","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XIX<sup>e</sup>, XX<sup>e</sup>)"],"freq":"2 288 587 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue des Pyrénées","acc":true},{"num":"2","desc":"rue de Belleville","esc":true},{"num":"3","desc":"avenue Simon Bolivar","acc":true},{"num":"4","desc":"rue Clavel","acc":true},{"num":"5","desc":"rue de l’Équerre"},{"num":"6","desc":"square Simon Bolivar"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Pyrénées&line=11&sens=Châtelet&stationcode=71864&linecode=C01381&destcode=Châtelet&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Pyrénées&line=11&sens=Rosny:t:sous-Bois&stationcode=71864&linecode=C01381&destcode=Rosny-sous-Bois&destcodealt=false"}]};
 
 			// Génération de la liste des lignes (pour les stations suivantes)

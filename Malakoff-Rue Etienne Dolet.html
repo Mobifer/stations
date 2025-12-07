@@ -222,7 +222,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Malakoff – Rue Étienne Dolet","lignes":{"metro":["13"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Station_Malakoff_Rue_%C3%89tienne_Dolet_M%C3%A9tro_Paris_Ligne_13_-_Malakoff_%28FR92%29_-_2022-07-05_-_5.jpg/1280px-Station_Malakoff_Rue_%C3%89tienne_Dolet_M%C3%A9tro_Paris_Ligne_13_-_Malakoff_%28FR92%29_-_2022-07-05_-_5.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Malakoff_Rue_%C3%89tienne_Dolet_M%C3%A9tro_Paris_Ligne_13_-_Malakoff_(FR92)_-_2022-07-05_-_5.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["13"]},"ouv":"9 novembre 1976","voies":"2","quais":"2","zt":"2","ufr":"Non","communes":["Malakoff"],"freq":"1 450 451 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Guy Môquet","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=siel&station=Malakoff%20-%20Rue%20%C3%89tienne%20Dolet&line=13&sens=Asni%C3%A8res:b:Gennevilliers%20%E2%80%A2%20Saint-Denis&stationcode=70562&linecode=C01383&destcode=Asni%C3%A8res%20-%20Gennevilliers%20Les%20Courtilles%20%E2%80%A2%20Saint-Denis%20-%20Universit%C3%A9&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Malakoff%20-%20Rue%20%C3%89tienne%20Dolet&line=13&sens=Ch%C3%A2tillon&stationcode=70562&linecode=C01383&destcode=Ch%C3%A2tillon-Montrouge&destcodealt=false"}]};
@@ -248,8 +248,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -379,8 +377,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

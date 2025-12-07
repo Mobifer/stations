@@ -236,7 +236,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Gallieni","lignes":{"metro":["3"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Station_M%C3%A9tro_Gallieni_Ligne_3_-_Bagnolet_%28FR93%29_-_2022-05-27_-_6.jpg/1280px-Station_M%C3%A9tro_Gallieni_Ligne_3_-_Bagnolet_%28FR93%29_-_2022-05-27_-_6.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_M%C3%A9tro_Gallieni_Ligne_3_-_Bagnolet_(FR93)_-_2022-05-27_-_6.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["3"]},"ouv":"2 avril 1971","voies":"4","quais":"2","zt":"2","ufr":"Non","communes":["Bagnolet"],"freq":"3 899 195 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue du Général de Gaulle"},{"num":"2","desc":"rue des Champeaux","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Gallieni&line=3&sens=Levallois&stationcode=71817&linecode=C01373&destcode=Pont%20de%20Levallois%20-%20B%C3%A9con&destcodealt=false"}],"pti":"Parc de Bagnolet"};
@@ -262,8 +262,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -393,8 +391,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

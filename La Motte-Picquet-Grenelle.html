@@ -350,7 +350,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"La Motte-Picquet – Grenelle","lignes":{"metro":["6","8","10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Station_Métro_Motte_Picquet_Grenelle_Lignes_8_%26_10_-_Paris_XV_%28FR75%29_-_2022-06-18_-_4.jpg/1280px-Station_Métro_Motte_Picquet_Grenelle_Lignes_8_%26_10_-_Paris_XV_%28FR75%29_-_2022-06-18_-_4.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Métro_Motte_Picquet_Grenelle_Lignes_8_%26_10_-_Paris_XV_(FR75)_-_2022-06-18_-_4.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["6","8","10"]},"ouv":"24 avril 1906","voies":"6","quais":"5","zt":"1","ufr":"Non","communes":["Paris (XV<sup>e</sup>)"],"freq":"5 117 708 voyageurs (2021)","inaug":"La Motte-Picquet"}],"sorties":[{"num":"1","desc":"rue du Commerce","acc":true},{"num":"2","desc":"avenue de La Motte-Picquet","acc":true,"esc":true},{"num":"3","desc":"boulevard de Grenelle"},{"num":"4","desc":"rue de Pondichéry"},{"num":"5","desc":"avenue de Suffren"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=La%20Motte%20Picquet-Grenelle&line=6&sens=Étoile&stationcode=71199&linecode=C01376&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=La%20Motte%20Picquet-Grenelle&line=6&sens=Nation&stationcode=71199&linecode=C01376&destcode=Nation&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=La%20Motte%20Picquet-Grenelle&line=8&sens=Balard&stationcode=71199&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=La%20Motte%20Picquet-Grenelle&line=8&sens=Créteil&stationcode=71199&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=La%20Motte%20Picquet-Grenelle&line=10&sens=Boulogne&stationcode=71199&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=La%20Motte%20Picquet-Grenelle&line=10&sens=Gare:b:d’Austerlitz&stationcode=71199&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
@@ -376,8 +376,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -507,8 +505,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

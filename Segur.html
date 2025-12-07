@@ -259,7 +259,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Ségur","rep":"UNESCO","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Acc%C3%A8s_Station_M%C3%A9tro_S%C3%A9gur_Avenue_Suffren_-_Paris_XV_%28FR75%29_-_2022-01-22_-_7.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_S%C3%A9gur_Avenue_Suffren_-_Paris_XV_%28FR75%29_-_2022-01-22_-_7.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_S%C3%A9gur_Avenue_Suffren_-_Paris_XV_(FR75)_-_2022-01-22_-_7.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["10"]},"ouv":"29 septembre 1937","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (VII<sup>e</sup>, XV<sup>e</sup>)"],"freq":"1 100 151 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue de Suffren","rep":"UNESCO – Fontenoy","acc":true},{"num":"2","desc":"boulevard Garibaldi","rep":"UNESCO – Miollis"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=S%C3%A9gur&line=10&sens=Boulogne&stationcode=71157&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=S%C3%A9gur&line=10&sens=Gare:b:d’Austerlitz&stationcode=71157&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
@@ -285,8 +285,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -416,8 +414,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

@@ -294,7 +294,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Rue Saint-Maur","lignes":{"metro":["3"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Entr%C3%A9e_m%C3%A9tro_Rue_St-Maur_Paris_3.jpg/1280px-Entr%C3%A9e_m%C3%A9tro_Rue_St-Maur_Paris_3.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_m%C3%A9tro_Rue_St-Maur_Paris_3.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["3"]},"ouv":"19 octobre 1094","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XI<sup>e</sup>)"],"freq":"2 004 445 voyageurs (2021)","inaug":"Saint-Maur"}],"sorties":[{"num":"1","desc":"rue Saint-Maur","acc":true},{"num":"2","desc":"rue Servan","esc":true},{"num":"3","desc":"rue Saint-Hubert"},{"num":"4","desc":"rue des Bluets"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Rue%20Saint-Maur&line=3&sens=Levallois&stationcode=71795&linecode=C01373&destcode=Pont%20de%20Levallois%20-%20B%C3%A9con&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Rue%20Saint-Maur&line=3&sens=Gallieni&stationcode=71795&linecode=C01373&destcode=Gallieni&destcodealt=false"}]};
@@ -320,8 +320,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -451,8 +449,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

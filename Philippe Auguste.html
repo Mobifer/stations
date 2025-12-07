@@ -243,7 +243,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Philippe Auguste","lignes":{"metro":["2"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Station_Philippe_Auguste_Métro_Paris_Ligne_2_-_Paris_XX_%28FR75%29_-_2022-07-01_-_8.jpg/1280px-Station_Philippe_Auguste_Métro_Paris_Ligne_2_-_Paris_XX_%28FR75%29_-_2022-07-01_-_8.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Philippe_Auguste_Métro_Paris_Ligne_2_-_Paris_XX_(FR75)_-_2022-07-01_-_8.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["2"]},"ouv":"31 janvier 1903","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XI<sup>e</sup>, XX<sup>e</sup>)"],"freq":"1 262 653 voyageurs annuels (2021)"}],"sorties":[{"num":"1","desc":"boulevard de Charonne","acc":true},{"num":"2","desc":"rue de Mont-Louis"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Philippe%20Auguste&line=2&sens=Porte:b:Dauphine&stationcode=44332&linecode=C01372&destcode=Porte%20Dauphine&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Philippe%20Auguste&line=2&sens=Nation&stationcode=44332&linecode=C01372&destcode=Nation&destcodealt=false"}]};
@@ -269,8 +269,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -400,8 +398,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

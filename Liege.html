@@ -229,7 +229,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Liège","lignes":{"metro":["13"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Acc%C3%A8s_Station_M%C3%A9tro_Li%C3%A8ge_Rue_Li%C3%A8ge_-_Paris_VIII_%28FR75%29_-_2022-01-29_-_4.jpg/960px-Acc%C3%A8s_Station_M%C3%A9tro_Li%C3%A8ge_Rue_Li%C3%A8ge_-_Paris_VIII_%28FR75%29_-_2022-01-29_-_4.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Accès_Station_Métro_Liège_Rue_Liège_-_Paris_VIII_(FR75)_-_2022-01-29_-_4.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["13"]},"ouv":"26 février 1911","inaug":"Berlin","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (VIII<sup>e</sup>, IX<sup>e</sup>)"],"freq":"1 143 956 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue de Liège","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=siel&station=Liège&line=13&sens=Asnières:b:Gennevilliers%20•%20Saint-Denis&stationcode=71382&linecode=C01383&destcode=Asnières%20-%20Gennevilliers%20Les%20Courtilles%20•%20Saint-Denis%20-%20Université&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Liège&line=13&sens=Châtillon&stationcode=71382&linecode=C01383&destcode=Châtillon-Montrouge&destcodealt=false"}]};
@@ -255,8 +255,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -386,8 +384,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

@@ -232,7 +232,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Mirabeau","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Paris_16_-_Station_Mirabeau_-1.JPG/1280px-Paris_16_-_Station_Mirabeau_-1.JPG","imgp":"https://commons.wikimedia.org/wiki/File:Paris_16_-_Station_Mirabeau_-1.JPG","imga":"MOSSOT","stats":[{"lignes":{"metro":["10"]},"ouv":"30 septembre 1913","voies":"2","quais":"1","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>)"],"freq":"1 001 302 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Mirabeau"},{"num":"2","desc":"avenue de Versailles"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Mirabeau&line=10&sens=Gare:b:d’Austerlitz&stationcode=71162&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
@@ -258,8 +258,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -389,8 +387,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

@@ -266,7 +266,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Raspail","lignes":{"metro":["4","6"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Bouche_de_m%C3%A9tro_Raspail%2C_Paris_14e.jpg/1280px-Bouche_de_m%C3%A9tro_Raspail%2C_Paris_14e.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Bouche_de_métro_Raspail,_Paris_14e.jpg","imga":"Celette","stats":[{"lignes":{"metro":["4","6"]},"ouv":"24 avril 1906","voies":"4","quais":"4","zt":"1","ufr":"Non","communes":["Paris (XIV<sup>e</sup>)"],"freq":"1 238 357 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard Edgar Quinet","rep":"Cimetière du Montparnasse","acc":true},{"num":"2","desc":"rue Campagne Première"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Raspail&line=4&sens=Porte%20de:b:Clignancourt&stationcode=71088&linecode=C01374&destcode=Porte%20de%20Clignancourt&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Raspail&line=4&sens=Bagneux&stationcode=71088&linecode=C01374&destcode=BAGNEUX-LUCIE%20AUBRAC&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Raspail&line=6&sens=Étoile&stationcode=71088&linecode=C01376&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Raspail&line=6&sens=Nation&stationcode=71088&linecode=C01376&destcode=Nation&destcodealt=false"}]};
@@ -292,8 +292,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -423,8 +421,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

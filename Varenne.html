@@ -228,7 +228,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Varenne","lignes":{"metro":["13"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Varenne_%283%29_par_Cramos.JPG/1280px-Varenne_%283%29_par_Cramos.JPG","imgp":"https://commons.wikimedia.org/wiki/File:Varenne_(3)_par_Cramos.JPG","imga":"Cramos","stats":[{"lignes":{"metro":["13"]},"ouv":"30 décembre 1923","voies":"3","quais":"2","zt":"1","ufr":"Non","communes":["Paris (VII<sup>e</sup>)"],"freq":"782 697 voyageurs (2021)"}],"sorties":[{"num":"1","pti":"Musée Rodin","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=siel&station=Varenne&line=13&sens=Asni%C3%A8res:b:Gennevilliers%20%E2%80%A2%20Saint-Denis&stationcode=71232&linecode=C01383&destcode=Asni%C3%A8res%20-%20Gennevilliers%20Les%20Courtilles%20%E2%80%A2%20Saint-Denis%20-%20Universit%C3%A9&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Varenne&line=13&sens=Ch%C3%A2tillon&stationcode=71232&linecode=C01383&destcode=Ch%C3%A2tillon-Montrouge&destcodealt=false"}]};
@@ -254,8 +254,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -385,8 +383,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

@@ -245,7 +245,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Lourmel","lignes":{"metro":["8"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Station_Lourmel_Métro_Paris_Ligne_8_-_Paris_XV_%28FR75%29_-_2022-07-02_-_1.jpg/1280px-Station_Lourmel_Métro_Paris_Ligne_8_-_Paris_XV_%28FR75%29_-_2022-07-02_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Lourmel_Métro_Paris_Ligne_8_-_Paris_XV_(FR75)_-_2022-07-02_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["8"]},"ouv":"27 juillet 1937","voies":"3","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XV<sup>e</sup>)"],"freq":"1 696 432 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue de Lourmel","acc":true},{"num":"2","desc":"rue Vasco de Gama","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Lourmel&line=8&sens=Balard&stationcode=71086&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Lourmel&line=8&sens=Créteil&stationcode=71086&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"}]};
@@ -271,8 +271,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -402,8 +400,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

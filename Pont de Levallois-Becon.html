@@ -260,7 +260,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Pont de Levallois – Bécon","lignes":{"metro":["3"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Paris_Metro_-_Ligne_3_-_Pont_de_Levallois_-_Becon_02.jpg/1024px-Paris_Metro_-_Ligne_3_-_Pont_de_Levallois_-_Becon_02.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Paris_Metro_-_Ligne_3_-_Pont_de_Levallois_-_Becon_02.jpg","imga":"Clicsouris","stats":[{"lignes":{"metro":["3"]},"ouv":"24 septembre 1937","voies":"3","quais":"2","zt":"2","ufr":"Non","communes":["Levallois-Perret"],"freq":"2,98 M voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place du Maréchal Juin","acc":true,"esc":true},{"num":"2","desc":"rue Anatole France","esc":true},{"num":"3","desc":"rue Baudin"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Pont%20de%20Levallois&line=3&sens=Gallieni&stationcode=72057&linecode=C01373&destcode=Gallieni&destcodealt=false"}]};
@@ -286,8 +286,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -417,8 +415,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

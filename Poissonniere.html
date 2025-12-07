@@ -266,7 +266,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Poissonnière","lignes":{"metro":["7"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Station_Poissonni%C3%A8re_M%C3%A9tro_Paris_Ligne_7_-_Paris_IX_%28FR75%29_-_2022-06-24_-_4.jpg/1280px-Station_Poissonni%C3%A8re_M%C3%A9tro_Paris_Ligne_7_-_Paris_IX_%28FR75%29_-_2022-06-24_-_4.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Poissonnière_Métro_Paris_Ligne_7_-_Paris_IX_(FR75)_-_2022-06-24_-_4.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["7"]},"ouv":"5 novembre 1910","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (IX<sup>e</sup>, X<sup>e</sup>)"],"freq":"2 306 725 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue La Fayette","esc":true},{"num":"2","desc":"rue de Chabrol","acc":true},{"num":"3","desc":"rue du Faubourg Poissonnière"}],"siv":[{"metro":"https://enrail.org/ratp/?style=siel&station=Poissonnière&line=7&sens=La%20Courneuve&stationcode=71363&linecode=C01377&destcode=La%20Courneuve%20-%208%20Mai%201945&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Poissonnière&line=7&sens=Ivry%20•%20Villejuif&stationcode=71363&linecode=C01377&destcode=Mairie%20d%27Ivry%20•%20Villejuif%20-%20Louis%20Aragon&destcodealt=false"}]};
@@ -292,8 +292,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -423,8 +421,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

@@ -240,7 +240,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Jussieu","lignes":{"metro":["7","10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Acc%C3%A8s_Station_M%C3%A9tro_Jussieu_Place_Jussieu_-_Paris_V_%28FR75%29_-_2022-01-15_-_6.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Jussieu_Place_Jussieu_-_Paris_V_%28FR75%29_-_2022-01-15_-_6.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Jussieu_Place_Jussieu_-_Paris_V_(FR75)_-_2022-01-15_-_6.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["7","10"]},"ouv":"26 avril 1931","voies":"4","quais":"4","zt":"1","ufr":"Non","communes":["Paris (V<sup>e</sup>)"],"freq":"2 889 642 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place Jussieu","acc":true,"esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=siel&station=Jussieu&line=7&sens=La%20Courneuve&stationcode=71148&linecode=C01377&destcode=La%20Courneuve%20-%208%20Mai%201945&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Jussieu&line=7&sens=Ivry%20%E2%80%A2%20Villejuif&stationcode=71148&linecode=C01377&destcode=Mairie%20d%27Ivry%20%E2%80%A2%20Villejuif%20-%20Louis%20Aragon&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Jussieu&line=10&sens=Boulogne&stationcode=71148&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Jussieu&line=10&sens=Gare:b:d’Austerlitz&stationcode=71148&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
@@ -266,8 +266,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -397,8 +395,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

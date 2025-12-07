@@ -219,7 +219,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Coteaux Beauclair","lignes":{"metro":["11"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/MP_14_-_Coteaux_Beauclair_%281%29.jpg/1280px-MP_14_-_Coteaux_Beauclair_%281%29.jpg","imgp":"https://commons.wikimedia.org/wiki/File:MP_14_-_Coteaux_Beauclair_(1).jpg","imga":"Capitaine AdBlock","stats":[{"lignes":{"metro":["11"]},"ouv":"13 juin 2024","voies":"2","quais":"2","zt":"3","ufr":"Oui","communes":["Rosny-sous-Bois","Noisy-le-Sec"]}],"sorties":[{"num":"1","desc":"rue de Lisbonne","acc":true,"asc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Coteaux%20Beauclair&line=11&sens=Ch%C3%A2telet&stationcode=490783&linecode=C01381&destcode=Ch%C3%A2telet&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Coteaux%20Beauclair&line=11&sens=Rosny:t:sous-Bois&stationcode=490783&linecode=C01381&destcode=Rosny-sous-Bois&destcodealt=false"}]};
@@ -245,8 +245,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -376,8 +374,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

@@ -539,7 +539,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Les Halles","corresp":["Chatelet","Chatelet-Les Halles"],"lignes":{"metro":["4"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Station_Halles_M%C3%A9tro_Paris_Ligne_4_-_Paris_I_%28FR75%29_-_2022-07-05_-_1.jpg/1280px-Station_Halles_M%C3%A9tro_Paris_Ligne_4_-_Paris_I_%28FR75%29_-_2022-07-05_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Halles_M%C3%A9tro_Paris_Ligne_4_-_Paris_I_(FR75)_-_2022-07-05_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["4"]},"ouv":"27 avril 1908","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (I<sup>er</sup>)"],"freq":"10,6 M de voyageurs (2021)"}],"sorties":[{"num":"1","desc":"Porte Marguerite de Navarre","asc":true,"esc":true},{"num":"2","desc":"Forum • Porte Berger","acc":true,"esc":true},{"num":"3","desc":"Forum • Porte Lescot","pti":"Centre Pompidou","asc":true,"esc":true},{"num":"4","desc":"Forum • Porte Rambuteau"},{"num":"5","desc":"Forum • Porte Saint-Eustache","asc":true},{"num":"6","desc":"Forum • Porte du Pont Neuf","acc":true,"esc":true},{"num":"7","desc":"Forum • Porte du Jour","esc":true},{"num":"8","desc":"Forum • Porte du Louvre","asc":true,"esc":true},{"num":"9","desc":"rue Montorgueil","acc":true},{"num":"10","desc":"place Sainte-Opportune"},{"num":"11","desc":"rue de Rivoli"},{"num":"12","desc":"rue Bertin Poirée"},{"num":"13","desc":"rue des Lavandières"},{"num":"14","desc":"rue Saint-Denis"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Les%20Halles&line=4&sens=Porte%20de:b:Clignancourt&stationcode=474151&linecode=C01374&destcode=Porte%20de%20Clignancourt&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Les%20Halles&line=4&sens=Bagneux&stationcode=474151&linecode=C01374&destcode=BAGNEUX-LUCIE%20AUBRAC&destcodealt=false"}]};
@@ -565,8 +565,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -696,8 +694,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

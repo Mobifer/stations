@@ -226,7 +226,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Saint-Paul","pti":"Le Marais","lignes":{"metro":["1"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/St-Paul_(2)_par_Cramos.JPG/1280px-St-Paul_(2)_par_Cramos.JPG","imgp":"https://commons.wikimedia.org/wiki/File:St-Paul_(2)_par_Cramos.JPG","imga":"Cramos","stats":[{"lignes":{"metro":["1"]},"ouv":"6 août 1900","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (IV<sup>e</sup>)"],"freq":"4 295 803 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue de Rivoli","acc":true,"esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Saint-Paul&line=1&sens=La%20Défense&stationcode=44881&linecode=C01371&destcode=La%20Défense%20(Grande%20Arche)&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Saint-Paul&line=1&sens=Château:b:de%20Vincennes&stationcode=44881&linecode=C01371&destcode=Château%20de%20Vincennes&destcodealt=false"}]};
@@ -252,8 +252,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -383,8 +381,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

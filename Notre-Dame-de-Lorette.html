@@ -252,7 +252,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Notre-Dame-de-Lorette","lignes":{"metro":["12"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Notre-Dame-de-Lorette_04.jpg/1280px-Notre-Dame-de-Lorette_04.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Notre-Dame-de-Lorette_04.jpg","imga":"Geralix","stats":[{"lignes":{"metro":["12"]},"ouv":"5 novembre 1910","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (IX<sup>e</sup>)"],"freq":"1 893 828 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Bourdaloue","pti":"Église Notre-Dame-de-Lorette","acc":true,"esc":true},{"num":"2","desc":"rue de Châteaudun"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Notre-Dame-de-Lorette&line=12&sens=Aubervilliers&stationcode=71350&linecode=C01382&destcode=Mairie%20d%27Aubervilliers&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Notre-Dame-de-Lorette&line=12&sens=Mairie%20d’Issy&stationcode=71350&linecode=C01382&destcode=Mairie%20d%27Issy&destcodealt=false"}]};
@@ -278,8 +278,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -409,8 +407,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

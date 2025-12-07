@@ -263,7 +263,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Porte d’Auteuil","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Bouche_m%C3%A9tro_Porte-d%27Auteuil%2C_Paris_16e_1.jpg/1280px-Bouche_m%C3%A9tro_Porte-d%27Auteuil%2C_Paris_16e_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Bouche_métro_Porte-d%27Auteuil,_Paris_16e_1.jpg","imga":"Polymagou","stats":[{"lignes":{"metro":["10"]},"ouv":"30 septembre 1913","voies":"3","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>)"],"freq":"375 748 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard Murat","pti":"Parc des Princes – Roland Garros","acc":true},{"num":"2","desc":"Hippodrome"},{"num":"3","desc":"rue d’Auteuil"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20d%27Auteuil&line=10&sens=Boulogne&stationcode=71169&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"}]};
@@ -289,8 +289,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -420,8 +418,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

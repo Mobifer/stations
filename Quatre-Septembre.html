@@ -219,7 +219,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Quatre-Septembre","lignes":{"metro":["3"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Station_M%C3%A9tro_Quatre-Septembre.JPG/960px-Station_M%C3%A9tro_Quatre-Septembre.JPG","imgp":"https://commons.wikimedia.org/wiki/File:Station_M%C3%A9tro_Quatre-Septembre.JPG","imga":"Oderik","stats":[{"lignes":{"metro":["3"]},"ouv":"3 novembre 1904","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (II<sup>e</sup>)"],"freq":"1 165 004 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue du Quatre-Septembre"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Quatre%20Septembre&line=3&sens=Levallois&stationcode=71313&linecode=C01373&destcode=Pont%20de%20Levallois%20-%20B%C3%A9con&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Quatre%20Septembre&line=3&sens=Gallieni&stationcode=71313&linecode=C01373&destcode=Gallieni&destcodealt=false"}]};
@@ -245,8 +245,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -376,8 +374,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

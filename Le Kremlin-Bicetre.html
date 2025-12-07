@@ -254,7 +254,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Le Kremlin-Bicêtre","lignes":{"metro":["7"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Station_Kremlin_Bic%C3%AAtre_M%C3%A9tro_Paris_Ligne_7_-_Le_Kremlin-Bic%C3%AAtre_%28FR94%29_-_2022-07-04_-_8.jpg/1280px-Station_Kremlin_Bic%C3%AAtre_M%C3%A9tro_Paris_Ligne_7_-_Le_Kremlin-Bic%C3%AAtre_%28FR94%29_-_2022-07-04_-_8.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Kremlin_Bicêtre_Métro_Paris_Ligne_7_-_Le_Kremlin-Bicêtre_(FR94)_-_2022-07-04_-_8.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["7"]},"ouv":"10 décembre 1982","voies":"2","quais":"2","zt":"2","ufr":"Non","communes":["Le Kremlin-Bicêtre"],"freq":"2 925 325 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue de Fontainebleau","esc":true},{"num":"2","desc":"avenue de Fontainebleau<br>avenue Eugène Thomas","rep":"Hôpital de Bicêtre","acc":true,"esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Le%20Kremlin-Bicêtre&line=7&sens=La%20Courneuve&stationcode=70452&linecode=C01377&destcode=La%20Courneuve%20-%208%20Mai%201945&destcodealt=false"},{"metro":"https://enrail.org/panam/?style=siel&station=Le%20Kremlin-Bicêtre&line=7&sens=Villejuif&stationcode=70452&linecode=C01377&destcode=Mairie%20d%27Ivry%20•%20Villejuif%20-%20Louis%20Aragon&destcodealt=false"}]};
@@ -280,8 +280,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -411,8 +409,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

@@ -410,7 +410,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Belleville","lignes":{"metro":["2","11"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Acc%C3%A8s_Station_M%C3%A9tro_Belleville_Boulevard_Belleville_-_Paris_XX_%28FR75%29_-_2022-01-07_-_2.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Belleville_Boulevard_Belleville_-_Paris_XX_%28FR75%29_-_2022-01-07_-_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Belleville_Boulevard_Belleville_-_Paris_XX_%28FR75%29_-_2022-01-07_-_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["2","11"]},"ouv":"31 janvier 1903","voies":"4","quais":"4","zt":"1","ufr":"Non","communes":["Paris (X<sup>e</sup>, XI<sup>e</sup>, XIX<sup>e</sup>, XX<sup>e</sup>)"],"freq":"7,3 M voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard de Belleville","acc":true},{"num":"2","desc":"rue de Belleville"},{"num":"3","desc":"boulevard de la Villette","esc":true},{"num":"4","desc":"terre-plein central du boulevard de la Villette"},{"num":"5","desc":"rue du Faubourg du Temple"},{"num":"6","desc":"rue Louis Bonnet"},{"num":"7","desc":"rue de la Présentation"},{"num":"8","desc":"rue de l’Orillon","esc":true},{"num":"9","desc":"cour de la Grâce de Dieu"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Belleville&line=2&sens=Porte:b:Dauphine&stationcode=42311&linecode=C01372&destcode=Porte%20Dauphine&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Belleville&line=2&sens=Nation&stationcode=42311&linecode=C01372&destcode=Nation&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Belleville&line=11&sens=Châtelet&stationcode=42311&linecode=C01381&destcode=Châtelet&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Belleville&line=11&sens=Rosny:t:sous-Bois&stationcode=42311&linecode=C01381&destcode=Rosny-sous-Bois&destcodealt=false"}]};
@@ -436,8 +436,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -567,8 +565,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

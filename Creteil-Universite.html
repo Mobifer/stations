@@ -253,7 +253,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Créteil – Université","lignes":{"metro":["8"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Station_Cr%C3%A9teil_Universit%C3%A9_M%C3%A9tro_Paris_Ligne_8_-_Cr%C3%A9teil_%28FR94%29_-_2022-07-04_-_2.jpg/1280px-Station_Cr%C3%A9teil_Universit%C3%A9_M%C3%A9tro_Paris_Ligne_8_-_Cr%C3%A9teil_%28FR94%29_-_2022-07-04_-_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Cr%C3%A9teil_Universit%C3%A9_M%C3%A9tro_Paris_Ligne_8_-_Cr%C3%A9teil_(FR94)_-_2022-07-04_-_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["8"]},"ouv":"10 septembre 1974","voies":"2","quais":"1","zt":"3","ufr":"Non","communes":["Créteil"],"freq":"2 496 595 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"mail des Mèches","acc":true},{"num":"2","desc":"route de Choisy","rep":"Hôpital Albert Chenevier","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Cr%C3%A9teil-Universit%C3%A9&line=8&sens=Balard&stationcode=70172&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Cr%C3%A9teil-Universit%C3%A9&line=8&sens=Cr%C3%A9teil&stationcode=70172&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"}]};
@@ -279,8 +279,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -410,8 +408,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

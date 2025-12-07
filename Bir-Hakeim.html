@@ -280,7 +280,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Bir-Hakeim","corresp":["Champ de Mars"],"lignes":{"metro":["6"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Métro_Bir-Hakeim%2C_Paris_15e_1.jpg/1280px-Métro_Bir-Hakeim%2C_Paris_15e_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Métro_Bir-Hakeim,_Paris_15e_1.jpg","imga":"Polymagou","stats":[{"lignes":{"metro":["6"]},"ouv":"24 avril 1906","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XV<sup>e</sup>)"],"freq":"3 362 908 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Nélaton","acc":true},{"num":"2","desc":"place des Martyrs Juifs","pti":"Tour Eiffel"},{"num":"3","desc":"boulevard de Grenelle"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Bir-Hakeim&line=6&sens=Étoile&stationcode=473829&linecode=C01376&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bir-Hakeim&line=6&sens=Nation&stationcode=473829&linecode=C01376&destcode=Nation&destcodealt=false"}],"pti":"Tour Eiffel"};
@@ -306,8 +306,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -437,8 +435,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

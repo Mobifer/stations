@@ -252,7 +252,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Louise Michel","lignes":{"metro":["3"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Acc%C3%A8s_Station_M%C3%A9tro_Louise_Michel_Rue_Anatole_France_-_Levallois-Perret_%28FR92%29_-_2022-01-30_-_4.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Louise_Michel_Rue_Anatole_France_-_Levallois-Perret_%28FR92%29_-_2022-01-30_-_4.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Louise_Michel_Rue_Anatole_France_-_Levallois-Perret_(FR92)_-_2022-01-30_-_4.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["3"]},"ouv":"24 septembre 1937","voies":"2","quais":"2","zt":"2","ufr":"Non","communes":["Levallois-Perret"],"freq":"2 319 185 voyageurs (2021)","inaug":"Vallier"}],"sorties":[{"num":"1","desc":"rue Louise Michel","acc":true},{"num":"2","desc":"rue Anatole France","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Louise%20Michel&line=3&sens=Levallois&stationcode=73667&linecode=C01373&destcode=Pont%20de%20Levallois%20-%20B%C3%A9con&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Louise%20Michel&line=3&sens=Gallieni&stationcode=73667&linecode=C01373&destcode=Gallieni&destcodealt=false"}]};
@@ -278,8 +278,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -409,8 +407,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

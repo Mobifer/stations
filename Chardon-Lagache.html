@@ -214,7 +214,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Chardon-Lagache","lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Edicule_M%C3%A9tro_Chardon_Lagache.jpg/1280px-Edicule_M%C3%A9tro_Chardon_Lagache.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Edicule_Métro_Chardon_Lagache.jpg","imga":"Arthur Weidmann","stats":[{"lignes":{"metro":["10"]},"ouv":"30 septembre 1913","voies":"1","quais":"1","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>)"],"freq":"485 053 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Chardon-Lagache","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Chardon%20Lagache&line=10&sens=Gare:b:d’Austerlitz&stationcode=71141&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
@@ -240,8 +240,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -371,8 +369,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

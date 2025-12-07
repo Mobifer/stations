@@ -380,7 +380,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Paris – Est","corresp":["Chateau-Landon","Gare de l’Est","Gare du Nord","Magenta-Gare du Nord","Paris-Nord"],"lignes":{"train":["P"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/B82500_et_Z50000_Paris_Est.jpg/1280px-B82500_et_Z50000_Paris_Est.jpg","imgp":"https://commons.wikimedia.org/wiki/File:B82500_et_Z50000_Paris_Est.jpg","imga":"Lodaï","stats":[{"lignes":{"train":["P"]},"ouv":"5 juillet 1849","voies":"29","quais":"15","zt":"1","ufr":"Oui","communes":["Paris (X<sup>e</sup>)"],"freq":"39 877 017 voyageurs (2023)"}],"sorties":[{"num":"1","desc":"rue d’Alsace","esc":true},{"num":"2","desc":"Galerie Marchande"},{"num":"3","desc":"place du 11 Novembre 1918"},{"num":"4","desc":"rue du Faubourg Saint-Martin"},{"num":"5","desc":"rue du 8 Mai 1945"},{"num":"6","desc":"boulevard de Strasbourg","esc":true},{"num":"7","desc":"Terre-plein"},{"num":"8","desc":"boulevard de Magenta","acc":true}],"siv":[{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.8763611%2C2.3581031&stop=stop_area%3AIDFM%3A71359&lines=line%3AIDFM%3AC01730%2Cline%3AIDFM%3AC01841&platforms="}]};
@@ -406,8 +406,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -537,8 +535,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

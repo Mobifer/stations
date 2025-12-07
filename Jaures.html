@@ -362,7 +362,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Jaurès","lignes":{"metro":["2","5","7bis"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/P1080807_Paris_X_station_metro_Jaurès_boulevard_de_la_Villette_rwk.JPG/1260px-P1080807_Paris_X_station_metro_Jaurès_boulevard_de_la_Villette_rwk.JPG","imgp":"https://commons.wikimedia.org/wiki/File:P1080807_Paris_X_station_metro_Jaurès_boulevard_de_la_Villette_rwk.JPG","imga":"Mbzt","stats":[{"lignes":{"metro":["2","5","7bis"]},"ouv":"23 février 1903","voies":"6","quais":"6","zt":"1","ufr":"Non","communes":["Paris (X<sup>e</sup>, XIX<sup>e</sup>)"],"freq":"4 055 461 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard de la Villette","acc":true},{"num":"2","desc":"quai de la Loire","acc":true},{"num":"3","desc":"avenue Jean Jaurès"},{"num":"4","desc":"avenue Secrétan"},{"num":"5","desc":"quai de Jemmapes"},{"num":"6","desc":"rue de Chaumont"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Jaurès&line=2&sens=Porte:b:Dauphine&stationcode=43425&linecode=C01372&destcode=Porte%20Dauphine&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Jaurès&line=2&sens=Nation&stationcode=43425&linecode=C01372&destcode=Nation&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Jaurès&line=5&sens=Bobigny&stationcode=43425&linecode=C01375&destcode=Bobigny%20Pablo%20Picasso&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Jaurès&line=5&sens=Place%20d’Italie&stationcode=43425&linecode=C01375&destcode=Place%20d%27Italie&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Jaurès&line=7b&sens=Louis%20Blanc&stationcode=43425&linecode=C01387&destcode=Louis%20Blanc&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Jaurès&line=7b&sens=Pré:b:Saint-Gervais&stationcode=43425&linecode=C01387&destcode=Pré-Saint-Gervais&destcodealt=false"}]};
@@ -388,8 +388,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -519,8 +517,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

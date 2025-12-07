@@ -362,7 +362,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Porte Dauphine","corresp":["Avenue Foch"],"rep":"Maréchal de Lattre de Tassigny","lignes":{"metro":["2"],"tram":["T3b"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Paris_Metro_2_Porte_Dauphine_Libellule.JPG/1280px-Paris_Metro_2_Porte_Dauphine_Libellule.JPG","imgp":"https://commons.wikimedia.org/wiki/File:Paris_Metro_2_Porte_Dauphine_Libellule.JPG","imga":"Bellomonte","stats":[{"lignes":{"metro":["2"]},"ouv":"13 décembre 1900","voies":"3","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XVI<sup>e</sup>)"],"freq":"2 021 656 voyageurs (2021)"},{"lignes":{"tram":["T3b"]},"ouv":"5 avril 2024","voies":"2","quais":"2","zt":"1","ufr":"Oui","communes":["Paris (XVI<sup>e</sup>)"]}],"sorties":[{"num":"1","desc":"boulevard Lannes","acc":true},{"num":"2","desc":"avenue Foch"},{"num":"3","desc":"boulevard de l’Amiral Bruix"},{"num":"4","desc":"avenue Bugeaud"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Porte%20Dauphine&line=2&sens=Nation&stationcode=44509&linecode=C01372&destcode=Nation&destcodealt=false"},{"tram":"490878","line":"3b"}]};
@@ -388,8 +388,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -519,8 +517,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

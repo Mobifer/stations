@@ -342,7 +342,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Bonne Nouvelle","lignes":{"metro":["8","9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/M%C3%A9tro_de_Paris_-_Ligne_9_-_Station_Bonne_Nouvelle.jpg/1280px-M%C3%A9tro_de_Paris_-_Ligne_9_-_Station_Bonne_Nouvelle.jpg","imgp":"https://commons.wikimedia.org/wiki/File:M%C3%A9tro_de_Paris_-_Ligne_9_-_Station_Bonne_Nouvelle.jpg","imga":"S23725","stats":[{"lignes":{"metro":["8","9"]},"ouv":"5 mai 1931","voies":"4","quais":"4","zt":"1","ufr":"Non","communes":["Paris (II<sup>e</sup>, IX<sup>e</sup>, X<sup>e</sup>)"],"freq":"2 806 227 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue du Sentier","esc":true},{"num":"2","desc":"rue du Faubourg Poissonnière "},{"num":"3","desc":"rue d’Hauteville"},{"num":"4","desc":"rue de Mazagran"},{"num":"5","desc":"rue de la Lune"},{"num":"6","desc":"boulevard de Bonne Nouvelle"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Bonne%20Nouvelle&line=8&sens=Balard&stationcode=71320&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bonne%20Nouvelle&line=8&sens=Cr%C3%A9teil&stationcode=71320&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bonne%20Nouvelle&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71320&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Bonne%20Nouvelle&line=9&sens=Montreuil&stationcode=71320&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"}]};
@@ -368,8 +368,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -499,8 +497,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

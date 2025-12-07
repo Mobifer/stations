@@ -243,7 +243,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Richard-Lenoir","lignes":{"metro":["5"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Estaci%C3%B3n_de_Richard_Lenoir_-_2019.jpg/1280px-Estaci%C3%B3n_de_Richard_Lenoir_-_2019.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Estación_de_Richard_Lenoir_-_2019.jpg","imga":"Bernard","stats":[{"lignes":{"metro":["5"]},"ouv":"17 décembre 1906","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XI<sup>e</sup>)"],"freq":"1 544 636 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard Voltaire","acc":true},{"num":"2","desc":"rue du Chemin Vert"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Richard%20Lenoir&line=5&sens=Bobigny&stationcode=73648&linecode=C01375&destcode=Bobigny%20Pablo%20Picasso&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Richard%20Lenoir&line=5&sens=Place%20d’Italie&stationcode=73648&linecode=C01375&destcode=Place%20d%27Italie&destcodealt=false"}]};
@@ -269,8 +269,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -400,8 +398,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

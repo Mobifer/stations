@@ -247,7 +247,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Barbara","lignes":{"metro":["4"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Station_M%C3%A9tro_Barbara_Ligne_4_-_Bagneux_%28FR92%29_-_2022-01-13_-_14.jpg/1280px-Station_M%C3%A9tro_Barbara_Ligne_4_-_Bagneux_%28FR92%29_-_2022-01-13_-_14.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_M%C3%A9tro_Barbara_Ligne_4_-_Bagneux_(FR92)_-_2022-01-13_-_14.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["4"]},"ouv":"13 janvier 2022","voies":"2","quais":"2","zt":"2","ufr":"Oui","communes":["Montrouge","Bagneux"]}],"sorties":[{"num":"1","desc":"avenue Marx Dormoy","rep":"Cimetière Parisien","acc":true,"asc":true},{"num":"2","desc":"avenue de Stalingrad"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Barbara&line=4&sens=Porte%20de:b:Clignancourt&stationcode=70441&linecode=C01374&destcode=Porte%20de%20Clignancourt&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Barbara&line=4&sens=Bagneux&stationcode=70441&linecode=C01374&destcode=BAGNEUX-LUCIE%20AUBRAC&destcodealt=false"}]};
@@ -273,8 +273,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -404,8 +402,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

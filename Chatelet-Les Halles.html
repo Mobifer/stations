@@ -431,7 +431,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Châtelet – Les Halles","corresp":["Chatelet","Les Halles"],"lignes":{"rer":["A","B","D"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Acc%C3%A8s_Gare_Ch%C3%A2telet_Halles_Place_Carr%C3%A9e_-_Paris_I_%28FR75%29_-_2025-02-12_-_2.jpg/1280px-Acc%C3%A8s_Gare_Ch%C3%A2telet_Halles_Place_Carr%C3%A9e_-_Paris_I_%28FR75%29_-_2025-02-12_-_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Gare_Ch%C3%A2telet_Halles_Place_Carr%C3%A9e_-_Paris_I_(FR75)_-_2025-02-12_-_2.jpg","imga":"Chabe01","stats":[{"lignes":{"rer":["A","B","D"]},"ouv":"9 décembre 1977","voies":"7","quais":"4","zt":"1","ufr":"Oui","communes":["Paris (I<sup>er</sup>)"],"freq":"33 581 162 voyageurs (RER A et B) (2019)"}],"sorties":[{"num":"1","desc":"Porte Marguerite de Navarre","asc":true,"esc":true},{"num":"2","desc":"Forum • Porte Berger","acc":true,"esc":true},{"num":"3","desc":"Forum • Porte Lescot","pti":"Centre Pompidou","acc":true,"esc":true},{"num":"4","desc":"Forum • Porte Rambuteau"},{"num":"5","desc":"Forum • Porte Saint-Eustache","asc":true},{"num":"6","desc":"Forum • Porte du Pont Neuf","acc":true,"esc":true},{"num":"7","desc":"Forum • Porte du Jour","esc":true},{"num":"8","desc":"Forum • Porte du Louvre","asc":true,"esc":true},{"num":"9","desc":"rue Montorgueil","acc":true}],"siv":[{"train":"https://departs.leon.gp/screen/ratp_rer/stop/fr-idf:IDFM:474151/line/fr-idf:IDFM:C01742/pos/48.861745,2.3469765"},{"train":"https://departs.leon.gp/screen/ratp_rer/stop/fr-idf:IDFM:474151/line/fr-idf:IDFM:C01743/pos/48.861745,2.3469765"},{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.861745%2C2.3469765&stop=stop_area%3AIDFM%3A474151&lines=line%3AIDFM%3AC01728&platforms="}]};
@@ -457,8 +457,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -588,8 +586,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

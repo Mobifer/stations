@@ -296,7 +296,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Télégraphe","lignes":{"metro":["11"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Acc%C3%A8s_Station_T%C3%A9l%C3%A9graphe_M%C3%A9tro_Paris_Rue_Docteur_Potain_-_Paris_XIX_(FR75)_-_2023-07-26_-_3.jpg/1280px-Acc%C3%A8s_Station_T%C3%A9l%C3%A9graphe_M%C3%A9tro_Paris_Rue_Docteur_Potain_-_Paris_XIX_(FR75)_-_2023-07-26_-_3.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_T%C3%A9l%C3%A9graphe_M%C3%A9tro_Paris_Rue_Docteur_Potain_-_Paris_XIX_(FR75)_-_2023-07-26_-_3.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["11"]},"ouv":"28 avril 1935","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris "],"freq":"1 636 898 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue du Télégraphe","acc":true},{"num":"2","desc":"rue de Belleville","acc":true},{"num":"3","desc":"Cimetière de Belleville","acc":true},{"num":"4","desc":"rue du Docteur Potain","acc":true,"asc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=T%C3%A9l%C3%A9graphe&line=11&sens=Ch%C3%A2telet&stationcode=71870&linecode=C01381&destcode=Ch%C3%A2telet&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=T%C3%A9l%C3%A9graphe&line=11&sens=Rosny:t:sous-Bois&stationcode=71870&linecode=C01381&destcode=Rosny-sous-Bois&destcodealt=false"}]};
@@ -322,8 +322,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -453,8 +451,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

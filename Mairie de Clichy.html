@@ -303,7 +303,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Mairie de Clichy","lignes":{"metro":["13"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Acc%C3%A8s_Station_M%C3%A9tro_Mairie_Clichy_Rue_Martre_-_Clichy_%28FR92%29_-_2022-01-09_-_13.jpg/960px-Acc%C3%A8s_Station_M%C3%A9tro_Mairie_Clichy_Rue_Martre_-_Clichy_%28FR92%29_-_2022-01-09_-_13.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Accès_Station_Métro_Mairie_Clichy_Rue_Martre_-_Clichy_(FR92)_-_2022-01-09_-_13.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["13"]},"ouv":"3 mai 1980","voies":"2","quais":"2","zt":"2","ufr":"Non","communes":["Clichy"],"freq":"4 043 071 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Martre","rep":"Hôpital Goüin","esc":true},{"num":"2","desc":"rue Charles et René Auffray","acc":true},{"num":"3","desc":"rue Villeneuve"},{"num":"4","desc":"rue du Landy","rep":"Hôpital Beaujon","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Mairie%20de%20Clichy&line=13&sens=Asnières%20:l::s:Gennevilliers&stationcode=72118&linecode=C01383&destcode=Asnières%20-%20Gennevilliers%20Les%20Courtilles%20•%20Saint-Denis%20-%20Université&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Mairie%20de%20Clichy&line=13&sens=Châtillon&stationcode=72118&linecode=C01383&destcode=Châtillon-Montrouge&destcodealt=false"}]};
@@ -329,8 +329,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -460,8 +458,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

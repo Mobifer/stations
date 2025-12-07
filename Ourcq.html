@@ -264,7 +264,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Ourcq","lignes":{"metro":["5"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Ourcq_-_Ligne_5_-_2025_-_Quais_5.jpg/1280px-Ourcq_-_Ligne_5_-_2025_-_Quais_5.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Ourcq_-_Ligne_5_-_2025_-_Quais_5.jpg","imga":"Métroën","stats":[{"lignes":{"metro":["5"]},"ouv":"21 mars 1947","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XIX<sup>e</sup>)"],"freq":"2 862 337 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue de Lunéville","acc":true},{"num":"2","desc":"rue de l’Ourcq"},{"num":"3","desc":"rue Adolphe Mille"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Ourcq&line=5&sens=Bobigny&stationcode=71972&linecode=C01375&destcode=Bobigny%20Pablo%20Picasso&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Ourcq&line=5&sens=Place%20d’Italie&stationcode=71972&linecode=C01375&destcode=Place%20d%27Italie&destcodealt=false"}]};
@@ -290,8 +290,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -421,8 +419,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

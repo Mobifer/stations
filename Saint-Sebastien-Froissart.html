@@ -250,7 +250,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Saint-Sébastien – Froissart","lignes":{"metro":["8"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Acc%C3%A8s_Station_M%C3%A9tro_Saint_S%C3%A9bastien_Froissart_Boulevard_Filles_Calvaire_-_Paris_III_%28FR75%29_-_2022-01-15_-_5.jpg/1094px-Acc%C3%A8s_Station_M%C3%A9tro_Saint_S%C3%A9bastien_Froissart_Boulevard_Filles_Calvaire_-_Paris_III_%28FR75%29_-_2022-01-15_-_5.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Saint_S%C3%A9bastien_Froissart_Boulevard_Filles_Calvaire_-_Paris_III_(FR75)_-_2022-01-15_-_5.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["8"]},"ouv":"5 mai 1931","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (III<sup>e</sup>, XI<sup>e</sup>)"],"freq":"1 151 192 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Froissart","pti":"Musée Pablo Picasso","acc":true},{"num":"2","desc":"rue Saint-Sébastien"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Saint-S%C3%A9bastien-Froissart&line=8&sens=Balard&stationcode=71777&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Saint-S%C3%A9bastien-Froissart&line=8&sens=Cr%C3%A9teil&stationcode=71777&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"}]};
@@ -276,8 +276,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -407,8 +405,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

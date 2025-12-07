@@ -222,7 +222,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Rome","lignes":{"metro":["2"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Métro_Rome_Guimard.jpg/1269px-Métro_Rome_Guimard.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Métro_Rome_Guimard.jpg","imga":"Claude Shoshany","stats":[{"lignes":{"metro":["2"]},"ouv":"6 novembre 1902","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (VIII<sup>e</sup>, XVII<sup>e</sup>)"],"freq":"1 696 331 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard des Batignolles","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Rome&line=2&sens=Porte:b:Dauphine&stationcode=44662&linecode=C01372&destcode=Porte%20Dauphine&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Rome&line=2&sens=Nation&stationcode=44662&linecode=C01372&destcode=Nation&destcodealt=false"}]};
@@ -248,8 +248,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -379,8 +377,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

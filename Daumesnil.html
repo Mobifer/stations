@@ -307,7 +307,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Daumesnil","rep":"Félix Éboué","lignes":{"metro":["6","8"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Acc%C3%A8s_Station_M%C3%A9tro_Daumesnil_Place_F%C3%A9lix_%C3%89bou%C3%A9_-_Paris_XII_%28FR75%29_-_2022-01-13_-_8.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Daumesnil_Place_F%C3%A9lix_%C3%89bou%C3%A9_-_Paris_XII_%28FR75%29_-_2022-01-13_-_8.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Daumesnil_Place_F%C3%A9lix_%C3%89bou%C3%A9_-_Paris_XII_(FR75)_-_2022-01-13_-_8.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["6","8"]},"ouv":"1<sup>er</sup> mars 1909","voies":"4","quais":"4","zt":"1","ufr":"Non","communes":["Paris (XII<sup>e</sup>)"],"freq":"3 634 023 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place Félix Éboué","esc":true},{"num":"2","desc":"rue Claude Decaen","acc":true},{"num":"3","desc":"avenue Daumesnil","esc":true},{"num":"4","desc":"rue de Reuilly"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Daumesnil&line=6&sens=%C3%89toile&stationcode=71614&linecode=C01376&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Daumesnil&line=6&sens=Nation&stationcode=71614&linecode=C01376&destcode=Nation&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Daumesnil&line=8&sens=Balard&stationcode=71614&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Daumesnil&line=8&sens=Cr%C3%A9teil&stationcode=71614&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"}]};
@@ -333,8 +333,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -464,8 +462,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

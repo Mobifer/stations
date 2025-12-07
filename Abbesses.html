@@ -224,7 +224,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Abbesses","pti":"Butte Montmartre","lignes":{"metro":["12"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Acc%C3%A8s_Station_Abbesses_M%C3%A9tro_Paris_Place_Abbesses_-_Paris_XVIII_%28FR75%29_-_2025-07-27_-_1.jpg/1280px-Acc%C3%A8s_Station_Abbesses_M%C3%A9tro_Paris_Place_Abbesses_-_Paris_XVIII_%28FR75%29_-_2025-07-27_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_Abbesses_M%C3%A9tro_Paris_Place_Abbesses_-_Paris_XVIII_(FR75)_-_2025-07-27_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["12"]},"ouv":"30 janvier 1913","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XVIII<sup>e</sup>)"],"freq":"1 513 884 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"place des Abbesses","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Abbesses&line=12&sens=Aubervilliers&stationcode=71432&linecode=C01382&destcode=Mairie%20d%27Aubervilliers&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Abbesses&line=12&sens=Mairie%20d’Issy&stationcode=71432&linecode=C01382&destcode=Mairie%20d%27Issy&destcodealt=false"}]};
@@ -250,8 +250,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -381,8 +379,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

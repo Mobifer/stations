@@ -222,7 +222,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Campo-Formio","lignes":{"metro":["5"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Acc%C3%A8s_Station_Campo_Formio_M%C3%A9tro_Paris_Boulevard_H%C3%B4pital_-_Paris_XIII_%28FR75%29_-_2024-11-10_-_3.jpg/1280px-Acc%C3%A8s_Station_Campo_Formio_M%C3%A9tro_Paris_Boulevard_H%C3%B4pital_-_Paris_XIII_%28FR75%29_-_2024-11-10_-_3.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_Campo_Formio_M%C3%A9tro_Paris_Boulevard_H%C3%B4pital_-_Paris_XIII_(FR75)_-_2024-11-10_-_3.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["5"]},"ouv":"6 juin 1906","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XIII<sup>e</sup>)"],"freq":"1 016 150 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard de l’Hôpital","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Campo%20Formio&line=5&sens=Bobigny&stationcode=71063&linecode=C01375&destcode=Bobigny%20Pablo%20Picasso&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Campo%20Formio&line=5&sens=Place%20d’Italie&stationcode=71063&linecode=C01375&destcode=Place%20d%27Italie&destcodealt=false"}]};
@@ -248,8 +248,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -379,8 +377,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

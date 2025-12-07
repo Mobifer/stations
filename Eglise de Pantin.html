@@ -308,7 +308,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Église de Pantin","lignes":{"metro":["5"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Entr%C3%A9e_Station_M%C3%A9tro_%C3%89glise_Pantin_Pantin_4.jpg/1280px-Entr%C3%A9e_Station_M%C3%A9tro_%C3%89glise_Pantin_Pantin_4.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Entrée_Station_Métro_Église_Pantin_Pantin_4.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["5"]},"ouv":"12 octobre 1942","voies":"2","quais":"2","zt":"2","ufr":"Non","communes":["Pantin"],"freq":"2 832 467 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue Jean Lolive"},{"num":"2","desc":"Gare Routière","acc":true,"esc":true},{"num":"3","desc":"rue Charles Auray"},{"num":"4","desc":"rue Jules Auffret"},{"num":"5","desc":"rue Delizy"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Église%20de%20Pantin&line=5&sens=Bobigny&stationcode=72024&linecode=C01375&destcode=Bobigny%20Pablo%20Picasso&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Église%20de%20Pantin&line=5&sens=Place%20d’Italie&stationcode=72024&linecode=C01375&destcode=Place%20d%27Italie&destcodealt=false"}]};
@@ -334,8 +334,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -465,8 +463,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

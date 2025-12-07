@@ -329,7 +329,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Rosny – Bois-Perrier","lignes":{"metro":["11"],"rer":["E"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Acc%C3%A8s_Station_Rosny_Bois_Perrier_M%C3%A9tro_Paris_-_Rosny-sous-Bois_(FR93)_-_2024-06-13_-_4.jpg/1280px-Acc%C3%A8s_Station_Rosny_Bois_Perrier_M%C3%A9tro_Paris_-_Rosny-sous-Bois_(FR93)_-_2024-06-13_-_4.jpg","imgp":"https://fr.m.wikipedia.org/wiki/Fichier:Acc%C3%A8s_Station_Rosny_Bois_Perrier_M%C3%A9tro_Paris_-_Rosny-sous-Bois_(FR93)_-_2024-06-13_-_4.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["11"]},"ouv":"13 juin 2024","voies":"2","quais":"2","zt":"3","ufr":"Oui","communes":["Rosny-sous-Bois"]},{"lignes":{"rer":["E"]},"ouv":"30 août 1999","voies":"4","quais":"2","zt":"3","ufr":"Non","communes":["Rosny-sous-Bois"],"freq":"4 959 155 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"Centre Commercial Rosny 2"},{"num":"1","desc":"rue Jacques Offenbach"},{"num":"2","desc":"rue Léon Blum"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Rosny-Bois-Perrier&line=11&sens=Ch%C3%A2telet&stationcode=426280&linecode=C01381&destcode=Ch%C3%A2telet&destcodealt=false"},{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.883230647193955%2C2.481232093417263&stop=stop_area%3AIDFM%3A426280&lines=line%3AIDFM%3AC01729&platforms="}]};
@@ -355,8 +355,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -486,8 +484,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

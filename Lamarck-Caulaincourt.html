@@ -229,7 +229,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Lamarck – Caulaincourt","lignes":{"metro":["12"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Lamarck_Caulaincourt_-_Ligne_12_-_2025_-_Acc%C3%A8s_de_nuit_2.jpg/1280px-Lamarck_Caulaincourt_-_Ligne_12_-_2025_-_Acc%C3%A8s_de_nuit_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Lamarck_Caulaincourt_-_Ligne_12_-_2025_-_Acc%C3%A8s_de_nuit_2.jpg","imga":"Métroën","stats":[{"lignes":{"metro":["12"]},"ouv":"31 octobre 1912","inaug":"Lamarck","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XVIII<sup>e</sup>)"],"freq":"1 875 717 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Lamarck","acc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Lamarck-Caulaincourt&line=12&sens=Aubervilliers&stationcode=71492&linecode=C01382&destcode=Mairie%20d%27Aubervilliers&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Lamarck-Caulaincourt&line=12&sens=Mairie%20d’Issy&stationcode=71492&linecode=C01382&destcode=Mairie%20d%27Issy&destcodealt=false"}]};
@@ -255,8 +255,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -386,8 +384,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

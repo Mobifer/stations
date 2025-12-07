@@ -391,7 +391,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Richelieu – Drouot","lignes":{"metro":["8","9"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Paris_Metro_Linie_9_Richelieu-Drouot_Bahnsteig.JPG/1280px-Paris_Metro_Linie_9_Richelieu-Drouot_Bahnsteig.JPG","imgp":"https://commons.wikimedia.org/wiki/File:Paris_Metro_Linie_9_Richelieu-Drouot_Bahnsteig.JPG","imga":"Bellomonte","stats":[{"lignes":{"metro":["8","9"]},"ouv":"30 juin 1928","voies":"4","quais":"4","zt":"1","ufr":"Non","communes":["Paris (II<sup>e</sup>, IX<sup>e</sup>)"],"freq":"2 994 510 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard Haussmann"},{"num":"2","desc":"rue de Richelieu"},{"num":"3","desc":"boulevard Montmartre"},{"num":"4","desc":"rue Cauchat"},{"num":"5","desc":"rue Laffitte"},{"num":"6","desc":"rue Taitbout"},{"num":"7","desc":"rue Marivaux","pti":"Opéra Comique"},{"num":"8","desc":"boulevard des Italiens","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Richelieu-Drouot&line=8&sens=Balard&stationcode=71330&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Richelieu-Drouot&line=8&sens=Cr%C3%A9teil&stationcode=71330&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Richelieu-Drouot&line=9&sens=Pont:b:de%20S%C3%A8vres&stationcode=71330&linecode=C01379&destcode=Pont%20de%20S%C3%A8vres&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Richelieu-Drouot&line=9&sens=Montreuil&stationcode=71330&linecode=C01379&destcode=Mairie%20de%20Montreuil&destcodealt=false"}]};
@@ -417,8 +417,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -548,8 +546,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

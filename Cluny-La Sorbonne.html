@@ -285,7 +285,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Cluny – La Sorbonne","corresp":["Saint-Michel-Notre-Dame"],"lignes":{"metro":["10"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Station_Cluny_Sorbonne_M%C3%A9tro_Paris_Ligne_10_-_Paris_V_%28FR75%29_-_2022-07-02_-_11.jpg/1280px-Station_Cluny_Sorbonne_M%C3%A9tro_Paris_Ligne_10_-_Paris_V_%28FR75%29_-_2022-07-02_-_11.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_Cluny_Sorbonne_M%C3%A9tro_Paris_Ligne_10_-_Paris_V_(FR75)_-_2022-07-02_-_11.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["10"]},"ouv":"15 février 1930","inaug":"Cluny","voies":"3","quais":"2","zt":"1","ufr":"Non","communes":["Paris (V<sup>e</sup>)"],"freq":"1 261 818 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"boulevard Saint-Michel"},{"num":"2","desc":"boulevard Saint-Germain","pti":"Musée du Moyen Âge","acc":true},{"num":"3","desc":"rue Saint-Jacques"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Cluny-La%20Sorbonne&line=10&sens=Boulogne&stationcode=73620&linecode=C01380&destcode=Boulogne%20Pont%20de%20Saint-Cloud&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Cluny-La%20Sorbonne&line=10&sens=Gare:b:d’Austerlitz&stationcode=73620&linecode=C01380&destcode=Gare%20d%27Austerlitz&destcodealt=false"}]};
@@ -311,8 +311,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -442,8 +440,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

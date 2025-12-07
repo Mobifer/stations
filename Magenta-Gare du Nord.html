@@ -227,7 +227,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Magenta – Gare du Nord","corresp":["Gare de lEst","Gare du Nord","Paris-Est","Paris-Nord"],"lignes":{"rer":["E"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Quais_RER_E_Gare_Magenta_Paris_9.jpg/1280px-Quais_RER_E_Gare_Magenta_Paris_9.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Quais_RER_E_Gare_Magenta_Paris_9.jpg","imga":"Chabe01","stats":[{"lignes":{"rer":["E"]},"ouv":"14 juillet 1999","voies":"4","quais":"2","zt":"1","ufr":"Oui","communes":["Paris (X<sup>e</sup>)"],"freq":"35 160 793 voyageurs (2023)"}],"sorties":[{"num":"1","desc":"rue La Fayette","acc":true,"asc":true}],"siv":[{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.88081039411524%2C2.358695908637114&stop=stop_area%3AIDFM%3A478733&lines=line%3AIDFM%3AC01729&platforms="}]};
@@ -253,8 +253,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -384,8 +382,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

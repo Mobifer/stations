@@ -308,7 +308,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Boucicaut","lignes":{"metro":["8"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Acc%C3%A8s_Station_M%C3%A9tro_Boucicaut_Avenue_F%C3%A9lix_Faure_-_Paris_XV_%28FR75%29_-_2022-01-23_-_3.jpg/1280px-Acc%C3%A8s_Station_M%C3%A9tro_Boucicaut_Avenue_F%C3%A9lix_Faure_-_Paris_XV_%28FR75%29_-_2022-01-23_-_3.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Acc%C3%A8s_Station_M%C3%A9tro_Boucicaut_Avenue_F%C3%A9lix_Faure_-_Paris_XV_(FR75)_-_2022-01-23_-_3.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["8"]},"ouv":"27 juillet 1937","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (XV<sup>e</sup>)"],"freq":"2 288 055 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Sarasate","acc":true},{"num":"2","desc":"rue Henri Bocquillon"},{"num":"3","desc":"rue de la Convention"},{"num":"4","desc":"avenue Félix Faure","esc":true},{"num":"5","desc":"rue Duranton"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Boucicaut&line=8&sens=Balard&stationcode=412992&linecode=C01378&destcode=Balard&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Boucicaut&line=8&sens=Cr%C3%A9teil&stationcode=412992&linecode=C01378&destcode=Pointe%20du%20Lac&destcodealt=false"}]};
@@ -334,8 +334,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -465,8 +463,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

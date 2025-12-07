@@ -301,7 +301,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Fort d’Aubervilliers","lignes":{"metro":["7"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Entr%C3%A9e_Station_M%C3%A9tro_Fort_Aubervilliers_Aubervilliers_2.jpg/1280px-Entr%C3%A9e_Station_M%C3%A9tro_Fort_Aubervilliers_Aubervilliers_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_Station_M%C3%A9tro_Fort_Aubervilliers_Aubervilliers_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["7"]},"ouv":"4 octobre 1979","voies":"2","quais":"2","zt":"2","ufr":"Non","communes":["Aubervilliers"],"freq":"3 103 518 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue Jean Jaurès","rep":"Aubervilliers","acc":true,"esc":true},{"num":"2","desc":"avenue Jean Jaurès","rep":"Pantin"},{"num":"3","desc":"avenue de la Division Leclerc"},{"num":"4","desc":"rue Danielle Casanova"}],"siv":[{"metro":"https://enrail.org/ratp/?style=siel&station=Fort%20d%27Aubervilliers&line=7&sens=La%20Courneuve&stationcode=73695&linecode=C01377&destcode=La%20Courneuve%20-%208%20Mai%201945&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Fort%20d%27Aubervilliers&line=7&sens=Ivry%20%E2%80%A2%20Villejuif&stationcode=73695&linecode=C01377&destcode=Mairie%20d%27Ivry%20%E2%80%A2%20Villejuif%20-%20Louis%20Aragon&destcodealt=false"}]};
@@ -327,8 +327,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -458,8 +456,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

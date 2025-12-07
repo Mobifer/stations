@@ -219,7 +219,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Étienne Marcel","lignes":{"metro":["4"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Entr%C3%A9e_Station_M%C3%A9tro_%C3%89tienne_Marcel_Rue_%C3%89tienne_Marcel_-_Paris_I_%28FR75%29_-_2021-10-25_-_2.jpg/1280px-Entr%C3%A9e_Station_M%C3%A9tro_%C3%89tienne_Marcel_Rue_%C3%89tienne_Marcel_-_Paris_I_%28FR75%29_-_2021-10-25_-_2.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_Station_M%C3%A9tro_%C3%89tienne_Marcel_Rue_%C3%89tienne_Marcel_-_Paris_I_(FR75)_-_2021-10-25_-_2.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["4"]},"ouv":"21 avril 1908","voies":"2","quais":"2","zt":"1","ufr":"Non","communes":["Paris (I<sup>er</sup>, II<sup>e</sup>)"],"freq":"1 705 639 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"rue Étienne Marcel"}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=%C3%89tienne%20Marcel&line=4&sens=Porte%20de:b:Clignancourt&stationcode=479068&linecode=C01374&destcode=Porte%20de%20Clignancourt&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=%C3%89tienne%20Marcel&line=4&sens=Bagneux&stationcode=479068&linecode=C01374&destcode=BAGNEUX-LUCIE%20AUBRAC&destcodealt=false"}]};
@@ -245,8 +245,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -376,8 +374,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

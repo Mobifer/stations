@@ -287,7 +287,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Bérault","lignes":{"metro":["1"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Station_B%C3%A9rault_M%C3%A9tro_Paris_Ligne_1_-_Vincennes_%28FR94%29_-_2022-06-28_-_1.jpg/1280px-Station_B%C3%A9rault_M%C3%A9tro_Paris_Ligne_1_-_Vincennes_%28FR94%29_-_2022-06-28_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Station_B%C3%A9rault_M%C3%A9tro_Paris_Ligne_1_-_Vincennes_(FR94)_-_2022-06-28_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["1"]},"ouv":"24 mars 1934","voies":"2","quais":"2","zt":"2","ufr":"Non","communes":["Saint-Mandé","Vincennes"],"freq":"2 106 827 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"Hôpital Bégin","acc":true},{"num":"2","desc":"place Bérault"},{"num":"3","desc":"rue Segond"},{"num":"4","desc":"rue des Vignerons","esc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=B%C3%A9rault&line=1&sens=La%20D%C3%A9fense&stationcode=42318&linecode=C01371&destcode=La%20D%C3%A9fense%20(Grande%20Arche)&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=B%C3%A9rault&line=1&sens=Ch%C3%A2teau:b:de%20Vincennes&stationcode=42318&linecode=C01371&destcode=Ch%C3%A2teau%20de%20Vincennes&destcodealt=false"}]};
@@ -313,8 +313,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -444,8 +442,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

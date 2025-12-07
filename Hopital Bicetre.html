@@ -244,7 +244,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Hôpital Bicêtre","lignes":{"metro":["14"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/B%C3%A2timent_Station_H%C3%B4pital_Bic%C3%AAtre_M%C3%A9tro_Paris_-_Le_Kremlin-Bic%C3%AAtre_%28FR94%29_-_2024-06-26_-_1.jpg/2560px-B%C3%A2timent_Station_H%C3%B4pital_Bic%C3%AAtre_M%C3%A9tro_Paris_-_Le_Kremlin-Bic%C3%AAtre_%28FR94%29_-_2024-06-26_-_1.jpg","imgp":"https://commons.wikimedia.org/wiki/File:B%C3%A2timent_Station_H%C3%B4pital_Bic%C3%AAtre_M%C3%A9tro_Paris_-_Le_Kremlin-Bic%C3%AAtre_(FR94)_-_2024-06-26_-_1.jpg","imga":"Chabe01","stats":[{"lignes":{"metro":["14"]},"ouv":"24 juin 2024","voies":"2","quais":"2","zt":"2","ufr":"Oui","communes":["Le Kremlin-Bicêtre","Gentilly"]}],"sorties":[{"num":"1","desc":"rue Séverine"},{"num":"2","desc":"rue Gabriel Péri","rep":"Hôpital Bicêtre","asc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=H%C3%B4pital%20Bic%C3%AAtre&line=14&sens=Saint-Denis%20:l::s:Pleyel&stationcode=70445&linecode=C01384&destcode=Saint-Denis%20-%20Pleyel&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=H%C3%B4pital%20Bic%C3%AAtre&line=14&sens=A%C3%A9roport:b:d’Orly&stationcode=70445&linecode=C01384&destcode=A%C3%A9roport%20d%27Orly&destcodealt=false"}]};
@@ -270,8 +270,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -401,8 +399,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

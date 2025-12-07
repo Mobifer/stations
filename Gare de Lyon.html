@@ -580,7 +580,7 @@
 		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js" type="module"></script>
-		<script>
+		<script type="module">
 			import { genererLignesHTML } from "/assets/script/genlineicons.js";
 
 			const station = {"nom":"Gare de Lyon","corresp":["Paris-Gare de Lyon"],"lignes":{"metro":["1","14"],"rer":["A","D"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Gare_de_Lyon_%28Paris_métro%29_MP14_CA32_par_Cramos.JPG/1280px-Gare_de_Lyon_%28Paris_métro%29_MP14_CA32_par_Cramos.JPG","imgp":"https://commons.m.wikimedia.org/wiki/File:Gare_de_Lyon_(Paris_métro)_MP14_CA32_par_Cramos.JPG#mw-jump-to-license","imga":"Cramos","stats":[{"lignes":{"metro":["1","14"]},"ouv":"19 juillet 1900","voies":"4","quais":"3","zt":"1","ufr":"Oui (ligne 14 uniquement)","communes":["Paris (XII<sup>e</sup>)"],"freq":"28,6 M voyageurs (2021)"},{"lignes":{"rer":["A","D"]},"ouv":"8 décembre 1977","voies":"2 (RER A)<br>4 (RER D)","quais":"1 (RER A)<br>2 (RER D)","zt":"1","ufr":"Oui","communes":["Paris (XII<sup>e</sup>)"],"freq":"148,1 M voyageurs (2018)"}],"sorties":[{"num":"1","desc":"boulevard Diderot","acc":true},{"num":"2","desc":"Ministère de l’Économie et des Finances","esc":true},{"num":"3","desc":"rue Michel Chasles","esc":true},{"num":"4","desc":"cour Chalon","esc":true},{"num":"6","desc":"Tour de l’Horloge","esc":true},{"num":"7","desc":"rue de Bercy"},{"num":"9","desc":"place Henri Frenay"},{"num":"10","desc":"rue Legraverend"},{"num":"11","desc":"rue de Chalon"},{"num":"12","desc":"rue Villiot","esc":true},{"num":"13","desc":"rue Van Gogh","acc":true,"esc":true},{"num":"15","desc":"Maison de la RATP","asc":true}],"siv":[{"metro":"https://enrail.org/ratp/?style=panam&station=Gare%20de%20Lyon&line=1&sens=La%20Défense&stationcode=43153&linecode=C01371&destcode=La%20Défense%20(Grande%20Arche)&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Gare%20de%20Lyon&line=1&sens=Château:b:de%20Vincennes&stationcode=43153&linecode=C01371&destcode=Château%20de%20Vincennes&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Gare%20de%20Lyon&line=14&sens=Saint-Denis%20:l::s:Pleyel&stationcode=73626&linecode=C01384&destcode=Saint-Denis%20-%20Pleyel&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Gare%20de%20Lyon&line=14&sens=A%C3%A9roport:b:d’Orly&stationcode=73626&linecode=C01384&destcode=A%C3%A9roport%20d%27Orly&destcodealt=false"},{"train":"https://departs.leon.gp/screen/ratp_rer/stop/fr-idf:IDFM:73626/line/fr-idf:IDFM:C01742/pos/48.8434021,2.3763657"},{"train":"https://iena.arno.cl/?aimedDepartureCount=5&coordinates=48.8434021%2C2.3763657&stop=stop_area%3AIDFM%3A73626&lines=line%3AIDFM%3AC01728%2Cline%3AIDFM%3AC01852&platforms="}]};
@@ -606,8 +606,6 @@
 				lignesListe.push(...lignes.map(formatter));
 			};
 
-		</script>
-		<script>
 			// Génération des arrêts suivants
 			let prochainsArrets = {};
 			let destinations = {};
@@ -737,8 +735,7 @@
 					})
 				.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err))},
 			1000 );
-		</script>
-		<script>
+			
 			// Génération de la carte
 			const map = L.map('map').setView([48.857, 2.350], 18);
 			// Calque de tuiles (fond de carte)

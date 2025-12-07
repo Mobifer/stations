@@ -7,7 +7,11 @@
 		
 		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
 		<title>Poissonnière - MobiFer</title>
-		<meta name="description" content="" />
+		<meta name="description" content="Plus d’informations sur la station Poissonnière sur MobiFer." />
+		<meta name="theme-color" content="#0b0082" />
+		<meta property="og:title" content="Poissonnière - MobiFer" />
+		<meta property="og:description" content="Plus d’informations sur la station Poissonnière sur MobiFer." />
+		<meta property="og:image" content="" />
 	</head>
 	<body>
 		<a href="/" class="header"><h1>MobiFer</h1></a>
@@ -48,56 +52,37 @@
 
 						<div class="centered">
 							<span class="blue-box" style="padding: 10px !important; text-align: left;">
-
 								
-
-
 								
-
 									<div class="sortie-row">
-
 										<div class="sortie-left">
 											<span class="num-sortie">1</span>
 										</div>
-
 										<div class="sortie-right">
-
 											
-
 											
 												rue La Fayette
 												<span style="font-size: 1.25em">
 													
 									
-
 									
-
 									
 										<span class="integrated"><img src="/assets/icons/escalator.svg"></span>
 									
 								
 												</span><br>
 											
-
 											
-
 											
-
 										</div>
 									</div>
-
 								
-
 									<div class="sortie-row">
-
 										<div class="sortie-left">
 											<span class="num-sortie">2</span>
 										</div>
-
 										<div class="sortie-right">
-
 											
-
 											
 												rue de Chabrol
 												<span style="font-size: 1.25em">
@@ -106,55 +91,37 @@
 										<span class="integrated"><img src="/assets/icons/info.svg"></span>
 										<span class="integrated"><img src="/assets/icons/tickets.svg"></span>
 									
-
 									
-
 									
 								
 												</span><br>
 											
-
 											
-
 											
-
 										</div>
 									</div>
-
 								
-
 									<div class="sortie-row">
-
 										<div class="sortie-left">
 											<span class="num-sortie">3</span>
 										</div>
-
 										<div class="sortie-right">
-
 											
-
 											
 												rue du Faubourg Poissonnière
 												<span style="font-size: 1.25em">
 													
 									
-
 									
-
 									
 								
 												</span><br>
 											
-
 											
-
 											
-
 										</div>
 									</div>
-
 								
-
 							</span>
 						</div>
 
@@ -165,22 +132,16 @@
 				<div class="item">
 					<div class="box image-center">
 						<h2 class="centered">Statistiques et données</h2>
-
 						
-
 							
-
 							<table style="text-align: left;">
-
 								
 									<tr>
 										<td class="title" style="width: 45%;">Ligne(s)</td>
 										<td style="font-size: 1.4em;"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span></td>
 									</tr>
 								
-
 								
-
 								
 									
 										<tr>
@@ -231,66 +192,48 @@
 										</tr>
 									
 								
-
 							</table>
 
 							
-
 						
-
 					</div>
 				</div>
 
 				
 					
-
 					
 						
 
 							<div class="item">
 								<div class="box image-center">
-
 									<h2 class="centered">Prochains passages <span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Métro" title="Métro"></span> <div class="btn-group" title="Modifiez le style des SIEL"><button onclick="switchToPANAM();"><img src="/assets/icons/panam.svg" alt="PANAM" style="height: 1.25em;" id="panam"></button><button onclick="switchToPIQ();"><img src="/assets/icons/piq.svg" alt="PIQ" style="height: 1.25em;" id="piq"></button><button onclick="switchToPIQDark();"><img src="/assets/icons/piq.svg" alt="PIQ" style="height: 1.25em;" id="piq"> (sombre)</button></div></h2>
-
 									
 										<div class="iframes-container">
 											<div class="iframes">
 									
-
 									
-
 										
 											<div class="item">
 												<iframe src="https://enrail.org/ratp/?style=siel&amp;station=Poissonnière&amp;line=7&amp;sens=La%20Courneuve&amp;stationcode=71363&amp;linecode=C01377&amp;destcode=La%20Courneuve%20-%208%20Mai%201945&amp;destcodealt=false+&rivoli=false" class="ratp" frameborder="0"></iframe>
 											</div>
 										
-
 										
-
 										
-
 									
-
 										
 											<div class="item">
 												<iframe src="https://enrail.org/ratp/?style=siel&amp;station=Poissonnière&amp;line=7&amp;sens=Ivry%20•%20Villejuif&amp;stationcode=71363&amp;linecode=C01377&amp;destcode=Mairie%20d%27Ivry%20•%20Villejuif%20-%20Louis%20Aragon&amp;destcodealt=false+&rivoli=false" class="ratp" frameborder="0"></iframe>
 											</div>
 										
-
 										
-
 										
-
 									
-
 									
 											</div>
 										</div>
 									
-
 								</div>
 							</div>
-
 						
 					
 						
@@ -327,26 +270,25 @@
 		<script src="/assets/script/map.js" type="module"></script>
 		<script src="/addons/footer.js"></script>
 		<script>
-			// Initialise le slideshow après la mise à jour du DOM
-			if (Array.isArray(station.img) && station.img.length > 0) {
-				let slideIndex = 0;
-				const slides = document.getElementsByClassName("slide");
+			let slideIndex = 0;
+			const slides = document.getElementsByClassName("slide");
 
-				function showSlides(slide) {
-					for (let i = 0; i < slides.length; i++) {
-						slides[i].classList.remove("active");
-					}
-
-					slideIndex++;
-					if (slideIndex > slides.length) { slideIndex = 1; }
-
-					if (slides.length > 0) {
-						slides[slideIndex - 1].classList.add("active");
-					}
-
-					setTimeout(showSlides, 3000); // or any interval you like
+			function showSlides(slide) {
+				for (let i = 0; i < slides.length; i++) {
+					slides[i].classList.remove("active");
 				}
 
+				slideIndex++;
+				if (slideIndex > slides.length) { slideIndex = 1; }
+
+				if (slides.length > 0) {
+					slides[slideIndex - 1].classList.add("active");
+				}
+
+				setTimeout(showSlides, 3000); // or any interval you like
+			}
+
+			if (slides.length > 0) {
 				showSlides();
 			}
 		</script>

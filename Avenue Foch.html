@@ -7,7 +7,11 @@
 		
 		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
 		<title>Avenue Foch - MobiFer</title>
-		<meta name="description" content="" />
+		<meta name="description" content="Plus d’informations sur la station Avenue Foch sur MobiFer." />
+		<meta name="theme-color" content="#0b0082" />
+		<meta property="og:title" content="Avenue Foch - MobiFer" />
+		<meta property="og:description" content="Plus d’informations sur la station Avenue Foch sur MobiFer." />
+		<meta property="og:image" content="" />
 	</head>
 	<body>
 		<a href="/" class="header"><h1>MobiFer</h1></a>
@@ -55,22 +59,14 @@
 
 						<div class="centered">
 							<span class="blue-box" style="padding: 10px !important; text-align: left;">
-
 								
-
-
 								
-
 									<div class="sortie-row">
-
 										<div class="sortie-left">
 											<span class="num-sortie">1</span>
 										</div>
-
 										<div class="sortie-right">
-
 											
-
 											
 												Porte Dauphine
 												<span style="font-size: 1.25em">
@@ -79,59 +75,41 @@
 										<span class="integrated"><img src="/assets/icons/info.svg"></span>
 										<span class="integrated"><img src="/assets/icons/tickets.svg"></span>
 									
-
 									
 										<span class="integrated"><img src="/assets/icons/ascenseur.svg"></span>
 									
-
 									
 										<span class="integrated"><img src="/assets/icons/escalator.svg"></span>
 									
 								
 												</span><br>
 											
-
 											
-
 											
-
 										</div>
 									</div>
-
 								
-
 									<div class="sortie-row">
-
 										<div class="sortie-left">
 											<span class="num-sortie">2</span>
 										</div>
-
 										<div class="sortie-right">
-
 											
-
 											
 												rue de Longchamp
 												<span style="font-size: 1.25em">
 													
 									
-
 									
-
 									
 								
 												</span><br>
 											
-
 											
-
 											
-
 										</div>
 									</div>
-
 								
-
 							</span>
 						</div>
 
@@ -142,22 +120,16 @@
 				<div class="item">
 					<div class="box image-center">
 						<h2 class="centered">Statistiques et données</h2>
-
 						
-
 							
-
 							<table style="text-align: left;">
-
 								
 									<tr>
 										<td class="title" style="width: 45%;">Ligne(s)</td>
 										<td style="font-size: 1.4em;"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerC.html"><img src="/assets/icons/RER_C_couleur_RVB.svg" alt="C"></a></span></span></td>
 									</tr>
 								
-
 								
-
 								
 									
 										<tr>
@@ -208,19 +180,15 @@
 										</tr>
 									
 								
-
 							</table>
 
 							
-
 						
-
 					</div>
 				</div>
 
 				
 					
-
 					
 						
 					
@@ -228,28 +196,18 @@
 
 							<div class="item">
 								<div class="box image-center">
-
 									<h2 class="centered">Prochains passages <span class="integrated" style="margin-right: 0px !important;"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER" title="RER"></span> et <span class="integrated"><img src="/assets/icons/symbole_train_RVB.svg" alt="Transilien" title="Transilien"></span></h2>
-
 									
-
 									
-
 										
-
 										
 											<iframe src="https://iena.arno.cl/?aimedDepartureCount=5&amp;coordinates=48.86985281215763%2C2.2747712644338454&amp;stop=stop_area%3AIDFM%3A71321&amp;lines=line%3AIDFM%3AC01727&amp;platforms=" class="sncf" frameborder="0" scrolling="no"></iframe>
 										
-
 										
-
 									
-
 									
-
 								</div>
 							</div>
-
 						
 					
 						
@@ -284,26 +242,25 @@
 		<script src="/assets/script/map.js" type="module"></script>
 		<script src="/addons/footer.js"></script>
 		<script>
-			// Initialise le slideshow après la mise à jour du DOM
-			if (Array.isArray(station.img) && station.img.length > 0) {
-				let slideIndex = 0;
-				const slides = document.getElementsByClassName("slide");
+			let slideIndex = 0;
+			const slides = document.getElementsByClassName("slide");
 
-				function showSlides(slide) {
-					for (let i = 0; i < slides.length; i++) {
-						slides[i].classList.remove("active");
-					}
-
-					slideIndex++;
-					if (slideIndex > slides.length) { slideIndex = 1; }
-
-					if (slides.length > 0) {
-						slides[slideIndex - 1].classList.add("active");
-					}
-
-					setTimeout(showSlides, 3000); // or any interval you like
+			function showSlides(slide) {
+				for (let i = 0; i < slides.length; i++) {
+					slides[i].classList.remove("active");
 				}
 
+				slideIndex++;
+				if (slideIndex > slides.length) { slideIndex = 1; }
+
+				if (slides.length > 0) {
+					slides[slideIndex - 1].classList.add("active");
+				}
+
+				setTimeout(showSlides, 3000); // or any interval you like
+			}
+
+			if (slides.length > 0) {
 				showSlides();
 			}
 		</script>

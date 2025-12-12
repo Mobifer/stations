@@ -8,11 +8,11 @@
 		
 		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
 		<title>Pyramides - MobiFer</title>
-		<meta name="description" content="Plus d’informations sur la station Pyramides sur MobiFer." />
+		<meta name="description" content="Prochains passages, informations et sorties de la station Pyramides." />
 		<meta name="theme-color" content="#0b0082" />
 		<meta property="og:title" content="Pyramides - MobiFer" />
-		<meta property="og:description" content="Plus d’informations sur la station Pyramides sur MobiFer." />
-		<meta property="og:image" content="" />
+		<meta property="og:description" content="Prochains passages, informations et sorties de la station Pyramides." />
+		<meta property="og:image" content=" https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Metro_de_Paris_-_Ligne_7_-_Pyramides_01.jpg/1280px-Metro_de_Paris_-_Ligne_7_-_Pyramides_01.jpg " />
 	</head>
 	<body>
 		<a href="/" class="header"><h1>MobiFer</h1></a>
@@ -269,12 +269,46 @@
 
 				<div class="box image-center" id="stations-suivantes" style="max-width: 1500px !important; display: none;">
 					<h2 class="centered">Stations suivantes</h2>
-					<div id="prochains-arrets" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;"></div>
+
+					
+
+					
+					<div id="prochains-arrets" class="box" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+						
+						<div style="flex:1;">
+						<table style="text-align:left; min-width:200px;">
+							<tr>
+								<td class="title" style="text-align:center;width:50%;">Direction</td>
+								<td class="title" style="text-align:center;width:50%;"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span></td>
+							</tr>
+						
+							<tr>
+								<td>La Courneuve–8 Mai 1945</td>
+								<td><a href="/stations/Opera">Opéra</a></td>
+							</tr>
+							<tr>
+								<td>Villejuif–Louis Aragon • Mairie d’Ivry</td>
+								<td><a href="/stations/Palais Royal-Musee du Louvre">Palais Royal–Musée du Louvre</a></td>
+							</tr></table></div>
+						<div style="flex:1;">
+						<table style="text-align:left; min-width:200px;">
+							<tr>
+								<td class="title" style="text-align:center;width:50%;">Direction</td>
+								<td class="title" style="text-align:center;width:50%;"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span></span></td>
+							</tr>
+						
+							<tr>
+								<td>Saint-Denis–Pleyel</td>
+								<td><a href="/stations/Madeleine">Madeleine</a></td>
+							</tr>
+							<tr>
+								<td>Aéroport d’Orly</td>
+								<td><a href="/stations/Chatelet">Châtelet</a></td>
+							</tr></table></div>
+					</div>
+					
 				</div>
-
 			</div>
-		</div>
-
 		</div>
 		
 		<div id="footer-container" style="padding-top: 10px;"></div>
@@ -284,159 +318,6 @@
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js"></script>
 		<script type="module">
-			import { genererLignesHTML } from "/assets/script/genlineicons.js";
-
-			const station = {"nom":"Pyramides","lignes":{"metro":["7","14"]},"img":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Metro_de_Paris_-_Ligne_7_-_Pyramides_01.jpg/1280px-Metro_de_Paris_-_Ligne_7_-_Pyramides_01.jpg","imgp":"https://commons.wikimedia.org/wiki/File:Metro_de_Paris_-_Ligne_7_-_Pyramides_01.jpg","imga":"Clicsouris","stats":[{"lignes":{"metro":["7","14"]},"ouv":"1<sup>er</sup> juillet 1916","voies":"4","quais":"4","zt":"1","ufr":"Oui (ligne 14 uniquement)","communes":["Paris (I<sup>er</sup>)"],"freq":"3 962 698 voyageurs (2021)"}],"sorties":[{"num":"1","desc":"avenue de l’Opéra","acc":true},{"num":"2","desc":"rue de l’Échelle","asc":true},{"num":"3","desc":"rue des Pyramides"}],"siv":[{"metro":"https://enrail.org/ratp/?style=siel&station=Pyramides&line=7&sens=La%20Courneuve&stationcode=73788&linecode=C01377&destcode=La%20Courneuve%20-%208%20Mai%201945&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=siel&station=Pyramides&line=7&sens=Ivry%20•%20Villejuif&stationcode=73788&linecode=C01377&destcode=Mairie%20d%27Ivry%20•%20Villejuif%20-%20Louis%20Aragon&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Pyramides&line=14&sens=Saint-Denis%20:l::s:Pleyel&stationcode=73788&linecode=C01384&destcode=Saint-Denis%20-%20Pleyel&destcodealt=false"},{"metro":"https://enrail.org/ratp/?style=panam&station=Pyramides&line=14&sens=Aéroport:b:d’Orly&stationcode=73788&linecode=C01384&destcode=Aéroport%20d%27Orly&destcodealt=false"}]};
-
-			// Génération de la liste des lignes (pour les stations suivantes)
-			const lignesListe = [];
-			const types = {
-				metro: line => {
-					if (line.endsWith("bis")) line = "0" + line.replace("bis", "b");
-					return "m" + line.padStart(2, "0");
-				},
-				rer: line => "rer" + line,
-				train: line => "train" + line,
-				tram: line => {
-					if (line.endsWith("a") || line.endsWith("b")) line = "0" + line;
-					return "t" + line.padStart(2, "0");
-				}
-			};
-
-			for (const [type, formatter] of Object.entries(types)) {
-				const lignes = station.lignes[type];
-				if (!Array.isArray(lignes)) continue;
-				lignesListe.push(...lignes.map(formatter));
-			};
-
-			// Génération des arrêts suivants
-			let prochainsArrets = {};
-			let destinations = {};
-			
-			fetch('/data/metroliste.json')
-				.then(response => response.json())
-				.then(data => {
-					const container = document.getElementById("prochains-arrets");
-					let containerHTML = ``;
-
-					lignesListe.forEach(ligne => {
-						if (data[ligne]) {
-							data[ligne].forEach(arret => {
-								let stationAvantApres = [];
-								let stationIndex = data[ligne].indexOf(arret);
-								if (arret.constructor === Object) {
-									if (arret.nom === station.nom) {
-										// Si la station est un dictionnaire (dans une branche), on a directement le suivant et le prédécent
-										stationAvantApres.push(arret.prec);
-										stationAvantApres.push(arret.suiv);
-										prochainsArrets[ligne] = stationAvantApres;
-										destinations[ligne] = arret.terminus;
-									}
-								} else if (arret === station.nom) {
-									// Si la station est "normale", on cherche le prédécent et le suivant
-									// Attention aux stations précédant des stations en fourche !
-									let avant = data[ligne][stationIndex - 1];
-									let apres = data[ligne][stationIndex + 1];
-
-									// Par exemple à Tolbiac, la station suivante sera Maison Blanche
-									/* {
-										"nom": "Maison Blanche",
-										"prec": "Tolbiac",
-										"suiv": ["Le Kremlin-Bicêtre", "Porte d’Italie"],
-										"terminus": ["La Courneuve–8 Mai 1945", ["Villejuif–Louis Aragon", "Mairie d’Ivry"]]
-									} */ 
-									
-									if (avant.constructor === Object)
-										avant = avant.nom;
-
-									if (apres.constructor === Object)
-										apres = apres.nom;
-									
-									stationAvantApres.push(avant);
-									stationAvantApres.push(apres);
-									prochainsArrets[ligne] = stationAvantApres;
-								}
-							});
-						}
-					})
-
-					lignesListe.forEach(ligne => {
-						if (prochainsArrets[ligne]?.length) {
-							let precedent = prochainsArrets[ligne][0];
-							let precedentId = [];
-							let suivant = prochainsArrets[ligne][1];
-							let suivantId = [];
-
-							if (precedent != "Terminus" && !Array.isArray(precedent)) {
-								precedentId = ["/stations/" + precedent.replaceAll(" \u2013 ", "-").replaceAll("\u2019", "").replaceAll(".", "").normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "")];
-							} else if (Array.isArray(precedent)) {
-								precedent.forEach(station => {
-									precedentId.push("/stations/" + station.replaceAll(" \u2013 ", "-").replaceAll("\u2019", "").replaceAll(".", "").normalize("NFD").replaceAll(/[\u0300-\u036f]/g, ""));
-								})
-							}
-
-							if (suivant != "Terminus" && !Array.isArray(suivant)) {
-								suivantId = ["/stations/" + suivant.replaceAll(" \u2013 ", "-").replaceAll("\u2019", "").replaceAll(".", "").normalize("NFD").replaceAll(/[\u0300-\u036f]/g, "")];
-							} else if (Array.isArray(suivant)) {
-								suivant.forEach(station => {
-									suivantId.push("/stations/" + station.replaceAll(" \u2013 ", "-").replaceAll("\u2019", "").replaceAll(".", "").normalize("NFD").replaceAll(/[\u0300-\u036f]/g, ""));
-								})
-							}
-
-							let pictos = ""; 
-
-							if (ligne.startsWith("m")) {
-								pictos = genererLignesHTML({ metro: [ligne.replace(/^m0?/, "").replace("b", "bis")] });
-							}
-
-							let terminusAller;
-							let terminusRetour;
-
-							if (destinations[ligne] && destinations[ligne].length > 0) {
-								terminusAller = destinations[ligne][0];
-								terminusRetour = destinations[ligne][1];
-							} else {
-								terminusAller = data[ligne][1];
-								terminusRetour = data[ligne][data[ligne].length - 2];
-							}
-
-							// Crée un tableau pour les prochains arrêts
-							containerHTML += `<div style="flex: 1;">`;
-							containerHTML += `<table style="text-align: left; min-width: 200px;">`;
-							// Ligne de titre
-							containerHTML += `<tr><td class="title" style="font-size: 1.2em; text-align: center !important; width: 50%;">Direction</td><td class="title" style="font-size: 1.2em; text-align: center !important; width: 50%;">${pictos}</td></tr>`;
-
-							if (Array.isArray(precedent)) {
-								precedent.forEach((prec, i) => {
-									containerHTML += `<tr><td class="title" style="width: 50%;">${terminusAller[precedent.indexOf(prec)]}</td><td><a href="${precedentId[i]}">${prec}</a></td></tr>`;
-								});
-							} else {
-								if (Array.isArray(terminusAller))
-									terminusAller = terminusAller.join(" • ");
-								containerHTML += `<tr><td class="title" style="width: 50%;">${terminusAller}</td><td><a href="${precedentId}">${precedent}</a></td></tr>`;
-							}
-							
-							if (Array.isArray(suivant)) {
-								suivant.forEach((suiv, i) => {
-									containerHTML += `<tr><td class="title">${terminusRetour[suivant.indexOf(suiv)]}</td><td><a href="${suivantId[i]}">${suiv}</a></td></tr>`;
-								});
-							} else {
-								if (Array.isArray(terminusRetour))
-									terminusRetour = terminusRetour.join(" • ");
-								containerHTML += `<tr><td class="title">${terminusRetour}</td><td><a href="${suivantId}">${suivant}</a></td></tr>`;
-							}
-
-							containerHTML += `</table></div>`;
-						}
-					});
-
-					if (containerHTML !== ``) {
-						container.innerHTML = containerHTML.replaceAll(" \u2013 ", "\u2013");
-						document.getElementById("stations-suivantes").style.display = "block";
-					}
-				})
-			.catch(err => console.error("Erreur de chargement du JSON des stations dans l'ordre :", err));
-			
 			setTimeout(() => {
 				// Génération de la carte
 				const map = L.map('map').setView([48.857, 2.350], 18);
@@ -563,7 +444,6 @@
 				}
 			}, 1000);
 		</script>
-		<script src="/addons/footer.js"></script>
 		<script>
 			let slideIndex = 0;
 			const slides = document.getElementsByClassName("slide");

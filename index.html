@@ -1,0 +1,4280 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/stationstyles.css" />
+		<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+		
+		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
+		<title>Liste des stations - MobiFer</title>
+		<meta name="description" content="La liste des stations disponibles sur MobiFer." />
+		<meta name="theme-color" content="#0b0082" />
+		<meta property="og:title" content="Liste des stations - MobiFer" />
+		<meta property="og:description" content="La liste des stations disponibles sur MobiFer." />
+	</head>
+	<body>
+		<a href="/" class="header"><h1>MobiFer</h1></a>
+		<div class="searchbox">
+			<div class="searchbtn" onclick="hidesearch()">
+				<span class="integrated"><img src="/assets/icons/search.svg"></span>
+			</div>
+			<input type="search" class="stationinput" id="search" placeholder="Rechercher une station...">
+		</div>
+		<div class="box image-center" id="search-results" style="max-width: 700px !important;"></div>
+
+		<div class="box image-center" style="max-width: 800px !important;">
+			<h2 class="centered">Liste des 326 stations disponibles</h2>
+			<p class="centered">Cliquez sur le nom d’une station pour en savoir plus.</p>
+
+			<table style="text-align: left;">
+				<tr>
+					<td class="title" style="text-align: left; font-size: 1.4em;">Ligne(s)</td>
+					<td class="title" style="text-align: left; font-size: 1.4em;">Station</td>
+				</tr>
+
+				
+
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Abbesses" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Abbesses
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Aime Cesaire" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Aimé Césaire
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Alesia" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Alésia
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Alexandre Dumas" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Alexandre Dumas
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Alma-Marceau" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Alma–Marceau
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Anatole France" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Anatole France
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span><span class="integrated"><a href="lines/fun.html"><img src="/assets/icons/funiculaire_montmartre_couleur_RVB.svg" alt="fun"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Anvers" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Anvers
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Argentine" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Argentine
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Arts et Metiers" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Arts et Métiers
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Assemblee Nationale" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Assemblée Nationale
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerA.html"><img src="/assets/icons/RER_A_couleur_RVB.svg" alt="A"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Auber" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Auber
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Aubervilliers-Pantin-Quatre Chemins" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Aubervilliers–Pantin–Quatre Chemins
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Avenue Emile Zola" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Avenue Émile Zola
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerC.html"><img src="/assets/icons/RER_C_couleur_RVB.svg" alt="C"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Avenue Foch" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Avenue Foch
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Avron" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Avron
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Bagneux-Lucie Aubrac" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Bagneux–Lucie Aubrac
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03a.html"><img src="/assets/icons/tram_T3a_couleur_RVB.svg" alt="T3a"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Balard" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Balard
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Barbara" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Barbara
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Barbes-Rochechouart" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Barbès–Rochechouart
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t01.html"><img src="/assets/icons/tram_T1_couleur_RVB.svg" alt="T1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Basilique de Saint-Denis" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Basilique de Saint-Denis
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Bastille" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Bastille
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Bel-Air" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Bel-Air
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Belleville" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Belleville
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Berault" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Bérault
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Bercy" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Bercy
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Billancourt" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Billancourt
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Bir-Hakeim" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Bir-Hakeim
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Blanche" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Blanche
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t01.html"><img src="/assets/icons/tram_T1_couleur_RVB.svg" alt="T1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Bobigny-Pablo Picasso" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Bobigny–Pablo Picasso
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Bobigny-Pantin-Raymond Queneau" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Bobigny–Pantin–Raymond Queneau
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Boissiere" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Boissière
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07b.html"><img src="/assets/icons/metro_7bis_couleur_RVB.svg" alt="7bis"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Bolivar" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Bolivar
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Bonne Nouvelle" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Bonne Nouvelle
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07b.html"><img src="/assets/icons/metro_7bis_couleur_RVB.svg" alt="7bis"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Botzaris" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Botzaris
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Boucicaut" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Boucicaut
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Boulogne-Jean Jaures" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Boulogne–Jean Jaurès
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Boulogne-Pont de Saint-Cloud" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Boulogne–Pont de Saint-Cloud
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Bourse" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Bourse
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Breguet-Sabin" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Bréguet–Sabin
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Brochant" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Brochant
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07b.html"><img src="/assets/icons/metro_7bis_couleur_RVB.svg" alt="7bis"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Buttes Chaumont" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Buttes Chaumont
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Buzenval" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Buzenval
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Cadet" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Cadet
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Cambronne" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Cambronne
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Campo-Formio" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Campo-Formio
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Cardinal Lemoine" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Cardinal Lemoine
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Carrefour Pleyel" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Carrefour Pleyel
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Censier-Daubenton" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Censier–Daubenton
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerC.html"><img src="/assets/icons/RER_C_couleur_RVB.svg" alt="C"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Champ de Mars" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Champ de Mars
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Champs-Elysees-Clemenceau" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Champs-Élysées–Clemenceau
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Chardon-Lagache" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Chardon-Lagache
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Charenton-Ecoles" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Charenton–Écoles
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerA.html"><img src="/assets/icons/RER_A_couleur_RVB.svg" alt="A"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Charles de Gaulle-Etoile" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Charles de Gaulle–Étoile
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Charles Michels" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Charles Michels
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Charonne" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Charonne
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Chateau dEau" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Château d’Eau
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Chateau de Vincennes" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Château de Vincennes
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Chateau Rouge" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Château Rouge
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Chateau-Landon" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Château-Landon
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Chatelet" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Châtelet
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerA.html"><img src="/assets/icons/RER_A_couleur_RVB.svg" alt="A"></a></span></span><span class="integrated"><a href="/lines/rerB.html"><img src="/assets/icons/RER_B_couleur_RVB.svg" alt="B"></a></span><span class="integrated"><a href="/lines/rerD.html"><img src="/assets/icons/RER_D_couleur_RVB.svg" alt="D"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Chatelet-Les Halles" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Châtelet–Les Halles
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t06.html"><img src="/assets/icons/tram_T6_couleur_RVB.svg" alt="T6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Chatillon-Montrouge" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Châtillon–Montrouge
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Chaussee dAntin-La Fayette" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Chaussée d’Antin–La Fayette
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Chemin Vert" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Chemin Vert
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Chevaleret" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Chevaleret
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Cite" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Cité
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Cluny-La Sorbonne" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Cluny–La Sorbonne
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Colonel Fabien" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Colonel Fabien
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Commerce" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Commerce
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Concorde" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Concorde
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Convention" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Convention
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Corentin Cariou" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Corentin Cariou
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Corentin Celton" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Corentin Celton
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Corvisart" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Corvisart
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Coteaux Beauclair" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Coteaux Beauclair
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Cour Saint-Emilion" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Cour Saint-Émilion
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Courcelles" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Courcelles
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Couronnes" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Couronnes
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Creteil-LEchat" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Créteil–L’Échat
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Creteil-Prefecture" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Créteil–Préfecture
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Creteil-Universite" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Créteil–Université
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Crimee" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Crimée
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Croix de Chavaux" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Croix de Chavaux
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07b.html"><img src="/assets/icons/metro_7bis_couleur_RVB.svg" alt="7bis"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Danube" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Danube
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Daumesnil" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Daumesnil
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerB.html"><img src="/assets/icons/RER_B_couleur_RVB.svg" alt="B"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Denfert-Rochereau" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Denfert-Rochereau
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Dugommier" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Dugommier
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Dupleix" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Dupleix
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Duroc" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Duroc
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Ecole Militaire" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								École Militaire
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Ecole Veterinaire de Maisons-Alfort" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								École Vétérinaire de Maisons-Alfort
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Edgar Quinet" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Edgar Quinet
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Eglise dAuteuil" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Église d’Auteuil
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Eglise de Pantin" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Église de Pantin
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Esplanade de La Defense" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Esplanade de La Défense
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Etienne Marcel" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Étienne Marcel
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Europe" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Europe
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Exelmans" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Exelmans
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Faidherbe-Chaligny" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Faidherbe–Chaligny
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Falguiere" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Falguière
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Felix Faure" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Félix Faure
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Filles du Calvaire" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Filles du Calvaire
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Fort dAubervilliers" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Fort d’Aubervilliers
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Franklin D Roosevelt" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Franklin D. Roosevelt
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Front Populaire" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Front Populaire
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Gabriel Peri" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Gabriel Péri
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Gaite" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Gaîté
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Gallieni" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Gallieni
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span><span class="integrated"><a href="/lines/m03b.html"><img src="/assets/icons/metro_3bis_couleur_RVB.svg" alt="3bis"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Gambetta" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Gambetta
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerC.html"><img src="/assets/icons/RER_C_couleur_RVB.svg" alt="C"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Gare dAusterlitz" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Gare d’Austerlitz
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Gare de lEst" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Gare de l’Est
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerA.html"><img src="/assets/icons/RER_A_couleur_RVB.svg" alt="A"></a></span></span><span class="integrated"><a href="/lines/rerD.html"><img src="/assets/icons/RER_D_couleur_RVB.svg" alt="D"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Gare de Lyon" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Gare de Lyon
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Gare du Nord" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Gare du Nord
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Garibaldi" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Garibaldi
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/George V" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								George V
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Glaciere" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Glacière
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Goncourt" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Goncourt
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Grands Boulevards" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Grands Boulevards
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Guy Moquet" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Guy Môquet
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerE.html"><img src="/assets/icons/RER_E_couleur_RVB.svg" alt="E"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Haussmann-Gare Saint-Lazare" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Haussmann–Gare Saint-Lazare
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Havre-Caumartin" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Havre–Caumartin
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Hoche" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Hoche
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Hopital Bicetre" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Hôpital Bicêtre
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Hotel de Ville" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Hôtel de Ville
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Iena" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Iéna
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerC.html"><img src="/assets/icons/RER_C_couleur_RVB.svg" alt="C"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Invalides" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Invalides
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Jacques Bonsergent" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Jacques Bonsergent
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Jasmin" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Jasmin
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span><span class="integrated"><a href="/lines/m07b.html"><img src="/assets/icons/metro_7bis_couleur_RVB.svg" alt="7bis"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Jaures" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Jaurès
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Javel-Andre Citroen" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Javel–André Citroën
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Jourdain" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Jourdain
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Jules Joffrin" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Jules Joffrin
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Jussieu" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Jussieu
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Kleber" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Kléber
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/La Chapelle" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								La Chapelle
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t01.html"><img src="/assets/icons/tram_T1_couleur_RVB.svg" alt="T1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/La Courneuve-8 Mai 1945" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								La Courneuve–8 Mai 1945
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerA.html"><img src="/assets/icons/RER_A_couleur_RVB.svg" alt="A"></a></span></span><span class="integrated"><a href="/lines/rerE.html"><img src="/assets/icons/RER_E_couleur_RVB.svg" alt="E"></a></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_train_RVB.svg" alt="Train"></span><span class="integrated"><a href="/lines/trainL.html"><img src="/assets/icons/train_L_couleur_RVB.svg" alt="L"></a></span></span><span class="integrated"><a href="/lines/trainU.html"><img src="/assets/icons/train_U_couleur_RVB.svg" alt="U"></a></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t02.html"><img src="/assets/icons/tram_T2_couleur_RVB.svg" alt="T2"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/La Defense" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								La Défense
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/La Dhuys" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								La Dhuys
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/La Fourche" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								La Fourche
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/La Motte-Picquet-Grenelle" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								La Motte-Picquet–Grenelle
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/La Muette" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								La Muette
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/La Tour-Maubourg" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								La Tour-Maubourg
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Lamarck-Caulaincourt" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Lamarck–Caulaincourt
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Laumiere" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Laumière
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Le Kremlin-Bicetre" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Le Kremlin-Bicêtre
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Le Peletier" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Le Peletier
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Ledru-Rollin" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Ledru-Rollin
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Les Agnettes" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Les Agnettes
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t01.html"><img src="/assets/icons/tram_T1_couleur_RVB.svg" alt="T1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Les Courtilles" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Les Courtilles
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Les Gobelins" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Les Gobelins
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Les Halles" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Les Halles
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Les Sablons" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Les Sablons
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Liberte" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Liberté
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Liege" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Liège
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span><span class="integrated"><a href="/lines/m07b.html"><img src="/assets/icons/metro_7bis_couleur_RVB.svg" alt="7bis"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Louis Blanc" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Louis Blanc
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Louise Michel" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Louise Michel
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Lourmel" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Lourmel
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Louvre-Rivoli" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Louvre–Rivoli
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Mabillon" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Mabillon
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Madeleine" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Madeleine
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerE.html"><img src="/assets/icons/RER_E_couleur_RVB.svg" alt="E"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Magenta-Gare du Nord" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Magenta–Gare du Nord
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Mairie dAubervilliers" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Mairie d’Aubervilliers
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Mairie dIssy" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Mairie d’Issy
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Mairie dIvry" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Mairie d’Ivry
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Mairie de Clichy" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Mairie de Clichy
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Mairie de Montreuil" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Mairie de Montreuil
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Mairie de Montrouge" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Mairie de Montrouge
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Mairie de Saint-Ouen" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Mairie de Saint-Ouen
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Mairie des Lilas" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Mairie des Lilas
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Maison Blanche" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Maison Blanche
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Maisons-Alfort-Les Juilliottes" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Maisons-Alfort–Les Juilliottes
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Maisons-Alfort-Stade" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Maisons-Alfort–Stade
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Malakoff-Plateau de Vanves" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Malakoff–Plateau de Vanves
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Malakoff-Rue Etienne Dolet" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Malakoff–Rue Étienne Dolet
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Malesherbes" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Malesherbes
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Maraichers" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Maraîchers
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Marcadet-Poissonniers" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Marcadet–Poissonniers
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Marcel Sembat" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Marcel Sembat
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Marx Dormoy" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Marx Dormoy
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Maubert-Mutualite" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Maubert–Mutualité
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Menilmontant" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Ménilmontant
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Michel Bizot" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Michel Bizot
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Michel-Ange-Auteuil" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Michel-Ange–Auteuil
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Michel-Ange-Molitor" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Michel-Ange–Molitor
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Mirabeau" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Mirabeau
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Miromesnil" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Miromesnil
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Monceau" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Monceau
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Montgallet" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Montgallet
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Montparnasse-Bienvenue" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Montparnasse–Bienvenüe
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Montreuil-Hopital" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Montreuil–Hôpital
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Mouton-Duvernet" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Mouton-Duvernet
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerA.html"><img src="/assets/icons/RER_A_couleur_RVB.svg" alt="A"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Nation" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Nation
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Nationale" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Nationale
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerC.html"><img src="/assets/icons/RER_C_couleur_RVB.svg" alt="C"></a></span></span><span class="integrated"><a href="/lines/rerE.html"><img src="/assets/icons/RER_E_couleur_RVB.svg" alt="E"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Neuilly-Porte Maillot" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Neuilly–Porte Maillot
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Notre-Dame-de-Lorette" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Notre-Dame-de-Lorette
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Notre-Dame-des-Champs" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Notre-Dame-des-Champs
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Oberkampf" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Oberkampf
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Odeon" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Odéon
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Olympiades" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Olympiades
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Opera" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Opéra
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Ourcq" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Ourcq
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Palais Royal-Musee du Louvre" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Palais Royal–Musée du Louvre
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_train_RVB.svg" alt="Train"></span><span class="integrated"><a href="/lines/trainP.html"><img src="/assets/icons/train_P_couleur_RVB.svg" alt="P"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Paris-Est" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Paris–Est
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_train_RVB.svg" alt="Train"></span><span class="integrated"><a href="/lines/trainR.html"><img src="/assets/icons/train_R_couleur_RVB.svg" alt="R"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Paris-Gare de Lyon" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Paris–Gare de Lyon
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_train_RVB.svg" alt="Train"></span><span class="integrated"><a href="/lines/trainN.html"><img src="/assets/icons/train_N_couleur_RVB.svg" alt="N"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Paris-Montparnasse" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Paris–Montparnasse
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerB.html"><img src="/assets/icons/RER_B_couleur_RVB.svg" alt="B"></a></span></span><span class="integrated"><a href="/lines/rerD.html"><img src="/assets/icons/RER_D_couleur_RVB.svg" alt="D"></a></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_train_RVB.svg" alt="Train"></span><span class="integrated"><a href="/lines/trainH.html"><img src="/assets/icons/train_H_couleur_RVB.svg" alt="H"></a></span></span><span class="integrated"><a href="/lines/trainK.html"><img src="/assets/icons/train_K_couleur_RVB.svg" alt="K"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Paris-Nord" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Paris–Nord
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_train_RVB.svg" alt="Train"></span><span class="integrated"><a href="/lines/trainJ.html"><img src="/assets/icons/train_J_couleur_RVB.svg" alt="J"></a></span></span><span class="integrated"><a href="/lines/trainL.html"><img src="/assets/icons/train_L_couleur_RVB.svg" alt="L"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Paris-Saint-Lazare" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Paris–Saint-Lazare
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Parmentier" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Parmentier
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Passy" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Passy
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Pasteur" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pasteur
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03b.html"><img src="/assets/icons/metro_3bis_couleur_RVB.svg" alt="3bis"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Pelleport" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pelleport
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Pere Lachaise" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Père Lachaise
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Pereire" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pereire
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerC.html"><img src="/assets/icons/RER_C_couleur_RVB.svg" alt="C"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Pereire-Levallois" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pereire–Levallois
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Pernety" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pernety
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Philippe Auguste" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Philippe Auguste
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Picpus" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Picpus
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Pierre et Marie Curie" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pierre et Marie Curie
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Pigalle" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pigalle
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Place dItalie" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Place d’Italie
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Place de Clichy" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Place de Clichy
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07b.html"><img src="/assets/icons/metro_7bis_couleur_RVB.svg" alt="7bis"></a></span></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Place des Fetes" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Place des Fêtes
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Place Monge" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Place Monge
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Plaisance" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Plaisance
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Pointe du Lac" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pointe du Lac
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Poissonniere" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Poissonnière
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Pont de Levallois-Becon" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pont de Levallois–Bécon
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Pont de Neuilly" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pont de Neuilly
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Pont de Sevres" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pont de Sèvres
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Pont Marie" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pont Marie
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Pont Neuf" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pont Neuf
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte dAuteuil" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte d’Auteuil
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03a.html"><img src="/assets/icons/tram_T3a_couleur_RVB.svg" alt="T3a"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte dItalie" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte d’Italie
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03a.html"><img src="/assets/icons/tram_T3a_couleur_RVB.svg" alt="T3a"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte dIvry" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte d’Ivry
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03a.html"><img src="/assets/icons/tram_T3a_couleur_RVB.svg" alt="T3a"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte dOrleans" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte d’Orléans
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03b.html"><img src="/assets/icons/tram_T3b_couleur_RVB.svg" alt="T3b"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte Dauphine" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte Dauphine
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03b.html"><img src="/assets/icons/tram_T3b_couleur_RVB.svg" alt="T3b"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de Bagnolet" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de Bagnolet
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03b.html"><img src="/assets/icons/tram_T3b_couleur_RVB.svg" alt="T3b"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de Champerret" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de Champerret
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03a.html"><img src="/assets/icons/tram_T3a_couleur_RVB.svg" alt="T3a"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de Charenton" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de Charenton
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03a.html"><img src="/assets/icons/tram_T3a_couleur_RVB.svg" alt="T3a"></a></span></span><span class="integrated"><a href="/lines/t09.html"><img src="/assets/icons/tram_T9_couleur_RVB.svg" alt="T9"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de Choisy" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de Choisy
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerC.html"><img src="/assets/icons/RER_C_couleur_RVB.svg" alt="C"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03b.html"><img src="/assets/icons/tram_T3b_couleur_RVB.svg" alt="T3b"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de Clichy" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de Clichy
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03b.html"><img src="/assets/icons/tram_T3b_couleur_RVB.svg" alt="T3b"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de Clignancourt" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de Clignancourt
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03b.html"><img src="/assets/icons/tram_T3b_couleur_RVB.svg" alt="T3b"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de la Chapelle" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de la Chapelle
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03b.html"><img src="/assets/icons/tram_T3b_couleur_RVB.svg" alt="T3b"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de la Villette" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de la Villette
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03b.html"><img src="/assets/icons/tram_T3b_couleur_RVB.svg" alt="T3b"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de Montreuil" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de Montreuil
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03b.html"><img src="/assets/icons/tram_T3b_couleur_RVB.svg" alt="T3b"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de Pantin" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de Pantin
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de Saint-Cloud" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de Saint-Cloud
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03b.html"><img src="/assets/icons/tram_T3b_couleur_RVB.svg" alt="T3b"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de Saint-Ouen" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de Saint-Ouen
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03a.html"><img src="/assets/icons/tram_T3a_couleur_RVB.svg" alt="T3a"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de Vanves" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de Vanves
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t02.html"><img src="/assets/icons/tram_T2_couleur_RVB.svg" alt="T2"></a></span></span><span class="integrated"><a href="/lines/t03a.html"><img src="/assets/icons/tram_T3a_couleur_RVB.svg" alt="T3a"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de Versailles" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de Versailles
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03a.html"><img src="/assets/icons/tram_T3a_couleur_RVB.svg" alt="T3a"></a></span></span><span class="integrated"><a href="/lines/t03b.html"><img src="/assets/icons/tram_T3b_couleur_RVB.svg" alt="T3b"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte de Vincennes" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte de Vincennes
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03b.html"><img src="/assets/icons/metro_3bis_couleur_RVB.svg" alt="3bis"></a></span></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03b.html"><img src="/assets/icons/tram_T3b_couleur_RVB.svg" alt="T3b"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte des Lilas" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte des Lilas
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03a.html"><img src="/assets/icons/tram_T3a_couleur_RVB.svg" alt="T3a"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte Doree" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte Dorée
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t03b.html"><img src="/assets/icons/tram_T3b_couleur_RVB.svg" alt="T3b"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Porte Maillot" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Porte Maillot
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07b.html"><img src="/assets/icons/metro_7bis_couleur_RVB.svg" alt="7bis"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Pre-Saint-Gervais" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pré-Saint-Gervais
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Pyramides" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pyramides
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Pyrenees" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Pyrénées
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Quai de la Gare" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Quai de la Gare
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Quai de la Rapee" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Quai de la Rapée
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Quatre-Septembre" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Quatre-Septembre
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Rambuteau" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Rambuteau
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Ranelagh" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Ranelagh
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Raspail" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Raspail
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Reaumur-Sebastopol" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Réaumur–Sébastopol
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Rennes" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Rennes
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Republique" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								République
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Reuilly-Diderot" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Reuilly–Diderot
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Richard-Lenoir" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Richard-Lenoir
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Richelieu-Drouot" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Richelieu–Drouot
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Riquet" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Riquet
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Robespierre" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Robespierre
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Romainville-Carnot" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Romainville–Carnot
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Rome" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Rome
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerE.html"><img src="/assets/icons/RER_E_couleur_RVB.svg" alt="E"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Rosny-Bois-Perrier" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Rosny–Bois-Perrier
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Rue de la Pompe" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Rue de la Pompe
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Rue des Boulets" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Rue des Boulets
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Rue du Bac" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Rue du Bac
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Rue Saint-Maur" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Rue Saint-Maur
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Ambroise" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Ambroise
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Augustin" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Augustin
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t08.html"><img src="/assets/icons/tram_T8_couleur_RVB.svg" alt="T8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Denis-Porte de Paris" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Denis–Porte de Paris
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Denis-Universite" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Denis–Université
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03b.html"><img src="/assets/icons/metro_3bis_couleur_RVB.svg" alt="3bis"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Fargeau" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Fargeau
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Francois-Xavier" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-François-Xavier
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Georges" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Georges
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Germain-des-Pres" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Germain-des-Prés
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Jacques" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Jacques
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Lazare" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Lazare
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Mande" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Mandé
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Marcel" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Marcel
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Michel" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Michel
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerB.html"><img src="/assets/icons/RER_B_couleur_RVB.svg" alt="B"></a></span></span><span class="integrated"><a href="/lines/rerC.html"><img src="/assets/icons/RER_C_couleur_RVB.svg" alt="C"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Michel-Notre-Dame" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Michel–Notre-Dame
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Paul" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Paul
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Philippe-du-Roule" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Philippe-du-Roule
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Placide" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Placide
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Sebastien-Froissart" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Sébastien–Froissart
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Saint-Sulpice" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Saint-Sulpice
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Segur" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Ségur
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Sentier" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Sentier
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Serge Gainsbourg" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Serge Gainsbourg
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Sevres-Babylone" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Sèvres–Babylone
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Sevres-Lecourbe" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Sèvres–Lecourbe
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Simplon" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Simplon
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Solferino" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Solférino
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span><span class="integrated"><a href="/lines/m05.html"><img src="/assets/icons/metro_5_couleur_RVB.svg" alt="5"></a></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Stalingrad" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Stalingrad
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span><span class="integrated"><a href="/lines/m08.html"><img src="/assets/icons/metro_8_couleur_RVB.svg" alt="8"></a></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Strasbourg-Saint-Denis" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Strasbourg–Saint-Denis
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Sully-Morland" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Sully–Morland
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m11.html"><img src="/assets/icons/metro_11_couleur_RVB.svg" alt="11"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Telegraphe" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Télégraphe
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Temple" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Temple
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Ternes" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Ternes
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Tolbiac" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Tolbiac
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Trinite-dEstienne dOrves" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Trinité–d’Estienne d’Orves
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Trocadero" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Trocadéro
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m01.html"><img src="/assets/icons/metro_1_couleur_RVB.svg" alt="1"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Tuileries" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Tuileries
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m10.html"><img src="/assets/icons/metro_10_couleur_RVB.svg" alt="10"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Vaneau" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Vaneau
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m13.html"><img src="/assets/icons/metro_13_couleur_RVB.svg" alt="13"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Varenne" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Varenne
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Vaugirard" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Vaugirard
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m04.html"><img src="/assets/icons/metro_4_couleur_RVB.svg" alt="4"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Vavin" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Vavin
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Victor Hugo" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Victor Hugo
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Villejuif-Leo Lagrange" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Villejuif–Léo Lagrange
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_tram_RVB.svg" alt="Tram"></span><span class="integrated"><a href="/lines/t07.html"><img src="/assets/icons/tram_T7_couleur_RVB.svg" alt="T7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Villejuif-Louis Aragon" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Villejuif–Louis Aragon
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m07.html"><img src="/assets/icons/metro_7_couleur_RVB.svg" alt="7"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Villejuif-Paul Vaillant-Couturier" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Villejuif–Paul Vaillant-Couturier
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m02.html"><img src="/assets/icons/metro_2_couleur_RVB.svg" alt="2"></a></span></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span>
+						</td>
+
+						<td>
+							<a href="/station/Villiers" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Villiers
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Volontaires" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Volontaires
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m09.html"><img src="/assets/icons/metro_9_couleur_RVB.svg" alt="9"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Voltaire" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Voltaire
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td style="font-size: 1.4em;">
+							<span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m03.html"><img src="/assets/icons/metro_3_couleur_RVB.svg" alt="3"></a></span></span>
+						</td>
+
+						<td>
+							<a href="/station/Wagram" 
+							style="text-decoration: none; color: inherit; font-size: 1.2em;">
+								Wagram
+							</a>
+						</td>
+					</tr>
+				
+			</table>
+		</div>
+    </body>
+</html>

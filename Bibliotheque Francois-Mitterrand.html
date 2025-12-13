@@ -7,11 +7,11 @@
 		<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 		
 		<link rel="icon" href="/assets/favicon.png" type="image/x-icon" />
-		<title>Bibliothèque François-Mitterand - MobiFer</title>
-		<meta name="description" content="Prochains passages, informations et sorties de la station Bibliothèque François-Mitterand." />
+		<title>Bibliothèque François-Mitterrand - MobiFer</title>
+		<meta name="description" content="Prochains passages, informations et sorties de la station Bibliothèque François-Mitterrand." />
 		<meta name="theme-color" content="#0b0082" />
-		<meta property="og:title" content="Bibliothèque François-Mitterand - MobiFer" />
-		<meta property="og:description" content="Prochains passages, informations et sorties de la station Bibliothèque François-Mitterand." />
+		<meta property="og:title" content="Bibliothèque François-Mitterrand - MobiFer" />
+		<meta property="og:description" content="Prochains passages, informations et sorties de la station Bibliothèque François-Mitterrand." />
 		<meta property="og:image" content=" https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Station_M%C3%A9tro_Biblioth%C3%A8que_Fran%C3%A7ois_Mitterrand_Ligne_14_-_Paris_XIII_%28FR75%29_-_2021-12-19_-_1.jpg/1280px-Station_M%C3%A9tro_Biblioth%C3%A8que_Fran%C3%A7ois_Mitterrand_Ligne_14_-_Paris_XIII_%28FR75%29_-_2021-12-19_-_1.jpg " />
 	</head>
 	<body>
@@ -30,7 +30,7 @@
 			<div class="centered">
 				<p class="centered"><strong>Station</strong><br>
 				<span class="shadowed pictos"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span></span> <span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_RER_RVB.svg" alt="RER"></span><span class="integrated"><a href="/lines/rerC.html"><img src="/assets/icons/RER_C_couleur_RVB.svg" alt="C"></a></span></span></span><br>
-				<span class="centered terminus-box">Bibliothèque François-Mitterand</span></p><div class="row">
+				<span class="centered terminus-box">Bibliothèque François-Mitterrand</span></p><div class="row">
 			<div class="item"><div style="break-inside: avoid;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Station_M%C3%A9tro_Biblioth%C3%A8que_Fran%C3%A7ois_Mitterrand_Ligne_14_-_Paris_XIII_%28FR75%29_-_2021-12-19_-_1.jpg/1280px-Station_M%C3%A9tro_Biblioth%C3%A8que_Fran%C3%A7ois_Mitterrand_Ligne_14_-_Paris_XIII_%28FR75%29_-_2021-12-19_-_1.jpg" alt="Photo de la station" style="width: 100%; max-width: 800px; border-radius: 10px;" class="image-center"><div class="license">© Chabe01 sur <a href="https://commons.wikimedia.org/wiki/File:Station_M%C3%A9tro_Biblioth%C3%A8que_Fran%C3%A7ois_Mitterrand_Ligne_14_-_Paris_XIII_(FR75)_-_2021-12-19_-_1.jpg">Wikimedia Commons</a></div></div></div><div class="item">
 				<div class="box image-center">
 				<h2 class="centered">Accès</h2>
@@ -44,7 +44,22 @@
 				Reproductions des panneaux officiels proposées par <a href="https://enrail.org">enrail.org</a> (Métro), <a href="https://prochainstrains.arno.cl">Prochains Trains</a> (RER et Transilien) et MobiFer (Tramway)
 				</div></div><div class="box image-center" id="stations-suivantes" style="max-width: 1500px !important;">
 			<h2 class="centered">Stations suivantes</h2>
-			<div id="prochains-arrets" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;"></div></div>
+			<div id="prochains-arrets" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+				<div style="flex:1;">
+				<table style="text-align:left; min-width:200px;">
+					<tr>
+						<td class="title" style="text-align:center;width:50%;">Direction</td>
+						<td class="title" style="text-align:center;width:50%;"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m14.html"><img src="/assets/icons/metro_14_couleur_RVB.svg" alt="14"></a></span></span></td>
+					</tr>
+				
+					<tr>
+						<td class="title" style="text-align: right; width: 50%;">Saint-Denis–Pleyel</td>
+						<td><a href="/stations/Cour Saint-Emilion">Cour Saint-Émilion</a></td>
+					</tr>
+					<tr>
+						<td class="title" style="text-align: right; width: 50%;">Aéroport d’Orly</td>
+						<td><a href="/stations/Olympiades">Olympiades</a></td>
+					</tr></table></div></div></div>
 
 		<div id="footer-container" style="padding-top: 10px;"></div>
 
@@ -53,7 +68,7 @@
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js"></script>
 		<script type="module">
-			const station2 = "Bibliothèque François-Mitterand";
+			const station2 = "Bibliothèque François-Mitterrand";
 			setTimeout(() => {
 				// Génération de la carte
 				const map = L.map('map').setView([48.857, 2.350], 18);

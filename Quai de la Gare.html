@@ -40,7 +40,7 @@
 			<div class="box image-center">
 			<h2 class="centered">Statistiques et données</h2><table style="text-align: left;"><tr><td class="title" style= "width: 45%;">Ligne(s)</td><td style="font-size: 1.4em;"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m06.html"><img src="/assets/icons/metro_6_couleur_RVB.svg" alt="6"></a></span></span></td></tr><tr><td class="title">Ouverture</td><td style="font-weight: normal;">1<sup>er</sup> mars 1909</td></tr><tr><td class="title">Voies</td><td style="font-weight: normal;">2</td></tr><tr><td class="title">Quais</td><td style="font-weight: normal;">2</td></tr><tr><td class="title">Zone tarifaire</td><td style="font-weight: normal;">1</td></tr><tr><td class="title">Accessible</td><td style="font-weight: normal;">Non</td></tr><tr><td class="title">Communes desservies</td><td style="font-weight: normal;">Paris (XIII<sup>e</sup>)</td></tr><tr><td class="title">Fréquentation</td><td style="font-weight: normal;">1 735 465 voyageurs (2021)</td></tr></table></div></div><div class="item"><div class="box image-center"><h2 class="centered">Prochains passages <span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Métro" title="Métro"></span> <div class="btn-group" title="Modifiez le style des SIEL"><button onclick="switchToPANAM();"><img src="/assets/icons/panam.svg" alt="PANAM" style="height: 1.25em;" id="panam"></button><button onclick="switchToPIQ();"><img src="/assets/icons/piq.svg" alt="PIQ" style="height: 1.25em;" id="piq"></button><button onclick="switchToPIQDark();"><img src="/assets/icons/piq.svg" alt="PIQ" style="height: 1.25em;" id="piq"> (sombre)</button></div></h2><div class="iframes-container"><div class="iframes"><div class="item"><iframe src="https://enrail.org/ratp/?style=panam&station=Quai%20de%20la%20Gare&line=6&sens=Étoile&stationcode=71597&linecode=C01376&destcode=Charles%20de%20Gaulle%20-%20Etoile&destcodealt=false+&rivoli=false" class="ratp" frameborder="0"></iframe></div><div class="item"><iframe src="https://enrail.org/ratp/?style=panam&station=Quai%20de%20la%20Gare&line=6&sens=Nation&stationcode=71597&linecode=C01376&destcode=Nation&destcodealt=false+&rivoli=false" class="ratp" frameborder="0"></iframe></div></div></div></div></div><div class="license">
 				Reproductions des panneaux officiels proposées par <a href="https://enrail.org">enrail.org</a> (Métro), <a href="https://prochainstrains.arno.cl">Prochains Trains</a> (RER et Transilien) et MobiFer (Tramway)
-				</div><div class="box image-center" id="stations-suivantes" style="max-width: 1500px !important; display: none;">
+				</div><div class="box image-center" id="stations-suivantes" style="max-width: 1500px !important;">
 			<h2 class="centered">Stations suivantes</h2>
 			<div id="prochains-arrets" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
 				<div style="flex:1;">
@@ -66,7 +66,7 @@
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js"></script>
 		<script type="module">
-			const station2 = Quai de la Gare;
+			const station2 = "Quai de la Gare";
 			setTimeout(() => {
 				// Génération de la carte
 				const map = L.map('map').setView([48.857, 2.350], 18);

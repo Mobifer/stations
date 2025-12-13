@@ -41,7 +41,7 @@
 			<div class="box image-center">
 			<h2 class="centered">Statistiques et données</h2><table style="text-align: left;"><tr><td class="title" style= "width: 45%;">Ligne(s)</td><td style="font-size: 1.4em;"><span class="inseparable"><span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Metro"></span><span class="integrated"><a href="/lines/m12.html"><img src="/assets/icons/metro_12_couleur_RVB.svg" alt="12"></a></span></span></td></tr><tr><td class="title">Ouverture</td><td style="font-weight: normal;">31 mai 2022</td></tr><tr><td class="title">Voies</td><td style="font-weight: normal;">2</td></tr><tr><td class="title">Quais</td><td style="font-weight: normal;">2</td></tr><tr><td class="title">Zone tarifaire</td><td style="font-weight: normal;">2</td></tr><tr><td class="title">Accessible</td><td style="font-weight: normal;">Oui</td></tr><tr><td class="title">Communes desservies</td><td style="font-weight: normal;">Aubervilliers</td></tr></table></div></div><div class="item"><div class="box image-center"><h2 class="centered">Prochains passages <span class="integrated"><img src="/assets/icons/symbole_metro_RVB.svg" alt="Métro" title="Métro"></span> <div class="btn-group" title="Modifiez le style des SIEL"><button onclick="switchToPANAM();"><img src="/assets/icons/panam.svg" alt="PANAM" style="height: 1.25em;" id="panam"></button><button onclick="switchToPIQ();"><img src="/assets/icons/piq.svg" alt="PIQ" style="height: 1.25em;" id="piq"></button><button onclick="switchToPIQDark();"><img src="/assets/icons/piq.svg" alt="PIQ" style="height: 1.25em;" id="piq"> (sombre)</button></div></h2><div class="iframes-container"><div class="iframes"><div class="item"><iframe src="https://enrail.org/ratp/?style=panam&station=Aim%C3%A9%20C%C3%A9saire&line=12&sens=Aubervilliers&stationcode=72491&linecode=C01382&destcode=Mairie%20d%27Aubervilliers&destcodealt=false+&rivoli=false" class="ratp" frameborder="0"></iframe></div><div class="item"><iframe src="https://enrail.org/ratp/?style=panam&station=Aim%C3%A9%20C%C3%A9saire&line=12&sens=Mairie%20d’Issy&stationcode=72491&linecode=C01382&destcode=Mairie%20d%27Issy&destcodealt=false+&rivoli=false" class="ratp" frameborder="0"></iframe></div></div></div></div></div><div class="license">
 				Reproductions des panneaux officiels proposées par <a href="https://enrail.org">enrail.org</a> (Métro), <a href="https://prochainstrains.arno.cl">Prochains Trains</a> (RER et Transilien) et MobiFer (Tramway)
-				</div><div class="box image-center" id="stations-suivantes" style="max-width: 1500px !important; display: none;">
+				</div><div class="box image-center" id="stations-suivantes" style="max-width: 1500px !important;">
 			<h2 class="centered">Stations suivantes</h2>
 			<div id="prochains-arrets" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
 				<div style="flex:1;">
@@ -67,7 +67,7 @@
 		<script src="/assets/script/stationsearch.js" type="module"></script>
 		<script src="/assets/script/searchandsiv.js"></script>
 		<script type="module">
-			const station2 = Aimé Césaire;
+			const station2 = "Aimé Césaire";
 			setTimeout(() => {
 				// Génération de la carte
 				const map = L.map('map').setView([48.857, 2.350], 18);
